@@ -659,3 +659,8 @@ button,a{outline-offset:3px}a:focus-visible,button:focus-visible{outline:2px sol
 footer{border-top:1px solid var(--pro-line);background:#06090c}
 @media(max-width:900px){.v32-feature{min-height:auto}.v32-feature-inner{padding-top:72px!important;padding-bottom:70px!important}.v32-feature-copy h1{font-size:clamp(2.5rem,12vw,4.6rem)!important}.v32-feature-art{opacity:.38!important}.v32-card-grid{grid-template-columns:1fr!important}.site-header{position:sticky;top:0;z-index:1000}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* v40 MindsEye + VirusTotal */
+.v38-mindseye .v38-hero{background-image:url('assets/mindseye-cover.jpg');background-position:72% 34%}
+.v38-mindseye .v38-badge{background:rgba(245,197,24,.16);border-color:rgba(245,197,24,.35);color:#ffe47a}
+.vt-card{border-color:rgba(61,214,140,.28)!important;background:linear-gradient(145deg,rgba(12,28,24,.94),rgba(11,17,22,.96))!important}.vt-button{background:#22b573!important;color:#06110c!important;font-weight:900}.hash-box{display:block;overflow-wrap:anywhere;padding:12px 14px;margin:12px 0 16px;border-radius:10px;background:#080d11;border:1px solid rgba(255,255,255,.1);color:#b9c5d0;font-size:.78rem}
