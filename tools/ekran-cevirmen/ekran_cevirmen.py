@@ -110,6 +110,25 @@ def cache_path() -> Path:
     return base / "ceviriler.sqlite3"
 
 
+def self_test() -> int:
+    from PIL import Image, ImageDraw, ImageFont
+
+    executable = locate_tesseract()
+    if not executable:
+        return 2
+    image = Image.new("RGB", (700, 120), "white")
+    font_file = (Path(os.environ.get("WINDIR", "C:/Windows")) / "Fonts" / "arial.ttf")
+    if not font_file.exists():
+        font_file = Path("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf")
+    font = ImageFont.truetype(str(font_file), 30)
+    ImageDraw.Draw(image).text((18, 20), "Welcome to the game", fill="black", font=font)
+    try:
+        value = recognize(image, executable, "eng").lower()
+    except Exception:
+        return 3
+    return 0 if "welcome" in value and "game" in value else 4
+
+
 class AreaPicker(tk.Toplevel):
     def __init__(self, parent, callback, cancel):
         super().__init__(parent)
@@ -369,7 +388,9 @@ class App(tk.Tk):
 
 
 if __name__ == "__main__":
-    if sys.platform != "win32":
+    if "--self-test" in sys.argv:
+        sys.exit(self_test())
+    elif sys.platform != "win32":
         print("Arayüz Windows için tasarlanmıştır.")
     else:
         App().mainloop()

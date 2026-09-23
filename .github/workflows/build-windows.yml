@@ -35,6 +35,11 @@ jobs:
           $ocr = Join-Path $env:ProgramFiles 'Tesseract-OCR'
           python -m PyInstaller --noconfirm --clean --onefile --windowed --name Oyun_Ekrani_Cevirmen --add-binary "${ocr};tesseract" ekran_cevirmen.py
           if (-not (Test-Path 'dist/Oyun_Ekrani_Cevirmen.exe')) { throw 'EXE missing' }
+      - name: Test bundled OCR
+        shell: pwsh
+        run: |
+          $process = Start-Process -FilePath (Resolve-Path 'dist/Oyun_Ekrani_Cevirmen.exe') -ArgumentList '--self-test' -Wait -PassThru
+          if ($process.ExitCode -ne 0) { throw "Bundled OCR self-test failed: $($process.ExitCode)" }
       - uses: actions/upload-artifact@v4
         with:
           name: Oyun_Ekrani_Cevirmen_Windows
