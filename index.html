@@ -23,19 +23,25 @@
 </header>
 
   <main class="v32-home">
-    <section class="v32-feature">
+    <section class="v32-feature v42-slider" id="featuredPatchSlider" aria-roledescription="carousel" aria-label="Öne çıkan Türkçe yamalar">
       <div class="v32-feature-bg" aria-hidden="true"></div>
       <div class="container v32-feature-inner">
         <div class="v32-feature-copy">
-          <span class="v32-eyebrow">YENİ TÜRKÇE YAMA</span>
-          <h1>SILENT HILL <em>townfall</em></h1>
-          <h2>GERÇEKLİK SADECE BİR YANSIMA...</h2>
-          <p>Silent Hill Townfall Türkçe yaması arşive eklendi. Kurulum bilgilerine ve iki farklı indirme seçeneğine ulaş.</p>
-          <a class="v32-yellow-button" href="silent-hill-townfall.html">🎮 Yamaya Göz At <b>›</b></a>
+          <span class="v32-eyebrow" id="featuredEyebrow">YENİ TÜRKÇE YAMA</span>
+          <h1 id="featuredTitle">SILENT HILL <em>townfall</em></h1>
+          <h2 id="featuredSubtitle">GERÇEKLİK SADECE BİR YANSIMA...</h2>
+          <p id="featuredDescription">Silent Hill Townfall Türkçe yaması arşive eklendi. Kurulum bilgilerine ve iki farklı indirme seçeneğine ulaş.</p>
+          <a class="v32-yellow-button" id="featuredLink" href="silent-hill-townfall.html">🎮 Yamaya Göz At <b>›</b></a>
         </div>
         <div class="v32-feature-art">
-          <img src="assets/silent-hill-townfall-cover.jpg" alt="Silent Hill Townfall">
+          <img id="featuredImage" src="assets/silent-hill-townfall-cover.jpg" alt="Silent Hill Townfall">
         </div>
+      </div>
+      <div class="v42-slider-nav" role="tablist" aria-label="Öne çıkan yamayı seç">
+        <button class="active" type="button" role="tab" aria-selected="true" aria-label="1. yama: Silent Hill Townfall" data-slide="0">1</button>
+        <button type="button" role="tab" aria-selected="false" aria-label="2. yama: MindsEye" data-slide="1">2</button>
+        <button type="button" role="tab" aria-selected="false" aria-label="3. yama: Aniimo" data-slide="2">3</button>
+        <button type="button" role="tab" aria-selected="false" aria-label="4. yama: Cuphead" data-slide="3">4</button>
       </div>
     </section>
 
@@ -78,7 +84,7 @@
           </article>
 
           <article class="v32-game-card">
-            <a class="v32-card-cover" href="mindseye.html"><span class="v32-platform">PC</span><img src="assets/mindseye-cover.jpg" alt="MindsEye"></a>
+            <a class="v32-card-cover" href="mindseye.html"><span class="v32-platform">PC</span><img src="assets/mindseye-hero.jpg" alt="MindsEye"></a>
             <div class="v32-card-body">
               <h3>MindsEye</h3><strong>Türkçe Yama</strong>
               <p>MindsEye Türkçe yaması, iki indirme seçeneği ve VirusTotal güvenlik kontrolüyle yayında.</p>
@@ -103,42 +109,112 @@
   </footer>
   <script>
     (function () {
-      const video = document.getElementById('heroPlaylist');
-      if (!video) return;
+      const slider = document.getElementById('featuredPatchSlider');
+      if (!slider) return;
 
-      const playlist = [
-        'assets/hero1.mp4',
-        'assets/hero2.mp4',
-        'assets/hero3.mp4',
-        'assets/hero4.mp4',
-        'assets/hero5.mp4'
+      const slides = [
+        {
+          title: 'SILENT HILL <em>townfall</em>',
+          subtitle: 'GERÇEKLİK SADECE BİR YANSIMA...',
+          description: 'Silent Hill Townfall Türkçe yaması arşive eklendi. Kurulum bilgilerine ve iki farklı indirme seçeneğine ulaş.',
+          image: 'assets/silent-hill-townfall-cover.jpg',
+          imageAlt: 'Silent Hill Townfall',
+          imagePosition: 'center 24%',
+          backgroundPosition: 'center 34%',
+          link: 'silent-hill-townfall.html',
+          theme: 'townfall'
+        },
+        {
+          title: 'MINDSEYE <em>TÜRKÇE YAMA</em>',
+          subtitle: 'GELECEK GÖZLERİNİN ÖNÜNDE...',
+          description: 'MindsEye Türkçe yamasına, kurulum bilgilerine ve VirusTotal güvenlik kontrolüne tek sayfadan ulaş.',
+          image: 'assets/mindseye-hero.jpg',
+          imageAlt: 'MindsEye',
+          imagePosition: '68% center',
+          backgroundPosition: 'center center',
+          link: 'mindseye.html',
+          theme: 'mindseye'
+        },
+        {
+          title: 'ANIIMO <em>TÜRKÇE YAMA</em>',
+          subtitle: 'MACERANI KENDİ DİLİNDE YAŞA',
+          description: 'Aniimo dünyasını Türkçe keşfet. Güncel yama, kurulum videosu ve iki farklı indirme seçeneği hazır.',
+          image: 'assets/aniimo-cover.webp',
+          imageAlt: 'Aniimo',
+          imagePosition: 'center 28%',
+          backgroundPosition: 'center 30%',
+          link: 'aniimo.html',
+          theme: 'aniimo'
+        },
+        {
+          title: 'CUPHEAD <em>TÜRKÇE YAMA</em>',
+          subtitle: 'KLASİK MACERA ARTIK TÜRKÇE',
+          description: 'Cuphead macerasını Türkçe oyna. Tam Türkçe kurucusuz paket ve kolay kurulum bilgileri burada.',
+          image: 'assets/cuphead-cover-small.jpg',
+          imageAlt: 'Cuphead',
+          imagePosition: 'center center',
+          backgroundPosition: 'center center',
+          link: 'cuphead.html',
+          theme: 'cuphead'
+        }
       ];
 
-      let currentIndex = 0;
+      const background = slider.querySelector('.v32-feature-bg');
+      const title = document.getElementById('featuredTitle');
+      const subtitle = document.getElementById('featuredSubtitle');
+      const description = document.getElementById('featuredDescription');
+      const link = document.getElementById('featuredLink');
+      const image = document.getElementById('featuredImage');
+      const buttons = [...slider.querySelectorAll('[data-slide]')];
+      let current = 0;
+      let timer;
 
-      function playVideo(index) {
-        currentIndex = index;
-        video.src = playlist[currentIndex];
-        video.load();
-        const playPromise = video.play();
-        if (playPromise && typeof playPromise.catch === 'function') {
-          playPromise.catch(() => {});
-        }
+      function showSlide(index, animate) {
+        current = (index + slides.length) % slides.length;
+        const slide = slides[current];
+        if (animate) slider.classList.add('is-changing');
+        window.setTimeout(function () {
+          slider.dataset.theme = slide.theme;
+          background.style.backgroundImage = 'linear-gradient(90deg,rgba(8,12,18,.98) 0%,rgba(8,12,18,.88) 34%,rgba(8,12,18,.20) 67%,rgba(8,12,18,.58) 100%),url("' + slide.image + '")';
+          background.style.backgroundPosition = slide.backgroundPosition;
+          title.innerHTML = slide.title;
+          subtitle.textContent = slide.subtitle;
+          description.textContent = slide.description;
+          link.href = slide.link;
+          image.src = slide.image;
+          image.alt = slide.imageAlt;
+          image.style.objectPosition = slide.imagePosition;
+          buttons.forEach(function (button, buttonIndex) {
+            const active = buttonIndex === current;
+            button.classList.toggle('active', active);
+            button.setAttribute('aria-selected', String(active));
+          });
+          slider.classList.remove('is-changing');
+        }, animate ? 180 : 0);
       }
 
-      video.addEventListener('ended', function () {
-        const nextIndex = (currentIndex + 1) % playlist.length;
-        playVideo(nextIndex);
+      function startAutoPlay() {
+        window.clearInterval(timer);
+        timer = window.setInterval(function () { showSlide(current + 1, true); }, 7000);
+      }
+
+      buttons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          showSlide(Number(button.dataset.slide), true);
+          startAutoPlay();
+        });
+      });
+      slider.addEventListener('mouseenter', function () { window.clearInterval(timer); });
+      slider.addEventListener('mouseleave', startAutoPlay);
+      slider.addEventListener('focusin', function () { window.clearInterval(timer); });
+      slider.addEventListener('focusout', startAutoPlay);
+      slider.addEventListener('keydown', function (event) {
+        if (event.key === 'ArrowRight') { showSlide(current + 1, true); startAutoPlay(); }
+        if (event.key === 'ArrowLeft') { showSlide(current - 1, true); startAutoPlay(); }
       });
 
-      video.addEventListener('error', function () {
-        const nextIndex = (currentIndex + 1) % playlist.length;
-        if (nextIndex !== currentIndex) playVideo(nextIndex);
-      });
-
-      // İlk video hazır olsun; kullanıcı Play tuşuyla başlatsın.
-      video.src = playlist[0];
-      video.load();
+      showSlide(0, false);
+      startAutoPlay();
     })();
   </script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>

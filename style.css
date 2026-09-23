@@ -661,6 +661,67 @@ footer{border-top:1px solid var(--pro-line);background:#06090c}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 
 /* v40 MindsEye + VirusTotal */
-.v38-mindseye .v38-hero{background-image:url('assets/mindseye-cover.jpg');background-position:72% 34%}
+.v38-mindseye .v38-hero{background-image:url('assets/mindseye-hero.jpg');background-position:center center}
 .v38-mindseye .v38-badge{background:rgba(245,197,24,.16);border-color:rgba(245,197,24,.35);color:#ffe47a}
 .vt-card{border-color:rgba(61,214,140,.28)!important;background:linear-gradient(145deg,rgba(12,28,24,.94),rgba(11,17,22,.96))!important}.vt-button{background:#22b573!important;color:#06110c!important;font-weight:900}.hash-box{display:block;overflow-wrap:anywhere;padding:12px 14px;margin:12px 0 16px;border-radius:10px;background:#080d11;border:1px solid rgba(255,255,255,.1);color:#b9c5d0;font-size:.78rem}
+
+/* v41 - yüksek çözünürlüklü MindsEye görseli ve tutarlı arşiv kartı */
+.mindseye-patch-row .patch-thumb img{object-position:72% center}
+.v32-game-card .v32-card-cover img[src$="mindseye-hero.jpg"]{object-position:68% center}
+.sidebar-link img[src$="mindseye-hero.jpg"]{object-position:70% center}
+.v38-mindseye .v38-video-card>img{object-position:center center}
+
+/* v42 - Animecix tarzı numaralı ana sayfa yama vitrini */
+.v42-slider{--slide-accent:#ef3150}
+.v42-slider .v32-feature-bg,
+.v42-slider .v32-feature-copy,
+.v42-slider .v32-feature-art{transition:opacity .22s ease,transform .32s ease,filter .32s ease}
+.v42-slider.is-changing .v32-feature-bg,
+.v42-slider.is-changing .v32-feature-copy,
+.v42-slider.is-changing .v32-feature-art{opacity:.18}
+.v42-slider.is-changing .v32-feature-copy{transform:translateY(8px)}
+.v42-slider .v32-feature-copy h1 em{color:var(--slide-accent)}
+.v42-slider[data-theme="mindseye"]{--slide-accent:#59dff4}
+.v42-slider[data-theme="aniimo"]{--slide-accent:#c793ff}
+.v42-slider[data-theme="cuphead"]{--slide-accent:#ffd43b}
+.v42-slider[data-theme="mindseye"] .v32-feature-copy h1 em,
+.v42-slider[data-theme="aniimo"] .v32-feature-copy h1 em,
+.v42-slider[data-theme="cuphead"] .v32-feature-copy h1 em{
+  font-family:inherit;
+  font-size:.42em;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.v42-slider-nav{
+  position:absolute;
+  z-index:5;
+  left:50%;
+  bottom:31px;
+  transform:translateX(-50%);
+  display:flex;
+  align-items:center;
+  gap:9px;
+  padding:8px;
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:999px;
+  background:rgba(5,9,13,.68);
+  box-shadow:0 12px 32px rgba(0,0,0,.3);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+}
+.v42-slider-nav button{
+  width:36px;
+  height:36px;
+  padding:0;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:50%;
+  background:rgba(255,255,255,.06);
+  color:#d5dbe3;
+  font:800 .9rem/1 inherit;
+  cursor:pointer;
+  transition:transform .2s ease,background .2s ease,color .2s ease,border-color .2s ease;
+}
+.v42-slider-nav button:hover{transform:translateY(-2px);border-color:rgba(255,212,59,.65);color:#fff}
+.v42-slider-nav button.active{background:#ffd43b;border-color:#ffd43b;color:#11161c;box-shadow:0 5px 18px rgba(255,212,59,.28)}
+@media(max-width:900px){.v42-slider-nav{bottom:20px}.v42-slider .v32-feature-copy{padding-bottom:80px!important}}
+@media(max-width:620px){.v42-slider-nav button{width:32px;height:32px}.v42-slider-nav{gap:6px}}
