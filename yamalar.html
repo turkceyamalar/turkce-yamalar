@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="Türkçe Yamalar oyun arşivi - PC oyunları için Türkçe yama indir">
+  <title>Türkçe Yamalar Arşivi | Türkçe Yamalar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="yamalar.html">
+<header class="site-header oi-header v29-header">
+  <div class="oi-nav-wrap v29-nav-wrap">
+    <a class="v29-brand" href="index.html" aria-label="Türkçe Yamalar Ana Sayfa"><img src="assets/turkce-yamalar-logo.png" alt="Türkçe Yamalar"></a>
+    <nav class="oi-main-nav v29-main-nav" aria-label="Ana menü">
+      <a href="index.html" class="oi-nav-item v29-pill"><span class="oi-menu-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.2 12 3l9 8.2v9.3a.5.5 0 0 1-.5.5h-5.7v-6.4H9.2V21H3.5a.5.5 0 0 1-.5-.5z"/><path d="M1.8 11.1 12 1.8l10.2 9.3"/></svg></span><span>ANA SAYFA</span></a>
+      <a href="#" class="oi-nav-item v29-pill" onclick="event.preventDefault(); alert('PC Oyunları çok yakında!');"><span class="oi-menu-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.2 8.1h9.6c2.5 0 4.2 1.7 4.8 4.2l.9 3.8c.5 2.2-1.9 3.8-3.6 2.3l-2.1-1.9H7.2l-2.1 1.9c-1.7 1.5-4.1-.1-3.6-2.3l.9-3.8c.6-2.5 2.3-4.2 4.8-4.2Z"/><path d="M7 11v4M5 13h4M16.8 11.7h.1M19 14h.1"/></svg></span><span>PC OYUNLARI</span></a>
+      <a href="yamalar.html" class="oi-nav-item v29-pill active"><span class="oi-menu-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7.5 7.5 12 3l4.5 4.5M5 13H3v7h18v-7h-2"/></svg></span><span>TÜRKÇE YAMA</span></a>
+    </nav>
+    <span class="nav-auth oi-account v29-account"><a class="js-login" href="#">GİRİŞ</a><a class="js-register register-link" href="#">KAYIT OL</a></span>
+  </div>
+</header>
+
+<main>
+  <section class="archive-hero">
+    <div class="container">
+      <span class="badge">Türkçe yama arşivi</span>
+      <h1>PC Oyun Türkçe Yamaları</h1>
+      <p>Aradığın oyunun Türkçe yamasını bul, detaylarını incele ve indirme sayfasına git.</p>
+      <div class="archive-searchbar">
+        <span class="search-icon">⌕</span>
+        <input id="patchSearch" type="search" placeholder="Oyun veya yama ara..." autocomplete="off">
+      </div>
+    </div>
+  </section>
+
+  <section class="section archive-section">
+    <div class="container archive-layout">
+      <div class="archive-main">
+        <div class="archive-toolbar">
+          <div class="filter-tabs" id="filterTabs">
+            <button class="filter-tab active" data-filter="all">Tümü</button>
+            <button class="filter-tab" data-filter="published">Yayınlanan</button>
+            <button class="filter-tab" data-filter="upcoming">Yakında</button>
+          </div>
+          <select id="patchSort" class="archive-sort" aria-label="Yamaları sırala">
+            <option value="newest">En Yeni</option>
+            <option value="name">A-Z</option>
+          </select>
+        </div>
+
+        <div id="patchList" class="patch-list-modern">
+
+          <article class="patch-row" data-title="Silent Hill Townfall Türkçe Yama" data-state="published" data-order="3">
+            <a class="patch-thumb" href="silent-hill-townfall.html"><img src="assets/silent-hill-townfall-cover.jpg" alt="Silent Hill Townfall Türkçe Yama" loading="lazy"></a>
+            <div class="patch-row-content">
+              <div class="patch-row-top"><span class="status">Yeni</span><span class="patch-date">23 Eylül 2026</span></div>
+              <h2><a href="silent-hill-townfall.html">Silent Hill Townfall Türkçe Yama</a></h2>
+              <p>Kurucusuz dosya sürümü. Dosya.co ve MediaFire indirme seçenekleri hazır.</p>
+              <div class="patch-tags"><span>Windows</span><span>Kurucusuz</span><span>Korku</span></div>
+              <a class="patch-readmore" href="silent-hill-townfall.html">Yamayı görüntüle →</a>
+            </div>
+          </article>
+
+          <article class="patch-row" data-title="Aniimo Türkçe Yama" data-state="published" data-order="2">
+            <a class="patch-thumb" href="aniimo.html"><img src="assets/aniimo-cover.webp" alt="Aniimo Türkçe Yama" loading="lazy"></a>
+            <div class="patch-row-content">
+              <div class="patch-row-top"><span class="status">Yayınlandı</span><span class="patch-date">23 Eylül 2026</span></div>
+              <h2><a href="aniimo.html">Aniimo Türkçe Yama</a></h2>
+              <p>Aniimo için hazırlanmış Türkçe topluluk yaması. Kurulum, indirme bağlantıları ve sürüm bilgileri.</p>
+              <div class="patch-tags"><span>Windows</span><span>v4</span><span>Türkçe</span></div>
+              <a class="patch-readmore" href="aniimo.html">Yamayı görüntüle →</a>
+            </div>
+          </article>
+
+          <article class="patch-row" data-title="Cuphead Türkçe Yama" data-state="published" data-order="1">
+            <a class="patch-thumb" href="cuphead.html"><img src="assets/cuphead-cover-small.jpg" alt="Cuphead Türkçe Yama" loading="lazy"></a>
+            <div class="patch-row-content">
+              <div class="patch-row-top"><span class="status">Yayınlandı</span><span class="patch-date">22 Eylül 2026</span></div>
+              <h2><a href="cuphead.html">Cuphead Türkçe Yama</a></h2>
+              <p>Cuphead için hazırlanmış tam Türkçe yama. Kurucusuz paket ve kolay kurulum bilgileri.</p>
+              <div class="patch-tags"><span>Windows</span><span>Tam Türkçe</span><span>Yama</span></div>
+              <a class="patch-readmore" href="cuphead.html">Yamayı görüntüle →</a>
+            </div>
+          </article>
+        </div>
+
+        <div id="noPatchResult" class="no-patch-result" hidden>Aramana uygun yama bulunamadı.</div>
+        <nav class="pagination-modern" aria-label="Sayfalama"><span class="current">1</span><span class="disabled">Sonraki ›</span></nav>
+      </div>
+
+      <aside class="archive-sidebar">
+        <section class="sidebar-card">
+          <h3>Hızlı Erişim</h3>
+          <a class="sidebar-link" href="silent-hill-townfall.html"><img src="assets/silent-hill-townfall-cover.jpg" alt=""><span><b>Silent Hill Townfall</b><small>Türkçe Yama</small></span></a>
+          <a class="sidebar-link" href="aniimo.html"><img src="assets/aniimo-cover.webp" alt=""><span><b>Aniimo</b><small>Türkçe Yama v4</small></span></a>
+          <a class="sidebar-link" href="cuphead.html"><img src="assets/cuphead-cover-small.jpg" alt=""><span><b>Cuphead</b><small>Tam Türkçe</small></span></a>
+        </section>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer><div class="container footer-inner"><span>© 2026 Türkçe Yamalar</span><span>Bağımsız topluluk projesi</span></div></footer>
+<script>
+(function(){
+  const input=document.getElementById('patchSearch');
+  const list=document.getElementById('patchList');
+  const rows=[...document.querySelectorAll('.patch-row')];
+  const tabs=[...document.querySelectorAll('.filter-tab')];
+  const sort=document.getElementById('patchSort');
+  const empty=document.getElementById('noPatchResult');
+  let filter='all';
+  function render(){
+    const q=(input.value||'').toLocaleLowerCase('tr-TR').trim();
+    let visible=rows.filter(row=>{
+      const okFilter=filter==='all'||row.dataset.state===filter;
+      const okSearch=!q||(row.dataset.title||'').toLocaleLowerCase('tr-TR').includes(q)||row.textContent.toLocaleLowerCase('tr-TR').includes(q);
+      return okFilter&&okSearch;
+    });
+    const sorted=[...rows].sort((a,b)=>sort.value==='name'?(a.dataset.title||'').localeCompare(b.dataset.title||'','tr'):(Number(b.dataset.order)-Number(a.dataset.order)));
+    sorted.forEach(r=>list.appendChild(r));
+    rows.forEach(r=>r.hidden=!visible.includes(r));
+    empty.hidden=visible.length!==0;
+  }
+  const qp=new URLSearchParams(location.search).get('q'); if(qp) input.value=qp;
+  input.addEventListener('input',render); sort.addEventListener('change',render);
+  tabs.forEach(t=>t.addEventListener('click',()=>{tabs.forEach(x=>x.classList.remove('active'));t.classList.add('active');filter=t.dataset.filter;render();}));
+  render();
+})();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="site.js"></script>
+</body>
+</html>
