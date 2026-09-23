@@ -684,6 +684,16 @@ footer{border-top:1px solid var(--pro-line);background:#06090c}
 .v42-slider[data-theme="mindseye"]{--slide-accent:#59dff4}
 .v42-slider[data-theme="aniimo"]{--slide-accent:#c793ff}
 .v42-slider[data-theme="cuphead"]{--slide-accent:#ffd43b}
+.v42-slider.v42-no-art .v32-feature-art{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+}
+.v42-slider.v42-no-art .v32-feature-copy{max-width:660px}
+.v42-slider.v42-no-art .v32-feature-bg{background-size:cover!important;background-repeat:no-repeat!important}
+.v42-slider[data-theme="mindseye"] .v32-feature-bg{filter:saturate(.92) contrast(1.04)}
+.v42-slider[data-theme="aniimo"] .v32-feature-bg{filter:saturate(.94) contrast(1.02)}
+.v42-slider[data-theme="cuphead"] .v32-feature-bg{filter:saturate(.88) contrast(1.05)}
 .v42-slider[data-theme="mindseye"] .v32-feature-copy h1 em,
 .v42-slider[data-theme="aniimo"] .v32-feature-copy h1 em,
 .v42-slider[data-theme="cuphead"] .v32-feature-copy h1 em{
@@ -725,3 +735,12 @@ footer{border-top:1px solid var(--pro-line);background:#06090c}
 .v42-slider-nav button.active{background:#ffd43b;border-color:#ffd43b;color:#11161c;box-shadow:0 5px 18px rgba(255,212,59,.28)}
 @media(max-width:900px){.v42-slider-nav{bottom:20px}.v42-slider .v32-feature-copy{padding-bottom:80px!important}}
 @media(max-width:620px){.v42-slider-nav button{width:32px;height:32px}.v42-slider-nav{gap:6px}}
+
+/* Prince of Persia: The Lost Crown */
+.v38-prince .v38-hero{background-image:url('assets/prince-of-persia-the-lost-crown-cover.png');background-position:78% 36%}
+.v38-prince .v38-badge{background:rgba(40,149,215,.18);border-color:rgba(93,196,255,.45);color:#bdeaff}
+.v38-prince .game-logo-text{font-size:clamp(2rem,4vw,4.5rem);line-height:1.06}
+.v38-prince .prince-cover{display:flex;align-items:center;justify-content:center;background:linear-gradient(140deg,#132c3b,#07131d);cursor:default}
+.v38-prince .prince-cover img{width:auto;max-width:100%;height:min(450px,65vw);object-fit:contain}
+.v42-slider[data-theme="prince"]{--slide-accent:#58c8f4}
+.v32-card-cover img[src$="prince-of-persia-the-lost-crown-cover.png"],.patch-thumb img[src$="prince-of-persia-the-lost-crown-cover.png"]{object-position:center 30%}
