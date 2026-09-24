@@ -744,3 +744,8 @@ footer{border-top:1px solid var(--pro-line);background:#06090c}
 .v38-prince .prince-cover img{width:auto;max-width:100%;height:min(450px,65vw);object-fit:contain}
 .v42-slider[data-theme="prince"]{--slide-accent:#58c8f4}
 .v32-card-cover img[src$="prince-of-persia-the-lost-crown-cover.png"],.patch-thumb img[src$="prince-of-persia-the-lost-crown-cover.png"]{object-position:center 30%}
+.v38-starwars .v38-hero{background-image:url('assets/star-wars-outlaws-cover.png');background-position:center 38%}
+.v38-starwars .v38-badge{background:rgba(255,196,70,.16);border-color:rgba(255,214,108,.45);color:#ffe09a}
+.v38-starwars .game-logo-text{font-size:clamp(2.4rem,5vw,5.4rem);line-height:.92;letter-spacing:-.04em}
+.v38-starwars .starwars-cover{display:flex;align-items:center;justify-content:center;background:linear-gradient(140deg,#2a1711,#080b10);cursor:default}
+.v38-starwars .starwars-cover img{width:auto;max-width:100%;height:min(450px,65vw);object-fit:contain}
