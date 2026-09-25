@@ -852,3 +852,93 @@ footer{background:#e5edf5!important;border-color:#d6e0eb!important;color:#3a4e63
   background-image:linear-gradient(90deg,#080c12 0%,#121b27 60%,#0b1018 100%);
   background-size:100% 100%;
 }
+
+/* The foreground cover remains inside its fixed box; its soft copy fills the hero. */
+.v42-slider .v32-feature-bg{overflow:hidden;filter:none!important}
+.v42-slider .v32-feature-bg::before{
+  content:"";position:absolute;inset:-35px;
+  background-image:var(--slide-art,url("assets/aniimo-cover.webp"));
+  background-position:center 38%;background-size:cover;
+  filter:blur(28px) saturate(.85);transform:scale(1.07);
+}
+.v42-slider .v32-feature-bg::after{
+  background:linear-gradient(90deg,rgba(8,12,18,.97) 0%,rgba(8,12,18,.86) 36%,rgba(8,12,18,.47) 72%,rgba(8,12,18,.70) 100%),linear-gradient(0deg,#0c1118,transparent 28%);
+}
+.v32-patches{
+  background:linear-gradient(rgba(238,243,248,.90),rgba(238,243,248,.96)),url("assets/site-background-blur.jpg") center top / cover no-repeat!important;
+}
+.section-logo{display:block;width:72px;height:52px;flex:0 0 72px;overflow:hidden;border-radius:11px;background:#080c16;box-shadow:0 5px 15px rgba(25,36,62,.16)}
+.section-logo img{display:block;width:auto!important;max-width:none!important;height:52px!important}
+
+/* News archive */
+.news-page{min-height:calc(100vh - 154px);padding:0 0 78px;background:linear-gradient(rgba(238,243,248,.90),rgba(238,243,248,.96)),url("assets/site-background-blur.jpg") center / cover no-repeat}
+.news-banner{position:relative;overflow:hidden;background:#101a29;color:#fff;padding:80px 0 76px}
+.news-banner::before{content:"";position:absolute;inset:-40px;background:url("assets/site-background-blur.jpg") center / cover;filter:blur(18px);opacity:.42}
+.news-banner::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,19,30,.94),rgba(11,19,30,.70))}
+.news-banner .container{z-index:1}.news-kicker{color:#ff9b4f;font-weight:850;letter-spacing:.14em;font-size:.82rem}
+.news-banner h1{font-size:clamp(2.5rem,5vw,4.5rem);margin:12px 0 14px}.news-banner p{max-width:660px;margin:0;color:#d6e0eb;font-size:1.08rem}
+.news-content{padding-top:38px}.news-filter{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}
+.news-filter button{border:1px solid #d4e0ed;background:#fff;color:#263a50;border-radius:8px;font:inherit;font-weight:700;font-size:1rem;padding:10px 17px;cursor:pointer}
+.news-filter button.active,.news-filter button:hover{background:#e87320;color:#fff;border-color:#e87320}
+.news-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.news-card{overflow:hidden;background:#fff;border:1px solid #dce5ee;border-radius:10px;box-shadow:0 12px 30px rgba(31,55,79,.07)}
+.news-card img{width:100%;height:220px;object-fit:cover}.news-card-body{padding:24px}
+.news-meta{display:flex;gap:10px;align-items:center;flex-wrap:wrap;color:#52647a;font-size:.87rem}
+.news-tag{background:#fff0df;color:#a8460c;border-radius:5px;padding:3px 8px;font-weight:800}
+.news-card h2{font-size:1.5rem;line-height:1.23;color:#18283b;margin:15px 0 10px}.news-card p{color:#52647a;margin:0 0 14px}
+.news-card .news-body{border-top:1px solid #e6edf4;padding-top:15px;white-space:pre-line}.news-card a{color:#b75212;font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.news-empty{background:#fff;border:1px solid #dce5ee;border-radius:10px;padding:32px;color:#52647a}
+@media(max-width:720px){.news-banner{padding:58px 0}.news-grid{grid-template-columns:1fr}.news-card img{height:190px}}
+
+/* Resident Evil yama detayları */
+.v38-resident .v38-hero{background-image:url("assets/resident-evil-2-cover.jpg");background-position:70% center}
+.v38-resident-evil-4-remake .v38-hero{background-image:url("assets/resident-evil-4-cover.jpg")}
+.v38-resident-evil-village .v38-hero{background-image:url("assets/resident-evil-village-cover.jpg")}
+.v38-resident .v38-hero::after{background:linear-gradient(90deg,rgba(4,9,14,.98),rgba(4,9,14,.87) 34%,rgba(4,9,14,.27) 75%),linear-gradient(0deg,rgba(4,9,14,.7),transparent 35%)}
+.v38-resident .game-logo-text{font-size:clamp(2.3rem,5vw,5.1rem);line-height:.97}
+.v38-resident .tr-title em{color:#ff8b54}
+.v38-resident .v38-badge{background:rgba(200,47,38,.2);border-color:rgba(255,104,77,.46);color:#ffd2c1}
+@media(max-width:900px){.v38-resident .v38-hero{background-position:70% center}.v38-resident .v38-hero::after{background:linear-gradient(90deg,rgba(4,9,14,.96),rgba(4,9,14,.62))}}
+
+/* Site-wide appearance switch */
+.theme-toggle{flex:0 0 42px;width:42px;height:42px;display:grid;place-items:center;margin-left:8px;border:1px solid #d6e0eb;border-radius:10px;background:#fff;color:#25384f;box-shadow:0 2px 8px rgba(30,53,76,.06);cursor:pointer}
+.theme-toggle:hover{border-color:#e87320;color:#bf5512}
+.theme-toggle:focus-visible{outline:3px solid #e87320;outline-offset:3px}
+.theme-toggle svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:760px){.theme-toggle{position:sticky;right:0;z-index:6;margin-left:0;flex-basis:38px;width:38px;height:38px}}
+
+html[data-theme="dark"]{color-scheme:dark;--text:#edf3f9;--muted:#aebdcb;--border:#2b3a4c;--pro-bg:#0b111a;--pro-line:#2b3a4c;--pro-muted:#aebdcb}
+html[data-theme="dark"] body{background:#0b111a;color:#edf3f9}
+html[data-theme="dark"] .site-header,html[data-theme="dark"] .oi-header,html[data-theme="dark"] .v29-header{background:rgba(14,21,31,.97)!important;border-color:#2b3a4c!important;box-shadow:0 5px 22px rgba(0,0,0,.24)!important}
+html[data-theme="dark"] .brand-name{color:#eef3f8}
+html[data-theme="dark"] .brand-mark{background:#222e3f;box-shadow:4px 4px 0 #df6b1d}
+html[data-theme="dark"] .v29-main-nav .v29-pill{background:#182434!important;border-color:#314256!important;color:#e0e8f0!important;box-shadow:none!important}
+html[data-theme="dark"] .v29-main-nav .v29-pill:hover,html[data-theme="dark"] .v29-main-nav .v29-pill.active{background:#56351f!important;border-color:#dc762e!important;color:#fff2e5!important}
+html[data-theme="dark"] .theme-toggle{background:#2a3040;color:#f3f3f6;border-color:#343f50;box-shadow:none}
+html[data-theme="dark"] .v45-logo{background:transparent!important}
+html[data-theme="dark"] .v32-home,html[data-theme="dark"] .v32-patches,html[data-theme="dark"] .archive-section,html[data-theme="dark"] .v38-detail>.section,html[data-theme="dark"] .v38-summary,html[data-theme="dark"] .download-gateway,html[data-theme="dark"] .legal-page,html[data-theme="dark"] .legal-shell{background:#0b111a!important}
+html[data-theme="dark"] .v32-patches{background:linear-gradient(rgba(11,17,26,.88),rgba(11,17,26,.96)),url("assets/site-background-blur.jpg") center top / cover no-repeat!important}
+html[data-theme="dark"] .archive-hero,html[data-theme="dark"] .download-gateway-hero{background:linear-gradient(135deg,#152231,#0b111a)!important;border-color:#2b3a4c!important}
+html[data-theme="dark"] .archive-hero h1,html[data-theme="dark"] .gateway-head h1{color:#eef3f8!important}
+html[data-theme="dark"] .archive-hero p,html[data-theme="dark"] .gateway-head p,html[data-theme="dark"] .gateway-back{color:#aebdcb!important}
+html[data-theme="dark"] .v32-feature::after{background:linear-gradient(transparent,#0b111a)}
+html[data-theme="dark"] .v32-section-title h2,html[data-theme="dark"] .v32-card-body h3,html[data-theme="dark"] .patch-row h2 a,html[data-theme="dark"] .sidebar-card h3,html[data-theme="dark"] .content-card h2,html[data-theme="dark"] .gateway-card h2,html[data-theme="dark"] .legal-shell h1,html[data-theme="dark"] .legal-shell h2,html[data-theme="dark"] .v38-panel h2{color:#eef3f8!important}
+html[data-theme="dark"] .v32-section-title p,html[data-theme="dark"] .v32-card-body p,html[data-theme="dark"] .patch-row p,html[data-theme="dark"] .content-card p,html[data-theme="dark"] .gateway-card p,html[data-theme="dark"] .gateway-card li,html[data-theme="dark"] .legal-shell p,html[data-theme="dark"] .v38-panel p,html[data-theme="dark"] .v38-panel li{color:#aebdcb!important}
+html[data-theme="dark"] .v32-game-card,html[data-theme="dark"] .v32-card-body,html[data-theme="dark"] .patch-row,html[data-theme="dark"] .sidebar-card,html[data-theme="dark"] .content-card,html[data-theme="dark"] .v38-panel,html[data-theme="dark"] .gateway-card,html[data-theme="dark"] .ad-slot,html[data-theme="dark"] .community-card,html[data-theme="dark"] .v45-stats-card{background:#162231!important;border-color:#2e3d50!important;box-shadow:0 12px 30px rgba(0,0,0,.18)!important}
+html[data-theme="dark"] .v45-stats-card h3,html[data-theme="dark"] .v45-stat-row span,html[data-theme="dark"] .gateway-meta b{color:#e5edf5!important}
+html[data-theme="dark"] .v45-stat-row,html[data-theme="dark"] .v38-req dl div,html[data-theme="dark"] .sidebar-link,html[data-theme="dark"] .gateway-trust{border-color:#304053!important}
+html[data-theme="dark"] .sidebar-link{color:#e7edf5}
+html[data-theme="dark"] .patch-tags span,html[data-theme="dark"] .gateway-meta span{background:#213044;border-color:#34465b;color:#d1dfed}
+html[data-theme="dark"] .v32-all,html[data-theme="dark"] .filter-tab,html[data-theme="dark"] .archive-sort,html[data-theme="dark"] .pagination-modern span,html[data-theme="dark"] .archive-searchbar,html[data-theme="dark"] .patch-tags span,html[data-theme="dark"] .home-search-card input{background:#1b2939!important;border-color:#34465b!important;color:#e3edf6!important}
+html[data-theme="dark"] .archive-searchbar input{color:#eef3f8!important}
+html[data-theme="dark"] .pagination-modern .current,html[data-theme="dark"] .filter-tab.active{background:#e87320!important;color:#17110d!important}
+html[data-theme="dark"] .legal-page .contact-email,html[data-theme="dark"] .legal-page .contact-placeholder{background:#162231;color:#edf3f9;border-color:#34465b}
+html[data-theme="dark"] footer{background:#101c2a!important;color:#b8c7d6;border-color:#2b3a4c!important}
+html[data-theme="dark"] .footer-links a{color:#b8c7d6!important}
+html[data-theme="dark"] .news-page{background:linear-gradient(rgba(11,17,26,.88),rgba(11,17,26,.96)),url("assets/site-background-blur.jpg") center / cover no-repeat}
+html[data-theme="dark"] .news-card,html[data-theme="dark"] .news-empty{background:#162231;border-color:#2e3d50;color:#aebdcb;box-shadow:0 12px 30px rgba(0,0,0,.18)}
+html[data-theme="dark"] .news-card h2{color:#edf3f9}
+html[data-theme="dark"] .news-card p,html[data-theme="dark"] .news-meta{color:#aebdcb}
+html[data-theme="dark"] .news-body{border-color:#304053}
+html[data-theme="dark"] .news-filter button{background:#1b2939;border-color:#34465b;color:#e3edf6}
+html[data-theme="dark"] .news-filter button.active,html[data-theme="dark"] .news-filter button:hover{background:#e87320;color:#17110d;border-color:#e87320}

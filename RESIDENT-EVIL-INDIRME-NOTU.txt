@@ -1,0 +1,4 @@
+Resident Evil 2 Remake, Resident Evil 4 Remake ve Resident Evil Village Türkçe yama ZIP arşivleri bu sitenin downloads klasöründedir.
+RE4 arşivi üç parça halinde saklanır. Ziyaretçi indirme sayfasındaki düğmeye bastığında tarayıcı parçaları birleştirerek tek RE4_Remake_Dosya_Yamasi.zip dosyası kaydeder.
+GitHub'a yüklerken downloads klasörünü ve üç part dosyasını aynı isimlerle koruyun. Bunlar ZIP dosyasının ham parçalarıdır; doğrudan açmaya çalışmayın.
+Bu sitedeki yeni sayfalar: resident-evil-2-remake.html, resident-evil-4-remake.html, resident-evil-village.html.

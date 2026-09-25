@@ -1,0 +1,21 @@
+HABER EKLEME
+
+haberler-veri.js dosyasını bir metin düzenleyicide açın. window.oyunHaberleri
+listesinin en başına şu biçimde yeni bir kayıt ekleyin:
+
+  {
+    baslik: 'Oyunun veya duyurunun başlığı',
+    kategori: 'Güncelleme',
+    tarih: '2026-09-25',
+    ozet: 'Kartta görünecek kısa özet.',
+    metin: 'Haberin devamı. Birkaç cümle yazabilirsiniz.',
+    gorsel: 'assets/ornek-kapak.jpg',
+    kaynak: 'https://resmi-kaynak-adresi'
+  },
+
+Kategori olarak Yeni Oyun, DLC, Güncelleme veya Site Haberleri kullanın.
+Görsel istemiyorsanız gorsel: '' yazın. Görsel kullanacaksanız dosyayı assets
+klasörüne koyun. Kaynak bağlantısı istemiyorsanız kaynak: '' yazın.
+Yayınlamadan önce oyunun çıkışını, tarihi ve bağlantıyı resmî kaynaktan doğrulayın.
+Kaydedip sitenin dosyalarını her zamanki gibi GitHub'a yükleyin; Cloudflare Pages
+otomatik olarak yeni sürümü yayınlar.

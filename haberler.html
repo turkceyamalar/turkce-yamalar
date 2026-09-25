@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Yeni oyunlar, DLC duyuruları ve oyun güncellemeleri için Türkçe Yamalar haber arşivi.">
+  <title>Oyun Haberleri | Türkçe Yamalar</title>
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('turkce-yamalar-theme')==='dark'?'dark':'light'}catch(e){document.documentElement.dataset.theme='light'}</script><script src="theme.js" defer></script><link rel="stylesheet" href="style.css">
+</head>
+<body data-page="haberler.html">
+  <header class="site-header oi-header v29-header">
+    <div class="oi-nav-wrap v29-nav-wrap">
+      <a class="v38-brand v45-logo" href="index.html" aria-label="Türkçe Yamalar Ana Sayfa"><span class="brand-mark" aria-hidden="true">TY</span><span class="brand-name">Türkçe<strong>Yamalar</strong></span></a>
+      <nav class="oi-main-nav v29-main-nav" aria-label="Ana menü">
+        <a href="index.html" class="oi-nav-item v29-pill"><span>ANA SAYFA</span></a>
+        <a href="haberler.html" class="oi-nav-item v29-pill active" aria-current="page"><span>HABERLER</span></a>
+        <a href="yamalar.html" class="oi-nav-item v29-pill"><span>TÜRKÇE YAMA</span></a>
+      </nav>
+    </div>
+  </header>
+  <main class="news-page">
+    <section class="news-banner">
+      <div class="container">
+        <span class="news-kicker">OYUN DÜNYASINDAN</span>
+        <h1>Haberler</h1>
+        <p>Yeni çıkan oyunlar, DLC duyuruları ve güncellemeler burada.</p>
+      </div>
+    </section>
+    <section class="container news-content" aria-label="Haber arşivi">
+      <div class="news-filter" role="group" aria-label="Haber türü">
+        <button type="button" class="active" data-category="Tümü" aria-pressed="true">Tümü</button>
+        <button type="button" data-category="Yeni Oyun" aria-pressed="false">Yeni Oyun</button>
+        <button type="button" data-category="DLC" aria-pressed="false">DLC</button>
+        <button type="button" data-category="Güncelleme" aria-pressed="false">Güncelleme</button>
+        <button type="button" data-category="Site Haberleri" aria-pressed="false">Site Haberleri</button>
+      </div>
+      <div id="newsGrid" class="news-grid" aria-live="polite"></div>
+      <p id="newsEmpty" class="news-empty" hidden>Bu kategoride henüz haber yok. Yeni duyurular eklendiğinde burada görünecek.</p>
+    </section>
+  </main>
+  <footer><div class="container footer-inner"><span>© 2026 Türkçe Yamalar</span><div class="footer-actions footer-links"><a href="hakkimizda.html">Hakkımızda</a><a href="gizlilik.html">Gizlilik</a><a href="kullanim.html">Kullanım</a><a href="iletisim.html">İletişim</a><a href="destek.html">Destekle</a></div></div></footer>
+  <script src="haberler-veri.js"></script>
+  <script src="haberler.js"></script>
+</body>
+</html>

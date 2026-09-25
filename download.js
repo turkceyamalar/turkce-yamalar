@@ -2,6 +2,18 @@
   'use strict';
 
   const patches = {
+    'resident-evil-4-remake': {
+      title: 'Resident Evil 4 Remake Türkçe Yama', file: 'RE4_Remake_Dosya_Yamasi.zip', size: '51,7 MB', type: 'ZIP • EXE içermez', image: 'assets/resident-evil-4-cover.jpg', detail: 'resident-evil-4-remake.html',
+      parts: ['downloads/RE4_Remake_Dosya_Yamasi.zip.part1', 'downloads/RE4_Remake_Dosya_Yamasi.zip.part2', 'downloads/RE4_Remake_Dosya_Yamasi.zip.part3'], links: []
+    },
+    'resident-evil-2-remake': {
+      title: 'Resident Evil 2 Remake Türkçe Yama', file: 'RE2_Remake_Dosya_Yamasi.zip', size: '11,5 MB', type: 'ZIP • EXE içermez', image: 'assets/resident-evil-2-cover.jpg', detail: 'resident-evil-2-remake.html',
+      links: [['Siteden İndir', 'downloads/RE2_Remake_Dosya_Yamasi.zip']]
+    },
+    'resident-evil-village': {
+      title: 'Resident Evil Village Türkçe Yama', file: 'RE_Village_Dosya_Yamasi.zip', size: '410 KB', type: 'ZIP • EXE içermez', image: 'assets/resident-evil-village-cover.jpg', detail: 'resident-evil-village.html',
+      links: [['Siteden İndir', 'downloads/RE_Village_Dosya_Yamasi.zip']]
+    },
     aniimo: {
       title: 'Aniimo Türkçe Yama', file: 'Aniimo_Turkce_ASCII_Yama_v4_English_Slot.zip', size: 'Dosya sunucusunda', type: 'ZIP • EXE içermez', image: 'assets/aniimo-cover.webp', detail: 'aniimo.html',
       links: [
@@ -62,6 +74,10 @@
   $('downloadImage').src = patch.image;
   $('downloadImage').alt = patch.title;
   $('backToPatch').href = patch.detail;
+  if (patch.parts || patch.links.length < 2) {
+    const note = document.querySelector('.gateway-note');
+    if (note) note.textContent = patch.parts ? 'Büyük ZIP dosyası indirme sırasında parçaları birleştirilerek tek dosya olarak kaydedilir.' : 'İndirme başlamazsa düğmeye yeniden tıkla.';
+  }
 
   const cfg = window.TY_SUPABASE_CONFIG || {};
   const sb = window.supabase && cfg.url && cfg.anonKey ? window.supabase.createClient(cfg.url, cfg.anonKey) : null;
@@ -80,7 +96,39 @@
     location.href = url;
   }
 
-  if (!patch.links.length) {
+  if (patch.parts) {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'button download-primary gateway-download-button';
+    button.textContent = 'Siteden İndir';
+    button.addEventListener('click', async () => {
+      button.disabled = true;
+      const chunks = [];
+      try {
+        for (let i = 0; i < patch.parts.length; i++) {
+          button.textContent = `Dosya hazırlanıyor (${i + 1}/${patch.parts.length})…`;
+          const response = await fetch(patch.parts[i]);
+          if (!response.ok) throw new Error(`Parça ${i + 1} indirilemedi`);
+          chunks.push(await response.blob());
+        }
+        if (sb) { try { await sb.rpc('register_download', { p_patch_key: key }); } catch (_) {} }
+        const url = URL.createObjectURL(new Blob(chunks, { type: 'application/zip' }));
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = patch.file;
+        document.body.append(link);
+        link.click();
+        link.remove();
+        window.setTimeout(() => URL.revokeObjectURL(url), 60000);
+        button.textContent = 'İndirme başlatıldı';
+      } catch (_) {
+        button.textContent = 'İndirilemedi — tekrar dene';
+      } finally {
+        button.disabled = false;
+      }
+    });
+    $('downloadButtons').appendChild(button);
+  } else if (!patch.links.length) {
     $('downloadButtons').innerHTML = '<span class="button pending-download" aria-disabled="true">İndirme bağlantısı hazırlanıyor</span><p class="gateway-pending">Dosya hazır; genel indirme bağlantısı eklenince bu düğme otomatik olarak etkinleştirilecek.</p>';
   } else {
     patch.links.forEach(([label, url], index) => {
