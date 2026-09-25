@@ -824,3 +824,31 @@ footer{background:#e5edf5!important;border-color:#d6e0eb!important;color:#3a4e63
 .v38-summary{margin-top:0!important;padding-top:28px!important}
 @media(max-width:900px){.v42-slider,.v42-slider .v32-feature-inner{height:580px;min-height:580px}.v38-summary{padding-top:24px!important}}
 @media(max-width:620px){.v42-slider,.v42-slider .v32-feature-inner{height:540px;min-height:540px}.v42-slider .v32-feature-bg{background-position:center,78% center!important}.v38-summary{padding-top:20px!important}}
+
+/* v48: kapak dosyaları arka plana yayılmak yerine sınırlı görsel kutusunda */
+.v42-slider:not(.v42-no-art) .v32-feature-art{
+  position:absolute;right:0;top:0;bottom:0;z-index:1;
+  width:47%;height:100%;display:flex;align-items:center;justify-content:center;
+  overflow:hidden;pointer-events:none
+}
+.v42-slider:not(.v42-no-art) .v32-feature-art img{
+  display:block;width:100%;height:100%;max-width:100%;max-height:100%;
+  object-fit:contain;object-position:center;opacity:.94;
+  mask-image:none;-webkit-mask-image:none
+}
+.v42-slider .v32-feature-copy{z-index:2}
+@media(max-width:900px){
+  .v42-slider:not(.v42-no-art) .v32-feature-art{inset:0 0 0 auto;width:60%;z-index:1;opacity:.34!important}
+  .v42-slider,.v42-slider .v32-feature-inner{height:620px;min-height:620px}
+}
+@media(max-width:620px){
+  .v42-slider:not(.v42-no-art) .v32-feature-art{width:78%}
+  .v42-slider,.v42-slider .v32-feature-inner{height:620px;min-height:620px}
+  .v42-slider .v32-feature-bg{background-position:center!important}
+}
+
+/* v49: ilk vitrin Aniimo; JavaScript yüklenmeden de eski kapak görünmez */
+.v42-slider .v32-feature-bg{
+  background-image:linear-gradient(90deg,#080c12 0%,#121b27 60%,#0b1018 100%);
+  background-size:100% 100%;
+}

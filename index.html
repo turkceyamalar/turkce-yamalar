@@ -27,17 +27,17 @@
       <div class="container v32-feature-inner">
         <div class="v32-feature-copy">
           <span class="v32-eyebrow" id="featuredEyebrow">YENİ TÜRKÇE YAMA</span>
-          <h1 id="featuredTitle">BEAST OF <em>REINCARNATION</em></h1>
-          <h2 id="featuredSubtitle">KADERİNİ TÜRKÇE YAŞA</h2>
-          <p id="featuredDescription">Beast of Reincarnation kurucusuz Türkçe yaması Steam, Epic ve Game Pass seçenekleriyle arşive eklendi.</p>
-          <a class="v32-yellow-button" id="featuredLink" href="beast-of-reincarnation.html">🎮 Yamaya Göz At <b>›</b></a>
+          <h1 id="featuredTitle">ANIIMO <em>TÜRKÇE YAMA</em></h1>
+          <h2 id="featuredSubtitle">MACERANI KENDİ DİLİNDE YAŞA</h2>
+          <p id="featuredDescription">Aniimo dünyasını Türkçe keşfet. Güncel yama, kurulum videosu ve iki farklı indirme seçeneği hazır.</p>
+          <a class="v32-yellow-button" id="featuredLink" href="aniimo.html">🎮 Yamaya Göz At <b>›</b></a>
         </div>
         <div class="v32-feature-art">
-          <img id="featuredImage" src="assets/beast-of-reincarnation-cover.jpg" alt="Beast of Reincarnation">
+          <img id="featuredImage" src="assets/aniimo-cover.webp" alt="Aniimo">
         </div>
       </div>
       <div class="v42-slider-nav" role="tablist" aria-label="Öne çıkan yamayı seç">
-        <button class="active" type="button" role="tab" aria-selected="true" aria-label="1. yama: Beast of Reincarnation" data-slide="0">1</button>
+        <button class="active" type="button" role="tab" aria-selected="true" aria-label="1. yama: Aniimo" data-slide="0">1</button>
         <button type="button" role="tab" aria-selected="false" aria-label="2. yama: Gothic 1 Remake" data-slide="1">2</button>
         <button type="button" role="tab" aria-selected="false" aria-label="3. yama: Mortal Shell 2" data-slide="2">3</button>
         <button type="button" role="tab" aria-selected="false" aria-label="4. yama: Star Wars Outlaws" data-slide="3">4</button>
@@ -150,17 +150,17 @@
 
       const slides = [
         {
-          title: 'BEAST OF <em>REINCARNATION</em>',
-          subtitle: 'KADERİNİ TÜRKÇE YAŞA',
-          description: 'Beast of Reincarnation kurucusuz Türkçe yaması Steam, Epic ve Game Pass seçenekleriyle arşive eklendi.',
-          image: 'assets/beast-of-reincarnation-cover.jpg',
-          imageAlt: 'Beast of Reincarnation',
-          imagePosition: 'center center',
-          backgroundPosition: 'center 50%',
-          overlay: 'linear-gradient(90deg,rgba(8,12,18,.98) 0%,rgba(8,12,18,.84) 34%,rgba(8,12,18,.18) 68%,rgba(8,12,18,.30) 100%)',
-          showArt: false,
-          link: 'beast-of-reincarnation.html',
-          theme: 'beast'
+          title: 'ANIIMO <em>TÜRKÇE YAMA</em>',
+          subtitle: 'MACERANI KENDİ DİLİNDE YAŞA',
+          description: 'Aniimo dünyasını Türkçe keşfet. Güncel yama, kurulum videosu ve iki farklı indirme seçeneği hazır.',
+          image: 'assets/aniimo-cover.webp',
+          imageAlt: 'Aniimo',
+          imagePosition: 'center 28%',
+          backgroundPosition: 'center 38%',
+          overlay: 'linear-gradient(90deg,rgba(8,12,18,.98) 0%,rgba(8,12,18,.86) 34%,rgba(8,12,18,.48) 68%,rgba(8,12,18,.72) 100%)',
+          showArt: true,
+          link: 'aniimo.html',
+          theme: 'aniimo'
         },
         {
           title: 'GOTHIC 1 <em>REMAKE</em>',
@@ -290,7 +290,6 @@
       const image = document.getElementById('featuredImage');
       const buttons = [...slider.querySelectorAll('[data-slide]')];
       let current = 0;
-      let timer;
 
       function showSlide(index, animate) {
         current = (index + slides.length) % slides.length;
@@ -298,12 +297,11 @@
         if (animate) slider.classList.add('is-changing');
         window.setTimeout(function () {
           slider.dataset.theme = slide.theme;
-          slider.classList.toggle('v42-no-art', !slide.showArt);
-          background.style.backgroundImage = slide.overlay + ',url("' + slide.image + '")';
-          // Dikey kapakları yatay vitrinde büyütüp kırpma.
-          const portrait = current > 0;
-          background.style.setProperty('background-size', portrait ? '100% 100%, auto 100%' : '100% 100%, cover', 'important');
-          background.style.backgroundPosition = portrait ? 'center, 73% center' : 'center, ' + slide.backgroundPosition;
+          slider.classList.remove('v42-no-art');
+          // Beş dikey kapak da aynı sabit kutuya sığar; arka planda büyütülmez.
+          background.style.backgroundImage = slide.overlay;
+          background.style.setProperty('background-size', '100% 100%', 'important');
+          background.style.backgroundPosition = 'center';
           background.style.backgroundRepeat = 'no-repeat';
           title.innerHTML = slide.title;
           subtitle.textContent = slide.subtitle;
@@ -321,28 +319,17 @@
         }, animate ? 180 : 0);
       }
 
-      function startAutoPlay() {
-        window.clearInterval(timer);
-        timer = window.setInterval(function () { showSlide(current + 1, true); }, 7000);
-      }
-
       buttons.forEach(function (button) {
         button.addEventListener('click', function () {
           showSlide(Number(button.dataset.slide), true);
-          startAutoPlay();
         });
       });
-      slider.addEventListener('mouseenter', function () { window.clearInterval(timer); });
-      slider.addEventListener('mouseleave', startAutoPlay);
-      slider.addEventListener('focusin', function () { window.clearInterval(timer); });
-      slider.addEventListener('focusout', startAutoPlay);
       slider.addEventListener('keydown', function (event) {
-        if (event.key === 'ArrowRight') { showSlide(current + 1, true); startAutoPlay(); }
-        if (event.key === 'ArrowLeft') { showSlide(current - 1, true); startAutoPlay(); }
+        if (event.key === 'ArrowRight') showSlide(current + 1, true);
+        if (event.key === 'ArrowLeft') showSlide(current - 1, true);
       });
 
       showSlide(0, false);
-      startAutoPlay();
     })();
   </script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
