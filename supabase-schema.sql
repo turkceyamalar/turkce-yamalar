@@ -44,6 +44,11 @@ create table if not exists public.download_stats (
   updated_at timestamptz not null default now()
 );
 
+create table if not exists public.download_daily_stats (
+  day date primary key,
+  download_count bigint not null default 0 check (download_count >= 0)
+);
+
 create or replace function public.handle_new_user()
 returns trigger language plpgsql security definer set search_path=public as $$
 begin
@@ -67,9 +72,13 @@ alter table public.comments enable row level security;
 alter table public.poll_votes enable row level security;
 alter table public.presence enable row level security;
 alter table public.download_stats enable row level security;
+alter table public.download_daily_stats enable row level security;
 
 drop policy if exists "download stats public read" on public.download_stats;
 create policy "download stats public read" on public.download_stats for select using (true);
+
+drop policy if exists "daily download stats public read" on public.download_daily_stats;
+create policy "daily download stats public read" on public.download_daily_stats for select using (true);
 
 create or replace function public.register_download(p_patch_key text)
 returns bigint language plpgsql security definer set search_path=public as $$
@@ -83,6 +92,10 @@ begin
   on conflict(patch_key) do update
     set download_count=public.download_stats.download_count+1, updated_at=now()
   returning download_count into new_count;
+  insert into public.download_daily_stats(day,download_count)
+  values(timezone('Europe/Istanbul',now())::date,1)
+  on conflict(day) do update
+    set download_count=public.download_daily_stats.download_count+1;
   return new_count;
 end; $$;
 grant execute on function public.register_download(text) to anon, authenticated;
@@ -92,6 +105,16 @@ returns bigint language sql stable security definer set search_path=public as $$
   select coalesce((select download_count from public.download_stats where patch_key=p_patch_key),0);
 $$;
 grant execute on function public.get_download_count(text) to anon, authenticated;
+
+create or replace function public.get_download_dashboard()
+returns jsonb language sql stable security definer set search_path=public as $$
+  select jsonb_build_object(
+    'total_downloads', coalesce((select sum(download_count) from public.download_stats),0),
+    'today_downloads', coalesce((select download_count from public.download_daily_stats where day=timezone('Europe/Istanbul',now())::date),0),
+    'yesterday_downloads', coalesce((select download_count from public.download_daily_stats where day=timezone('Europe/Istanbul',now())::date-1),0)
+  );
+$$;
+grant execute on function public.get_download_dashboard() to anon, authenticated;
 
 create or replace function public.is_admin(uid uuid default auth.uid())
 returns boolean language sql stable security definer set search_path=public as $$
