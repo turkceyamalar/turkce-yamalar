@@ -8,6 +8,15 @@
   let currentUser=null, currentProfile=null;
   const page=document.body.dataset.page||location.pathname.split('/').pop()||'index.html';
 
+  function ensureFooterLinks(){
+    const footer=document.querySelector('footer .footer-inner');
+    if(!footer||footer.querySelector('.js-legal-links'))return;
+    const links=document.createElement('div');
+    links.className='footer-actions footer-links js-legal-links';
+    links.innerHTML='<a href="hakkimizda.html">Hakkımızda</a><a href="gizlilik.html">Gizlilik</a><a href="kullanim.html">Kullanım</a><a href="iletisim.html">İletişim</a><a href="destek.html">Destekle</a>';
+    footer.appendChild(links);
+  }
+
   function toast(msg,type='ok'){
     let box=$('#tyToast'); if(!box){box=document.createElement('div');box.id='tyToast';box.className='ty-toast';document.body.appendChild(box)}
     box.textContent=msg;box.className=`ty-toast show ${type}`;clearTimeout(box._t);box._t=setTimeout(()=>box.classList.remove('show'),2600);
@@ -146,6 +155,7 @@
   });
 
   async function init(){
+    ensureFooterLinks();
     if(sb){sb.auth.onAuthStateChange(async()=>{await refreshSession();renderPoll();renderComments()});}
     await refreshSession(); await renderPoll(); await renderComments(); await initProfilePage(); await initAdminPage(); heartbeat(); if(active)setInterval(heartbeat,30000);
   }

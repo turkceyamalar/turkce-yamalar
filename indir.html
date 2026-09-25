@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,follow">
+  <meta name="description" content="Türkçe yama dosya bilgileri, güvenlik notları ve resmi indirme seçenekleri.">
+  <title>Yama İndirme | Türkçe Yamalar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="indir.html">
+  <header class="site-header oi-header v29-header">
+    <div class="oi-nav-wrap v29-nav-wrap">
+      <a class="v38-brand" href="index.html" aria-label="Türkçe Yamalar Ana Sayfa"><span class="v38-pad">🎮</span><span><b>TÜRKÇE</b> YAMALAR</span></a>
+      <nav class="oi-main-nav v29-main-nav" aria-label="Ana menü">
+        <a href="index.html" class="oi-nav-item v29-pill"><span>ANA SAYFA</span></a>
+        <a href="yamalar.html" class="oi-nav-item v29-pill active"><span>TÜRKÇE YAMA</span></a>
+      </nav>
+      <span class="nav-auth oi-account v29-account"><a class="js-login" href="#">GİRİŞ</a><a class="js-register register-link" href="#">KAYIT OL</a></span>
+    </div>
+  </header>
+
+  <main class="download-gateway">
+    <section class="download-gateway-hero">
+      <div class="container gateway-head">
+        <a id="backToPatch" class="gateway-back" href="yamalar.html">‹ Yama sayfasına dön</a>
+        <span class="gateway-kicker">GÜVENLİ İNDİRME MERKEZİ</span>
+        <h1 id="downloadTitle">Yama hazırlanıyor...</h1>
+        <p id="downloadLead">Dosya bilgileri yükleniyor.</p>
+      </div>
+    </section>
+
+    <section class="section gateway-section">
+      <div class="container gateway-layout">
+        <div class="gateway-main">
+          <aside class="ad-slot" aria-label="Reklam alanı">
+            <span>REKLAM</span>
+            <p>AdSense onayından sonra reklam burada gösterilecek.</p>
+            <!-- AdSense reklam kodu onay alındıktan sonra bu alana eklenecek. -->
+          </aside>
+
+          <article class="gateway-card file-card">
+            <div class="gateway-file-top">
+              <img id="downloadImage" src="assets/turkce-yamalar-logo.png" alt="Türkçe yama kapak görseli">
+              <div>
+                <span class="mini-label">Dosya bilgisi</span>
+                <h2 id="downloadFileName">Türkçe Yama</h2>
+                <div class="gateway-meta">
+                  <span>📦 <b id="downloadSize">—</b></span>
+                  <span>🗂 <b id="downloadType">Arşiv</b></span>
+                  <span>⬇ <b id="downloadCount">Sayaç hazırlanıyor</b></span>
+                </div>
+              </div>
+            </div>
+            <div class="gateway-trust">
+              <span>✓ Kurulum EXE'si içermez</span>
+              <span>✓ Ücretsiz topluluk yaması</span>
+              <span>✓ İndirmeden önce tarayabilirsin</span>
+            </div>
+          </article>
+
+          <article class="gateway-card gateway-download-card">
+            <h2>İndirme seçenekleri</h2>
+            <p>Gerçek indirme düğmeleri aşağıdadır. Reklamlara tıklamak zorunda değilsin.</p>
+            <div id="downloadButtons" class="gateway-buttons" aria-live="polite"></div>
+            <p class="gateway-note">Bağlantı açılmazsa diğer indirme seçeneğini deneyebilirsin.</p>
+          </article>
+
+          <article class="gateway-card support-strip">
+            <div><span class="mini-label">Projeyi destekle</span><h2>Yamalar ücretsiz kalmaya devam etsin</h2><p>Reklam engelleyiciyi bu sitede kapatman bile projeye destek olur. Bağış bağlantısı daha sonra eklenecek.</p></div>
+            <a class="button secondary" href="destek.html">Destek seçenekleri</a>
+          </article>
+        </div>
+
+        <aside class="gateway-side">
+          <article class="gateway-card">
+            <h2>Kurulumdan önce</h2>
+            <ol>
+              <li>Oyun dosyalarının yedeğini al.</li>
+              <li>Arşivi güvenlik yazılımınla tara.</li>
+              <li>Yama sayfasındaki sürüm notunu kontrol et.</li>
+            </ol>
+            <a class="button vt-button" href="https://www.virustotal.com/gui/home/upload" target="_blank" rel="noopener noreferrer">VirusTotal'de Tara</a>
+          </article>
+          <article class="gateway-card legal-note">
+            <h2>Şeffaflık</h2>
+            <p>İndirme sayfasındaki reklamlar dosya düğmelerinden ayrı tutulur. Reklama tıklamak indirme şartı değildir.</p>
+          </article>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-inner"><span>© 2026 Türkçe Yamalar</span><div class="footer-actions footer-links"><a href="hakkimizda.html">Hakkımızda</a><a href="gizlilik.html">Gizlilik</a><a href="kullanim.html">Kullanım</a><a href="iletisim.html">İletişim</a></div></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="site.js"></script>
+  <script src="download.js"></script>
+</body>
+</html>

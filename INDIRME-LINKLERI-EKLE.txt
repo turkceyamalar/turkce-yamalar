@@ -3,11 +3,17 @@ YENI YAMALARIN INDIRME LINKLERI
 Bu surumde Beast of Reincarnation, Gothic 1 Remake ve Mortal Shell 2 sayfalari hazirdir.
 Buyuk RAR dosyalari Cloudflare Pages'in tek dosya sinirini astigi icin site paketine gomulmedi.
 
-RAR dosyalarini MediaFire veya dosya.co'ya yukledikten sonra asagidaki sayfalardaki
-"Indirme baglantisi hazirlaniyor" butonlarinin href alanina baglantilari ekleyin:
+RAR dosyalarini MediaFire veya dosya.co'ya yukledikten sonra download.js dosyasindaki
+ilgili yamanin "links: []" bolumune baglantiyi ekleyin:
 
-- beast-of-reincarnation.html
-- gothic-1-remake.html
-- mortal-shell-2.html
+- beast-of-reincarnation
+- gothic-1-remake
+- mortal-shell-2
+
+Ornek:
+links: [['MediaFire’dan İndir', 'BURAYA_LINK']]
+
+Yama sayfalarindaki butonlar artik kendi indir.html sayfamiza gider. Gercek MediaFire
+veya dosya.co baglantisi sadece download.js icinde tutulur.
 
 Baglantilari gonderirseniz site dosyasina sizin icin eklenebilir.

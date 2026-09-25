@@ -14,6 +14,12 @@ TÜRKÇE YAMALAR v25 - GERÇEK ÜYELİK / ADMIN KURULUMU
    update public.profiles set role='admin' where id=(select id from auth.users where email='SENIN_EPOSTAN@example.com');
 8) Çıkış yapıp tekrar giriş yap. Üst menüde "Admin" butonu gözükecek.
 
+İNDİRME SAYACI:
+- Bu sürümde kişisel bilgi tutmayan toplam indirme sayacı eklendi.
+- Supabase kurulumunu daha önce yaptıysan güncel "supabase-schema.sql" dosyasının
+  tamamını SQL Editor'da tekrar RUN et. "if not exists" komutları mevcut üyeleri
+  ve yorumları silmeden yalnızca eksik sayaç tablosu ile fonksiyonları ekler.
+
 ADMIN PANELİNDE:
 - Üyeleri ve e-postalarını görürsün.
 - 24 saat susturabilirsin.
