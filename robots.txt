@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://turkce-yamalar.pages.dev/sitemap.xml

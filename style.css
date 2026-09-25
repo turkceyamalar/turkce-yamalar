@@ -558,7 +558,7 @@ footer { border-top: 1px solid var(--border); padding: 26px 0; color: var(--mute
 /* v32 - gönderilen tasarımın siteye uygulanmış hali */
 .v32-home{background:#0c1118}
 .v32-feature{position:relative;overflow:hidden;min-height:440px;border-bottom:1px solid rgba(255,255,255,.09);background:#0d121a}
-.v32-feature-bg{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,12,18,.98) 0%,rgba(8,12,18,.88) 34%,rgba(8,12,18,.20) 67%,rgba(8,12,18,.58) 100%),url("assets/silent-hill-townfall-cover.jpg") center 34%/cover no-repeat;filter:saturate(.78)}
+.v32-feature-bg{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,12,18,.98) 0%,rgba(8,12,18,.84) 34%,rgba(8,12,18,.18) 68%,rgba(8,12,18,.30) 100%),url("assets/beast-of-reincarnation-cover.jpg") center 50%/cover no-repeat;filter:saturate(.78)}
 .v32-feature-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#0c1118 0%,transparent 28%),radial-gradient(circle at 72% 48%,transparent 0%,rgba(7,10,15,.24) 58%,rgba(7,10,15,.72) 100%)}
 .v32-feature-inner{position:relative;z-index:2;min-height:440px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center}
 .v32-feature-copy{padding:48px 0;max-width:610px}
@@ -735,6 +735,7 @@ footer{border-top:1px solid var(--pro-line);background:#06090c}
 .v42-slider-nav button.active{background:#ffd43b;border-color:#ffd43b;color:#11161c;box-shadow:0 5px 18px rgba(255,212,59,.28)}
 @media(max-width:900px){.v42-slider-nav{bottom:20px}.v42-slider .v32-feature-copy{padding-bottom:80px!important}}
 @media(max-width:620px){.v42-slider-nav button{width:32px;height:32px}.v42-slider-nav{gap:6px}}
+@media(max-width:430px){.v42-slider-nav{max-width:calc(100% - 20px);overflow-x:auto;justify-content:flex-start}.v42-slider-nav button{flex:0 0 30px;width:30px;height:30px}}
 
 /* Prince of Persia: The Lost Crown */
 .v38-prince .v38-hero{background-image:url('assets/prince-of-persia-the-lost-crown-cover.png');background-position:78% 36%}
@@ -749,3 +750,19 @@ footer{border-top:1px solid var(--pro-line);background:#06090c}
 .v38-starwars .game-logo-text{font-size:clamp(2.4rem,5vw,5.4rem);line-height:.92;letter-spacing:-.04em}
 .v38-starwars .starwars-cover{display:flex;align-items:center;justify-content:center;background:linear-gradient(140deg,#2a1711,#080b10);cursor:default}
 .v38-starwars .starwars-cover img{width:auto;max-width:100%;height:min(450px,65vw);object-fit:contain}
+
+/* v43 - Beast of Reincarnation, Gothic 1 Remake ve Mortal Shell 2 */
+.v38-beast .v38-hero{background-image:url('assets/beast-of-reincarnation-cover.jpg');background-position:center 48%}
+.v38-gothic .v38-hero{background-image:url('assets/gothic-1-remake-cover.jpg');background-position:72% 32%}
+.v38-mortal .v38-hero{background-image:url('assets/mortal-shell-2-cover.jpg');background-position:70% 22%}
+.v38-beast .v38-badge{background:rgba(219,151,48,.18);border-color:rgba(255,200,89,.45);color:#ffe0a0}
+.v38-gothic .v38-badge{background:rgba(224,79,39,.17);border-color:rgba(255,123,72,.42);color:#ffc2a6}
+.v38-mortal .v38-badge{background:rgba(185,20,31,.20);border-color:rgba(255,75,86,.45);color:#ffb5ba}
+.v38-beast .game-logo-text,.v38-gothic .game-logo-text,.v38-mortal .game-logo-text{font-size:clamp(2.35rem,5vw,5.15rem);line-height:.94;letter-spacing:-.035em}
+.direct-cover{display:flex;align-items:center;justify-content:center;background:#080b10;cursor:default}
+.direct-cover>img{width:100%!important;height:220px!important;object-fit:cover!important}
+.portrait-cover>img{object-position:center 25%}
+.trust-panel code{display:block;max-width:100%;padding:10px;border-radius:9px;background:#080c12;border:1px solid #26323d;color:#9fe8bd;font-size:.72rem;line-height:1.55;overflow-wrap:anywhere;user-select:all}
+.micro-note{font-size:.78rem!important;color:#8992a4!important;line-height:1.45}
+.pending-download{background:#2a303b!important;border:1px solid #414958!important;color:#b9c0cb!important;cursor:not-allowed;box-shadow:none!important}
+@media(max-width:900px){.v38-gothic .v38-hero,.v38-mortal .v38-hero{background-position:center top}.direct-cover>img{height:auto!important;aspect-ratio:16/9}}
