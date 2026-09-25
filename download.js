@@ -4,7 +4,7 @@
   const patches = {
     'resident-evil-4-remake': {
       title: 'Resident Evil 4 Remake Türkçe Yama', file: 'RE4_Remake_Dosya_Yamasi.zip', size: '51,7 MB', type: 'ZIP • EXE içermez', image: 'assets/resident-evil-4-cover.jpg', detail: 'resident-evil-4-remake.html',
-      parts: ['downloads/RE4_Remake_Dosya_Yamasi.zip.part1', 'downloads/RE4_Remake_Dosya_Yamasi.zip.part2', 'downloads/RE4_Remake_Dosya_Yamasi.zip.part3'], links: []
+      links: [['MediaFire’dan İndir', 'https://www.mediafire.com/file/au6ispp4p8mpw8w/RE4_Remake_Dosya_Yamasi.zip/file']]
     },
     'resident-evil-2-remake': {
       title: 'Resident Evil 2 Remake Türkçe Yama', file: 'RE2_Remake_Dosya_Yamasi.zip', size: '11,5 MB', type: 'ZIP • EXE içermez', image: 'assets/resident-evil-2-cover.jpg', detail: 'resident-evil-2-remake.html',

@@ -942,3 +942,6 @@ html[data-theme="dark"] .news-card p,html[data-theme="dark"] .news-meta{color:#a
 html[data-theme="dark"] .news-body{border-color:#304053}
 html[data-theme="dark"] .news-filter button{background:#1b2939;border-color:#34465b;color:#e3edf6}
 html[data-theme="dark"] .news-filter button.active,html[data-theme="dark"] .news-filter button:hover{background:#e87320;color:#17110d;border-color:#e87320}
+
+.section-logo-ty{display:grid!important;place-items:center!important;width:56px!important;height:52px!important;flex:0 0 56px!important;border-radius:12px!important;background:#17283c!important;color:#fff!important;font-size:1.15rem!important;font-weight:950!important;letter-spacing:-.11em!important;box-shadow:4px 4px 0 #f58a35!important;overflow:visible!important}
+html[data-theme="dark"] .section-logo-ty{background:#222e3f!important;box-shadow:4px 4px 0 #df6b1d!important}
