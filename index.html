@@ -300,7 +300,11 @@
           slider.dataset.theme = slide.theme;
           slider.classList.toggle('v42-no-art', !slide.showArt);
           background.style.backgroundImage = slide.overlay + ',url("' + slide.image + '")';
-          background.style.backgroundPosition = slide.backgroundPosition;
+          // Dikey kapakları yatay vitrinde büyütüp kırpma.
+          const portrait = current > 0;
+          background.style.setProperty('background-size', portrait ? '100% 100%, auto 100%' : '100% 100%, cover', 'important');
+          background.style.backgroundPosition = portrait ? 'center, 73% center' : 'center, ' + slide.backgroundPosition;
+          background.style.backgroundRepeat = 'no-repeat';
           title.innerHTML = slide.title;
           subtitle.textContent = slide.subtitle;
           description.textContent = slide.description;

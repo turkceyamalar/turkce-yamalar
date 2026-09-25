@@ -816,3 +816,11 @@ footer{background:#e5edf5!important;border-color:#d6e0eb!important;color:#3a4e63
 .footer-links a{color:#3a4e63!important}
 @media(max-width:760px){.v29-nav-wrap{width:calc(100% - 24px);gap:12px!important;overflow-x:auto!important}.v45-logo{height:62px;flex:0 0 auto;width:auto;background:rgba(250,252,255,.97)!important;padding-right:10px}.brand-mark{width:36px;height:36px;flex-basis:36px;font-size:.9rem}.brand-name{font-size:.82rem}.brand-name strong{font-size:.89rem}.v29-main-nav{margin-left:auto!important}}
 @media(max-width:520px){.v45-logo{position:sticky;left:0;z-index:5}.v29-main-nav{margin-left:10px!important}.v29-main-nav .v29-pill{font-size:.78rem!important}}
+
+/* v47: tüm beş vitrin görseli aynı yükseklikte; detay kartları ayrı nefes alır */
+.v42-slider,.v42-slider .v32-feature-inner{height:650px;min-height:650px}
+.v42-slider .v32-feature-bg{background-color:#0c1017}
+.v42-slider.v42-no-art .v32-feature-bg{background-repeat:no-repeat!important}
+.v38-summary{margin-top:0!important;padding-top:28px!important}
+@media(max-width:900px){.v42-slider,.v42-slider .v32-feature-inner{height:580px;min-height:580px}.v38-summary{padding-top:24px!important}}
+@media(max-width:620px){.v42-slider,.v42-slider .v32-feature-inner{height:540px;min-height:540px}.v42-slider .v32-feature-bg{background-position:center,78% center!important}.v38-summary{padding-top:20px!important}}

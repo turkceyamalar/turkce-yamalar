@@ -38,9 +38,9 @@
       title: 'Prince of Persia: The Lost Crown Türkçe Yama', file: 'PrinceOfPersiaTheLostCrown.rar', size: 'Dosya sunucusunda', type: 'RAR • EXE içermez', image: 'assets/prince-of-persia-the-lost-crown-cover.png', detail: 'prince-of-persia-the-lost-crown.html',
       links: [['MediaFire’dan İndir', 'https://www.mediafire.com/file/td5v61jmgnv63bf/PrinceOfPersiaTheLostCrown.rar/file']]
     },
-    'beast-of-reincarnation': { title: 'Beast of Reincarnation Türkçe Yama', file: 'Beast_of_Reincarnation_Turkce_Yama_Dosya.rar', size: '79,9 MB', type: 'RAR • EXE içermez', image: 'assets/beast-of-reincarnation-cover.jpg', detail: 'beast-of-reincarnation.html', links: [] },
-    'gothic-1-remake': { title: 'Gothic 1 Remake Türkçe Yama', file: 'Gothic_1_Remake_Turkce_Yama_Dosya.rar', size: '41,9 MB', type: 'RAR • EXE içermez', image: 'assets/gothic-1-remake-cover.jpg', detail: 'gothic-1-remake.html', links: [] },
-    'mortal-shell-2': { title: 'Mortal Shell 2 Türkçe Yama', file: 'Mortal_Shell_2_Turkce_Yama_Dosya.rar', size: '3,4 MB', type: 'RAR • EXE içermez', image: 'assets/mortal-shell-2-cover.jpg', detail: 'mortal-shell-2.html', links: [] }
+    'beast-of-reincarnation': { title: 'Beast of Reincarnation Türkçe Yama', file: 'Beast_of_Reincarnation_Turkce_Yama_Dosya.rar', size: '79,9 MB', type: 'RAR • EXE içermez', image: 'assets/beast-of-reincarnation-cover.jpg', detail: 'beast-of-reincarnation.html', links: [['MediaFire’dan İndir', 'https://www.mediafire.com/file/1wijszoks43wqwt/Beast_of_Reincarnation_Turkce_Yama_Dosya.rar/file']] },
+    'gothic-1-remake': { title: 'Gothic 1 Remake Türkçe Yama', file: 'Gothic_1_Remake_Turkce_Yama_Dosya.rar', size: '41,9 MB', type: 'RAR • EXE içermez', image: 'assets/gothic-1-remake-cover.jpg', detail: 'gothic-1-remake.html', links: [['MediaFire’dan İndir', 'https://www.mediafire.com/file/q5blibw9dnu2d71/Gothic_1_Remake_Turkce_Yama_Dosya.rar/file']] },
+    'mortal-shell-2': { title: 'Mortal Shell 2 Türkçe Yama', file: 'Mortal_Shell_2_Turkce_Yama_Dosya.rar', size: '3,4 MB', type: 'RAR • EXE içermez', image: 'assets/mortal-shell-2-cover.jpg', detail: 'mortal-shell-2.html', links: [['MediaFire’dan İndir', 'https://www.mediafire.com/file/ghtxfv0j9a330id/Mortal_Shell_2_Turkce_Yama_Dosya.rar/file']] }
   };
 
   const key = new URLSearchParams(location.search).get('yama') || '';
