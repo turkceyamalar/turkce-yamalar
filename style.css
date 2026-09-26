@@ -950,6 +950,3 @@ html[data-theme="dark"] .section-logo-ty{background:#222e3f!important;box-shadow
 html[data-theme="dark"] .patch-row-content{background:#162231!important;}
 html[data-theme="dark"] .v38-video-card{background:#0b131d!important;border-color:#2e3d50!important;}
 html[data-theme="dark"] .v38-video-label{background:#162231!important;color:#edf3f9!important;border-top:1px solid #2e3d50!important;}
-
-/* Mobil APK ve haber bağlantıları */
-.news-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px}.news-source-note{color:#52647a;margin:0 0 24px}.mobile-apk-grid{max-width:780px}.mobile-apk-card img{height:270px;object-position:center}.mobile-apk-card .button{display:inline-flex;margin-top:8px}.apk-disclaimer{margin-top:20px!important;font-size:.93rem}html[data-theme="dark"] .news-source-note{color:#aebdcb}@media(max-width:900px){.oi-nav-wrap{flex-wrap:wrap;gap:0}.oi-main-nav{overflow-x:auto;max-width:100%;width:100%;order:2}.oi-nav-item{padding:0 13px!important}}

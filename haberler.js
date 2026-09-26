@@ -3,7 +3,18 @@
   const empty = document.getElementById('newsEmpty');
   const buttons = [...document.querySelectorAll('[data-category]')];
   let news = Array.isArray(window.oyunHaberleri) ? [...window.oyunHaberleri] : [];
+  const STEAM_APPS = [
+    { id: 2050650, ad: 'Resident Evil 4' },
+    { id: 1196590, ad: 'Resident Evil Village' },
+    { id: 883710, ad: 'Resident Evil 2' },
+    { id: 2680010, ad: 'Silent Hill: Townfall' }
+  ];
   const dateFormatter = new Intl.DateTimeFormat('tr-TR', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+  const nonLatinScript = /[\u0400-\u052f\u2de0-\u2dff\ua640-\ua69f\u0600-\u06ff\u0370-\u03ff\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]/;
+
+  function isReadableNews(item) {
+    return !nonLatinScript.test(`${item.title || ''} ${item.contents || ''}`);
+  }
 
   function element(tag, className, value) {
     const node = document.createElement(tag);
@@ -52,20 +63,26 @@
   }
 
   async function loadSteamNews() {
-    try {
-      const res = await fetch('/api/haberler', { headers: { Accept: 'application/json' } });
-      if (!res.ok) return;
+    const requests = STEAM_APPS.map(async game => {
+      const url = `https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=${game.id}&count=20&maxlength=260&format=json`;
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(game.ad);
       const data = await res.json();
-      const steam = Array.isArray(data.news) ? data.news : [];
+      return (data?.appnews?.newsitems || []).filter(isReadableNews).slice(0, 4).map(x => ({
+        baslik: x.title,
+        kategori: /dlc|expansion/i.test(x.title) ? 'DLC' : 'Güncelleme',
+        tarih: new Date(x.date * 1000).toISOString().slice(0,10),
+        ozet: `${game.ad}: ${String(x.contents || '').replace(/\[[^\]]*\]|<[^>]*>/g, ' ').replace(/\s+/g,' ').trim().slice(0,260)}`,
+        metin: '', gorsel: '', kaynak: x.url
+      }));
+    });
+    try {
+      const groups = await Promise.allSettled(requests);
+      const steam = groups.filter(x => x.status === 'fulfilled').flatMap(x => x.value);
       const seen = new Set();
-      news = [...steam, ...news].filter(x => {
-        const key = (x.baslik || '') + (x.kaynak || '');
-        if (seen.has(key)) return false;
-        seen.add(key);
-        return true;
-      });
+      news = [...steam, ...news].filter(x => { const k=(x.baslik||'')+(x.kaynak||''); if(seen.has(k)) return false; seen.add(k); return true; });
       render(document.querySelector('[data-category].active')?.dataset.category || 'Tümü');
-    } catch (_) { /* Resmî kaynak geçici olarak erişilemezse yerel haberleri göster. */ }
+    } catch (_) {}
   }
 
   buttons.forEach(button => button.addEventListener('click', () => render(button.dataset.category)));

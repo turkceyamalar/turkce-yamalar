@@ -14,12 +14,16 @@
       title: 'Resident Evil Village Türkçe Yama', file: 'RE_Village_Dosya_Yamasi.zip', size: '410 KB', type: 'ZIP • EXE içermez', image: 'assets/resident-evil-village-cover.jpg', detail: 'resident-evil-village.html',
       links: [['Siteden İndir', 'downloads/RE_Village_Dosya_Yamasi.zip']]
     },
+    'red-dead-redemption-2': {
+      title: 'Red Dead Redemption 2 Türkçe Yama', file: 'RDR2_Turkce_Yama_Dosya_Kurulum.zip', size: 'Dosya sunucusunda', type: 'ZIP • EXE içermez', image: 'assets/rdr2-cover.png', detail: 'red-dead-redemption-2.html',
+      links: [['GoFile’dan İndir', 'https://gofile.io/d/xC2ZskiG']]
+    },
     aniimo: {
-      title: 'Aniimo Türkçe Yama', file: 'Aniimo_Turkce_ASCII_Yama_v5_English_Slot.zip', size: 'Dosya sunucusunda', type: 'ZIP • EXE içermez', image: 'assets/aniimo-cover.webp', detail: 'aniimo.html',
+      title: 'Aniimo Türkçe Yama', file: 'Aniimo_Turkce_ASCII_Yama_v4_English_Slot.zip', size: 'Dosya sunucusunda', type: 'ZIP • EXE içermez', image: 'assets/aniimo-cover.webp', detail: 'aniimo.html',
       links: [
-        ['Gofile’dan v5 İndir', 'https://gofile.io/d/gvwEiKwU'],
-        ['Eski sürüm v4 • MediaFire', 'https://www.mediafire.com/file/2haogl7cdelz0aw/Aniimo_Turkce_ASCII_Yama_v4_English_Slot.zip/file'],
-        ['Eski sürüm v4 • Dosya.co', 'https://dosya.co/dy2k5qz0dnjb/Aniimo_Turkce_ASCII_Yama_v4_English_Slot.zip.html']
+        ['MediaFire’dan İndir', 'https://www.mediafire.com/file/2haogl7cdelz0aw/Aniimo_Turkce_ASCII_Yama_v4_English_Slot.zip/file'],
+        ['Dosya.co’dan İndir', 'https://dosya.co/dy2k5qz0dnjb/Aniimo_Turkce_ASCII_Yama_v4_English_Slot.zip.html'],
+        ['Client Versiyonu (GoFile)', 'https://gofile.io/d/RDbP2plp']
       ]
     },
     cuphead: {
