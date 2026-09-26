@@ -4,6 +4,25 @@
   const header = document.querySelector('.site-header .v29-nav-wrap');
   if (!header) return;
 
+  const nav = header.querySelector('.v29-main-nav');
+  const brand = header.querySelector('.v45-logo');
+  if (nav && brand && !header.querySelector('.header-dragon')) {
+    const dragon = document.createElement('span');
+    dragon.className = 'header-dragon';
+    dragon.setAttribute('aria-hidden', 'true');
+    dragon.innerHTML = '<img src="assets/header-dragon.svg" alt="">';
+    header.insertBefore(dragon, nav);
+  }
+  if (nav && !nav.querySelector('.nav-support')) {
+    const support = document.createElement('a');
+    support.className = 'oi-nav-item v29-pill nav-support';
+    support.href = 'https://www.shopier.com/MUSTI88/51255056';
+    support.target = '_blank';
+    support.rel = 'noopener noreferrer nofollow';
+    support.innerHTML = '<span class="support-heart" aria-hidden="true">♥</span><span>DESTEKLE</span>';
+    nav.appendChild(support);
+  }
+
   const button = document.createElement('button');
   button.type = 'button';
   button.className = 'theme-toggle';

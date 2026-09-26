@@ -10,11 +10,15 @@
   }
 
   const statCards = [...document.querySelectorAll('.js-site-stats')];
+  // The owner confirmed 40 earlier downloads before the click recorder existed.
+  // The database stores subsequent clicks, so add that historical baseline once.
+  const historicDownloads = 40;
   const writeStat = (name, value) => {
     const formatted = Number(value).toLocaleString('tr-TR');
     document.querySelectorAll(`[data-stat="${name}"]`).forEach(node => { node.textContent = formatted; });
   };
   if (statCards.length) writeStat('total_patches', 15);
+  if (statCards.length) writeStat('total_downloads', historicDownloads);
   const cfg = window.TY_SUPABASE_CONFIG || {};
   if (!window.supabase || !cfg.url || !cfg.anonKey) return;
   const sb = window.supabase.createClient(cfg.url, cfg.anonKey);
@@ -36,14 +40,14 @@
   (async () => {
     const { data, error } = await sb.rpc('get_download_dashboard');
     if (!error && data && data.total_downloads != null) {
-      writeStat('total_downloads', data.total_downloads);
+      writeStat('total_downloads', historicDownloads + Number(data.total_downloads));
       writeStat('today_downloads', data.today_downloads);
       writeStat('yesterday_downloads', data.yesterday_downloads);
       return;
     }
     const fallback = await sb.from('download_stats').select('download_count');
     if (!fallback.error) {
-      writeStat('total_downloads', (fallback.data || []).reduce((sum, row) => sum + Number(row.download_count || 0), 0));
+      writeStat('total_downloads', historicDownloads + (fallback.data || []).reduce((sum, row) => sum + Number(row.download_count || 0), 0));
     }
     const istanbulDate = date => {
       const parts = new Intl.DateTimeFormat('en-US', { timeZone: 'Europe/Istanbul', year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(date);
