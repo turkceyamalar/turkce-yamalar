@@ -16,7 +16,7 @@
     const formatted = Number(value || 0).toLocaleString('tr-TR');
     document.querySelectorAll(`[data-stat="${name}"]`).forEach(node => { node.textContent = formatted; });
   };
-  writeStat('total_patches', 12);
+  writeStat('total_patches', 15);
 
   const cfg = window.TY_SUPABASE_CONFIG || {};
   if (!window.supabase || !cfg.url || !cfg.anonKey) return;
