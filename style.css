@@ -943,7 +943,8 @@ html[data-theme="dark"] .legal-page .contact-email,html[data-theme="dark"] .lega
 .uniform-media{max-width:720px;margin:0 0 28px}
 .uniform-media .v38-video-card{height:auto}
 .uniform-media .v38-video-card>img{height:auto;max-height:310px;object-fit:cover}
-.uniform-media .youtube-embed iframe{display:block;width:100%;aspect-ratio:16/9;height:auto;border:0}
+.uniform-media .youtube-embed iframe{display:block;position:absolute;inset:0;width:100%;height:100%!important;aspect-ratio:auto;border:0}
+.v38-video-card .youtube-embed iframe{height:100%!important}
 .uniform-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:stretch}
 .uniform-grid .uniform-card{min-width:0;border-radius:9px!important;padding:28px;background:#fff!important;border:1px solid #dce5ee!important;box-shadow:0 12px 30px rgba(31,55,79,.07)!important}
 .uniform-grid .uniform-card h2{margin:0 0 20px;font-size:1.45rem;line-height:1.3;color:#18283b!important}
