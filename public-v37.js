@@ -11,7 +11,7 @@
 
   // Owner-confirmed downloads before the server-side recorder was installed.
   // Nine of the 40 historical downloads have no per-game attribution.
-  const baseline = { daily: {'2026-09-25':3, '2026-09-26':37}, patches: {aniimo:31}, total:40 };
+  const baseline = { daily: {'2026-09-25':3, '2026-09-26':37}, patches: {aniimo:31}, total:40 }; // Confirmed totals: today 37, yesterday 3
   const dateKey = date => new Intl.DateTimeFormat('sv-SE', {timeZone:'Europe/Istanbul'}).format(date);
   const today = dateKey(new Date());
   const yesterday = dateKey(new Date(Date.now()-86400000));

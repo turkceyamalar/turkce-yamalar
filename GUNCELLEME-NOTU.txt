@@ -1,7 +1,5 @@
-V37 — 32 kareli, sürekli dönen GIF ejderha, kaldırılmış Haberler ve sayaç düzeltmesi.
-
-ZIP dosyasını bilgisayarda çıkarın. İçindeki TÜM dosyaları (index.html ve assets klasörü dahil) GitHub deposunun ana klasörüne yükleyip mevcut dosyaların üzerine yazın. ZIP dosyasının kendisini yüklemeyin. Cloudflare Pages dağıtımı tamamlandıktan sonra siteyi Ctrl+F5 ile yenileyin.
-
-Bugün (26 Eylül 2026): 37. Dün: 3. Toplam: 40. Aniimo: 31. Bunlar sayım başlamadan önce bildirilen indirmelerdir. Diğer 9 indirmenin oyunlara dağılımı bilinmediğinden uydurulmadı. Günlük etiketler İstanbul tarihine göre değişir.
-
-Yeni indirme tıklamalarının otomatik kaydı için Supabase > SQL Editor > New query bölümünde INDIRME-SAYACI-KUR.sql dosyasının içeriğini çalıştırın. Tablolar kurulmadan geçmiş sayılar görünür ama yeni tıklamalar sunucuya kaydedilemez. 40 eski indirimi SQL içine ayrıca eklemeyin; sitedeki geçmiş kaydıyla iki kez sayılır.
+V39
+- Bugünkü indirme: 37
+- Dünkü indirme: 3
+- Toplam indirme: 40
+- Ejderha GIF animasyonu ve haberler menüsü V38 ile korunmuştur.
