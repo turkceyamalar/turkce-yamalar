@@ -15,13 +15,17 @@
       links: [['Siteden İndir', 'downloads/RE_Village_Dosya_Yamasi.zip']]
     },
     aniimo: {
-      title: 'Aniimo Türkçe Yama', file: 'Aniimo_Turkce_ASCII_Yama_v4_English_Slot.zip', size: 'Dosya sunucusunda', type: 'ZIP • EXE içermez', image: 'assets/aniimo-cover.webp', detail: 'aniimo.html',
+      title: 'Aniimo Türkçe Yama', file: 'Aniimo_Turkce_ASCII_Yama.zip', size: 'Dosya sunucusunda', type: 'ZIP • EXE içermez', image: 'assets/aniimo-cover.webp', detail: 'aniimo.html',
       links: [
-        ['GoFile’dan İndir', 'https://gofile.io/d/gvwEiKwU'],
-        ['Client Versiyonu (GoFile)', 'https://gofile.io/d/RDbP2plp'],
-        ['MediaFire’dan İndir', 'https://www.mediafire.com/file/2haogl7cdelz0aw/Aniimo_Turkce_ASCII_Yama_v4_English_Slot.zip/file'],
-        ['Dosya.co’dan İndir', 'https://dosya.co/dy2k5qz0dnjb/Aniimo_Turkce_ASCII_Yama_v4_English_Slot.zip.html']
+        ['Steam Sürümü (Dosya.co)', 'https://dosya.co/e9856561yl86/Aniimo_Turkce_ASCII_Yama_v5_English_Slot.zip.html'],
+        ['PC Client Sürümü (Dosya.co)', 'https://dosya.co/x71udugwl2f9/Aniimo_Turkce_ASCII_Yama_v4_English_Slot(1).zip.html']
       ]
+    },
+    'gta-5': { title: 'Grand Theft Auto V Türkçe Yama', file: 'GTA_5_TR_Dosya_Kopyala.zip', size: 'Dosya sunucusunda', type: 'ZIP • EXE içermez', image: 'assets/gta-5-cover.png', detail: 'gta-5.html', links: [['Dosya.co’dan İndir', 'https://dosya.co/6g8qlxymjwbi/GTA_5_TR_Dosya_Kopyala.zip.html']] },
+    'shadow-of-the-tomb-raider': { title: 'Shadow of the Tomb Raider Türkçe Yama', file: 'Shadow_of_the_Tomb_Raider_TR_Dosya_Kopyala.zip', size: 'Dosya sunucusunda', type: 'ZIP • EXE içermez', image: 'assets/shadow-of-the-tomb-raider-cover.png', detail: 'shadow-of-the-tomb-raider.html', links: [['Dosya.co’dan İndir', 'https://dosya.co/m2ijdt9b221h/Shadow_of_the_Tomb_Raider_TR_Dosya_Kopyala.zip.html']] },
+    'red-dead-redemption-2': {
+      title: 'Red Dead Redemption 2 Türkçe Yama', file: 'RDR2_Turkce_Yama_Dosya_Kurulum.zip', size: 'Dosya sunucusunda', type: 'ZIP • EXE içermez', image: 'assets/rdr2-cover.png', detail: 'red-dead-redemption-2.html',
+      links: [['Dosya.co’dan İndir', 'https://dosya.co/jbc08lem0ni1/RDR2_Turkce_Yama_Dosya_Kurulum.zip.html']]
     },
     cuphead: {
       title: 'Cuphead Türkçe Yama', file: 'Cuphead_Tam_Turkce_Yama_Kurucusuz.zip', size: 'Dosya sunucusunda', type: 'ZIP • EXE içermez', image: 'assets/cuphead-cover-small.jpg', detail: 'cuphead.html',
