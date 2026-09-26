@@ -15,10 +15,11 @@
       links: [['Siteden İndir', 'downloads/RE_Village_Dosya_Yamasi.zip']]
     },
     aniimo: {
-      title: 'Aniimo Türkçe Yama', file: 'Aniimo_Turkce_ASCII_Yama_v4_English_Slot.zip', size: 'Dosya sunucusunda', type: 'ZIP • EXE içermez', image: 'assets/aniimo-cover.webp', detail: 'aniimo.html',
+      title: 'Aniimo Türkçe Yama', file: 'Aniimo_Turkce_ASCII_Yama_v5_English_Slot.zip', size: 'Dosya sunucusunda', type: 'ZIP • EXE içermez', image: 'assets/aniimo-cover.webp', detail: 'aniimo.html',
       links: [
-        ['MediaFire’dan İndir', 'https://www.mediafire.com/file/2haogl7cdelz0aw/Aniimo_Turkce_ASCII_Yama_v4_English_Slot.zip/file'],
-        ['Dosya.co’dan İndir', 'https://dosya.co/dy2k5qz0dnjb/Aniimo_Turkce_ASCII_Yama_v4_English_Slot.zip.html']
+        ['Gofile’dan v5 İndir', 'https://gofile.io/d/gvwEiKwU'],
+        ['Eski sürüm v4 • MediaFire', 'https://www.mediafire.com/file/2haogl7cdelz0aw/Aniimo_Turkce_ASCII_Yama_v4_English_Slot.zip/file'],
+        ['Eski sürüm v4 • Dosya.co', 'https://dosya.co/dy2k5qz0dnjb/Aniimo_Turkce_ASCII_Yama_v4_English_Slot.zip.html']
       ]
     },
     cuphead: {
