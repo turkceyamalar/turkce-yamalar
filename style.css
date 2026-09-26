@@ -997,3 +997,18 @@ html[data-theme="dark"] .nav-support .support-heart{color:#f58a35}
 .v32-card-grid>.v32-game-card>.v32-card-body{display:flex;flex:1;flex-direction:column}
 .v32-card-grid>.v32-game-card .v32-detail{margin-top:auto}
 @media(max-width:1300px){.header-dragon{display:none}}
+
+/* Balanced patch pages, shared art sizing and download labels. */
+.uniform-grid{align-items:start}
+.detail-column{display:grid;gap:20px;min-width:0}
+.uniform-media.media-pair{max-width:none;display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
+.media-pair #v38-video,.media-pair .v38-video-card{height:100%}
+.detail-art{margin:0;overflow:hidden;border-radius:9px;border:1px solid #dce5ee;background:#142132}
+.detail-art img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:16/10}
+.media-banner .v38-video-card>img{width:100%;height:220px;max-height:none;object-fit:cover;object-position:center}
+.uniform-grid .uniform-card h2:not(:first-child){margin-top:26px}
+.uniform-grid code{overflow-wrap:anywhere}
+.patch-download-count{font-size:.85rem!important;font-weight:700;color:#b75212!important;margin:12px 0!important;min-height:0!important}
+html[data-theme="dark"] .patch-download-count{color:#ffac6e!important}
+html[data-theme="dark"] .detail-art{border-color:#2e3d50}
+@media(max-width:720px){.uniform-media.media-pair{grid-template-columns:1fr}.detail-art img{height:auto;aspect-ratio:16/9}.media-banner .v38-video-card>img{height:auto;aspect-ratio:720/220}}

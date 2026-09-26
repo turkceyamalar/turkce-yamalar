@@ -1,164 +1,149 @@
 <!DOCTYPE html>
+
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="description" content="Türkçe Yamalar oyun arşivi - PC oyunları için Türkçe yama indir">
-  <title>Türkçe Yamalar Arşivi | Türkçe Yamalar</title>
-  <script>try{document.documentElement.dataset.theme=localStorage.getItem('turkce-yamalar-theme')==='dark'?'dark':'light'}catch(e){document.documentElement.dataset.theme='light'}</script><script src="theme.js" defer></script><link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<meta content="Türkçe Yamalar oyun arşivi - PC oyunları için Türkçe yama indir" name="description"/>
+<title>Türkçe Yamalar Arşivi | Türkçe Yamalar</title>
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('turkce-yamalar-theme')==='dark'?'dark':'light'}catch(e){document.documentElement.dataset.theme='light'}</script><script defer="" src="theme.js"></script><link href="style.css" rel="stylesheet"/>
 </head>
 <body data-page="yamalar.html">
 <header class="site-header oi-header v29-header">
-  <div class="oi-nav-wrap v29-nav-wrap">
-    <a class="v38-brand v45-logo" href="index.html" aria-label="Türkçe Yamalar Ana Sayfa"><span class="brand-mark" aria-hidden="true">TY</span><span class="brand-name">Türkçe<strong>Yamalar</strong></span></a>
-    <nav class="oi-main-nav v29-main-nav" aria-label="Ana menü">
-      <a href="index.html" class="oi-nav-item v29-pill"><span class="oi-menu-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.2 12 3l9 8.2v9.3a.5.5 0 0 1-.5.5h-5.7v-6.4H9.2V21H3.5a.5.5 0 0 1-.5-.5z"/><path d="M1.8 11.1 12 1.8l10.2 9.3"/></svg></span><span>ANA SAYFA</span></a>
-      <a href="haberler.html" class="oi-nav-item v29-pill"><span class="oi-menu-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16v18H4zM8 8h8M8 12h8M8 16h5"/></svg></span><span>HABERLER</span></a>
-      <a href="apklar.html" class="oi-nav-item v29-pill"><span class="oi-menu-icon">📱</span><span>APK'LAR</span></a>
-      <a href="yamalar.html" class="oi-nav-item v29-pill active"><span class="oi-menu-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7.5 7.5 12 3l4.5 4.5M5 13H3v7h18v-7h-2"/></svg></span><span>TÜRKÇE YAMA</span></a>
-    </nav>
-  </div>
+<div class="oi-nav-wrap v29-nav-wrap">
+<a aria-label="Türkçe Yamalar Ana Sayfa" class="v38-brand v45-logo" href="index.html"><span aria-hidden="true" class="brand-mark">TY</span><span class="brand-name">Türkçe<strong>Yamalar</strong></span></a>
+<nav aria-label="Ana menü" class="oi-main-nav v29-main-nav">
+<a class="oi-nav-item v29-pill" href="index.html"><span class="oi-menu-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3 11.2 12 3l9 8.2v9.3a.5.5 0 0 1-.5.5h-5.7v-6.4H9.2V21H3.5a.5.5 0 0 1-.5-.5z"></path><path d="M1.8 11.1 12 1.8l10.2 9.3"></path></svg></span><span>ANA SAYFA</span></a>
+
+<a class="oi-nav-item v29-pill" href="apklar.html"><span class="oi-menu-icon">📱</span><span>APK'LAR</span></a>
+<a class="oi-nav-item v29-pill active" href="yamalar.html"><span class="oi-menu-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 3v12M7.5 7.5 12 3l4.5 4.5M5 13H3v7h18v-7h-2"></path></svg></span><span>TÜRKÇE YAMA</span></a>
+</nav>
+</div>
 </header>
-
 <main>
-  <section class="archive-hero">
-    <div class="container">
-      <span class="badge">Türkçe yama arşivi</span>
-      <h1>PC Oyun Türkçe Yamaları</h1>
-      <p>Aradığın oyunun Türkçe yamasını bul, detaylarını incele ve indirme sayfasına git.</p>
-      <div class="archive-searchbar">
-        <span class="search-icon">⌕</span>
-        <input id="patchSearch" type="search" placeholder="Oyun veya yama ara..." autocomplete="off">
-      </div>
-    </div>
-  </section>
-
-  <section class="section archive-section">
-    <div class="container archive-layout">
-      <div class="archive-main">
-        <div class="archive-toolbar">
-          <div class="filter-tabs" id="filterTabs">
-            <button class="filter-tab active" data-filter="all">Tümü</button>
-            <button class="filter-tab" data-filter="published">Yayınlanan</button>
-            <button class="filter-tab" data-filter="upcoming">Yakında</button>
-          </div>
-          <select id="patchSort" class="archive-sort" aria-label="Yamaları sırala">
-            <option value="newest">En Yeni</option>
-            <option value="name">A-Z</option>
-          </select>
-        </div>
-
-        <div id="patchList" class="patch-list-modern">
-<article class="patch-row" data-title="Grand Theft Auto V Türkçe Yama" data-state="published" data-order="15"><a class="patch-thumb" href="gta-5.html"><img src="assets/gta-5-cover.png" alt="Grand Theft Auto V Türkçe Yama" loading="lazy"></a><div class="patch-row-content"><div class="patch-row-top"><span class="status">Yeni</span><span class="patch-date">26 Eylül 2026</span></div><h2><a href="gta-5.html">Grand Theft Auto V Türkçe Yama</a></h2><p>GTA 5 için kurucusuz dosya kopyalama Türkçe yaması.</p><div class="patch-tags"><span>Windows</span><span>Kurucusuz</span><span>GTA V</span></div><a class="patch-readmore" href="gta-5.html">Yamayı görüntüle →</a></div></article>
-<article class="patch-row" data-title="Shadow of the Tomb Raider Türkçe Yama" data-state="published" data-order="14"><a class="patch-thumb" href="shadow-of-the-tomb-raider.html"><img src="assets/shadow-of-the-tomb-raider-cover.png" alt="Shadow of the Tomb Raider Türkçe Yama" loading="lazy"></a><div class="patch-row-content"><div class="patch-row-top"><span class="status">Yeni</span><span class="patch-date">26 Eylül 2026</span></div><h2><a href="shadow-of-the-tomb-raider.html">Shadow of the Tomb Raider Türkçe Yama</a></h2><p>Shadow of the Tomb Raider için kurucusuz dosya kopyalama Türkçe yaması.</p><div class="patch-tags"><span>Windows</span><span>Kurucusuz</span><span>Tomb Raider</span></div><a class="patch-readmore" href="shadow-of-the-tomb-raider.html">Yamayı görüntüle →</a></div></article>
-<article class="patch-row" data-title="Red Dead Redemption 2 Türkçe Yama" data-state="published" data-order="13"><a class="patch-thumb" href="red-dead-redemption-2.html"><img src="assets/rdr2-cover.png" alt="Red Dead Redemption 2 Türkçe Yama" loading="lazy"></a><div class="patch-row-content"><div class="patch-row-top"><span class="status">Yeni</span><span class="patch-date">26 Eylül 2026</span></div><h2><a href="red-dead-redemption-2.html">Red Dead Redemption 2 Türkçe Yama</a></h2><p>RDR2 için kurucusuz Türkçe yama dosyaları ve kolay klasöre kopyalama kurulumu.</p><div class="patch-tags"><span>Windows</span><span>Kurucusuz</span><span>RDR2</span></div><a class="patch-readmore" href="red-dead-redemption-2.html">Yamayı görüntüle →</a></div></article>
-<article class="patch-row" data-title="Resident Evil 4 Remake Türkçe Yama" data-state="published" data-order="12"><a class="patch-thumb" href="resident-evil-4-remake.html"><img src="assets/resident-evil-4-cover.jpg" alt="Resident Evil 4 Remake Türkçe Yama" loading="lazy"></a><div class="patch-row-content"><div class="patch-row-top"><span class="status">Yeni</span><span class="patch-date">25 Eylül 2026</span></div><h2><a href="resident-evil-4-remake.html">Resident Evil 4 Remake Türkçe Yama</a></h2><p>RE4 Remake Türkçe yama dosyası ve kurulum notları.</p><div class="patch-tags"><span>Windows</span><span>Kurucusuz</span><span>Resident Evil</span></div><a class="patch-readmore" href="resident-evil-4-remake.html">Yamayı görüntüle →</a></div></article>
-<article class="patch-row" data-title="Resident Evil 2 Remake Türkçe Yama" data-state="published" data-order="11"><a class="patch-thumb" href="resident-evil-2-remake.html"><img src="assets/resident-evil-2-cover.jpg" alt="Resident Evil 2 Remake Türkçe Yama" loading="lazy"></a><div class="patch-row-content"><div class="patch-row-top"><span class="status">Yeni</span><span class="patch-date">25 Eylül 2026</span></div><h2><a href="resident-evil-2-remake.html">Resident Evil 2 Remake Türkçe Yama</a></h2><p>RE2 Remake için kurucusuz Türkçe yama ve kurulum anlatımı.</p><div class="patch-tags"><span>Windows</span><span>Kurucusuz</span><span>Resident Evil</span></div><a class="patch-readmore" href="resident-evil-2-remake.html">Yamayı görüntüle →</a></div></article>
-<article class="patch-row" data-title="Resident Evil Village Türkçe Yama" data-state="published" data-order="10"><a class="patch-thumb" href="resident-evil-village.html"><img src="assets/resident-evil-village-cover.jpg" alt="Resident Evil Village Türkçe Yama" loading="lazy"></a><div class="patch-row-content"><div class="patch-row-top"><span class="status">Yeni</span><span class="patch-date">25 Eylül 2026</span></div><h2><a href="resident-evil-village.html">Resident Evil Village Türkçe Yama</a></h2><p>Resident Evil Village için kurucusuz Türkçe yama.</p><div class="patch-tags"><span>Windows</span><span>Kurucusuz</span><span>Resident Evil</span></div><a class="patch-readmore" href="resident-evil-village.html">Yamayı görüntüle →</a></div></article>
-          <article class="patch-row" data-title="Beast of Reincarnation Türkçe Yama" data-state="published" data-order="9">
-            <a class="patch-thumb" href="beast-of-reincarnation.html"><img src="assets/beast-of-reincarnation-cover.jpg" alt="Beast of Reincarnation Türkçe Yama" loading="lazy"></a>
-            <div class="patch-row-content"><div class="patch-row-top"><span class="status">Yeni</span><span class="patch-date">25 Eylül 2026</span></div><h2><a href="beast-of-reincarnation.html">Beast of Reincarnation Türkçe Yama</a></h2><p>Steam, Epic ve Game Pass desteği bulunan kurucusuz Türkçe yama dosyaları.</p><div class="patch-tags"><span>Windows</span><span>Kurucusuz</span><span>Aksiyon RPG</span></div><a class="patch-readmore" href="beast-of-reincarnation.html">Yamayı görüntüle →</a></div>
-          </article>
-
-          <article class="patch-row" data-title="Gothic 1 Remake Türkçe Yama" data-state="published" data-order="8">
-            <a class="patch-thumb" href="gothic-1-remake.html"><img src="assets/gothic-1-remake-cover.jpg" alt="Gothic 1 Remake Türkçe Yama" loading="lazy"></a>
-            <div class="patch-row-content"><div class="patch-row-top"><span class="status">Yeni</span><span class="patch-date">25 Eylül 2026</span></div><h2><a href="gothic-1-remake.html">Gothic 1 Remake Türkçe Yama</a></h2><p>Türkçe karakter desteği ve doğrudan klasöre kopyalama yöntemiyle kurucusuz yama.</p><div class="patch-tags"><span>Windows</span><span>Kurucusuz</span><span>RPG</span></div><a class="patch-readmore" href="gothic-1-remake.html">Yamayı görüntüle →</a></div>
-          </article>
-
-          <article class="patch-row" data-title="Mortal Shell 2 Türkçe Yama" data-state="published" data-order="7">
-            <a class="patch-thumb" href="mortal-shell-2.html"><img src="assets/mortal-shell-2-cover.jpg" alt="Mortal Shell 2 Türkçe Yama" loading="lazy"></a>
-            <div class="patch-row-content"><div class="patch-row-top"><span class="status">Yeni</span><span class="patch-date">25 Eylül 2026</span></div><h2><a href="mortal-shell-2.html">Mortal Shell 2 Türkçe Yama</a></h2><p>Steam, Epic ve Game Pass için ayrı klasörleri bulunan küçük boyutlu kurucusuz yama.</p><div class="patch-tags"><span>Windows</span><span>Kurucusuz</span><span>Souls-like</span></div><a class="patch-readmore" href="mortal-shell-2.html">Yamayı görüntüle →</a></div>
-          </article>
-
-          <article class="patch-row" data-title="Star Wars Outlaws Türkçe Yama" data-state="published" data-order="6">
-            <a class="patch-thumb" href="star-wars-outlaws.html"><img src="assets/star-wars-outlaws-cover.png" alt="Star Wars Outlaws Türkçe Yama" loading="lazy"></a>
-            <div class="patch-row-content"><div class="patch-row-top"><span class="status">Yeni</span><span class="patch-date">24 Eylül 2026</span></div><h2><a href="star-wars-outlaws.html">Star Wars Outlaws Türkçe Yama</a></h2><p>Türkçe yama dosyaları, MediaFire indirme bağlantısı ve kurulum notları.</p><div class="patch-tags"><span>Windows</span><span>Türkçe</span><span>Aksiyon</span></div><a class="patch-readmore" href="star-wars-outlaws.html">Yamayı görüntüle →</a></div>
-          </article>
-
-          <article class="patch-row" data-title="Prince of Persia The Lost Crown Türkçe Yama" data-state="published" data-order="5">
-            <a class="patch-thumb" href="prince-of-persia-the-lost-crown.html"><img src="assets/prince-of-persia-the-lost-crown-cover.png" alt="Prince of Persia The Lost Crown Türkçe Yama" loading="lazy"></a>
-            <div class="patch-row-content"><div class="patch-row-top"><span class="status">Yeni</span><span class="patch-date">23 Eylül 2026</span></div><h2><a href="prince-of-persia-the-lost-crown.html">Prince of Persia: The Lost Crown Türkçe Yama</a></h2><p>MediaFire indirme bağlantısı ve kurulum öncesi bilgiler.</p><div class="patch-tags"><span>Windows</span><span>Türkçe</span><span>Aksiyon</span></div><a class="patch-readmore" href="prince-of-persia-the-lost-crown.html">Yamayı görüntüle →</a></div>
-          </article>
-
-
-
-          
-          <article class="patch-row mindseye-patch-row" data-title="MindsEye Türkçe Yama" data-state="published" data-order="4">
-            <a class="patch-thumb" href="mindseye.html"><img src="assets/mindseye-hero.jpg" alt="MindsEye Türkçe Yama" loading="lazy"></a>
-            <div class="patch-row-content">
-              <div class="patch-row-top"><span class="status">Yeni</span><span class="patch-date">23 Eylül 2026</span></div>
-              <h2><a href="mindseye.html">MindsEye Türkçe Yama</a></h2>
-              <p>MindsEye için Türkçe yama. İndirme bağlantıları, kurulum ve VirusTotal kontrolü.</p>
-              <div class="patch-tags"><span>Windows</span><span>Türkçe</span><span>Aksiyon</span></div>
-              <a class="patch-readmore" href="mindseye.html">Yamayı görüntüle →</a>
-            </div>
-          </article>
-<article class="patch-row" data-title="Silent Hill Townfall Türkçe Yama" data-state="published" data-order="3">
-            <a class="patch-thumb" href="silent-hill-townfall.html"><img src="assets/silent-hill-townfall-cover.jpg" alt="Silent Hill Townfall Türkçe Yama" loading="lazy"></a>
-            <div class="patch-row-content">
-              <div class="patch-row-top"><span class="status">Yeni</span><span class="patch-date">23 Eylül 2026</span></div>
-              <h2><a href="silent-hill-townfall.html">Silent Hill Townfall Türkçe Yama</a></h2>
-              <p>Kurucusuz dosya sürümü. Dosya.co ve MediaFire indirme seçenekleri hazır.</p>
-              <div class="patch-tags"><span>Windows</span><span>Kurucusuz</span><span>Korku</span></div>
-              <a class="patch-readmore" href="silent-hill-townfall.html">Yamayı görüntüle →</a>
-            </div>
-          </article>
-
-          <article class="patch-row" data-title="Aniimo Türkçe Yama" data-state="published" data-order="2">
-            <a class="patch-thumb" href="aniimo.html"><img src="assets/aniimo-cover.webp" alt="Aniimo Türkçe Yama" loading="lazy"></a>
-            <div class="patch-row-content">
-              <div class="patch-row-top"><span class="status">Yayınlandı</span><span class="patch-date">23 Eylül 2026</span></div>
-              <h2><a href="aniimo.html">Aniimo Türkçe Yama</a></h2>
-              <p>Aniimo için hazırlanmış Türkçe topluluk yaması. Kurulum, indirme bağlantıları ve sürüm bilgileri.</p>
-              <div class="patch-tags"><span>Windows</span><span>v4</span><span>Türkçe</span></div>
-              <a class="patch-readmore" href="aniimo.html">Yamayı görüntüle →</a>
-            </div>
-          </article>
-
-          <article class="patch-row" data-title="Cuphead Türkçe Yama" data-state="published" data-order="1">
-            <a class="patch-thumb" href="cuphead.html"><img src="assets/cuphead-cover-small.jpg" alt="Cuphead Türkçe Yama" loading="lazy"></a>
-            <div class="patch-row-content">
-              <div class="patch-row-top"><span class="status">Yayınlandı</span><span class="patch-date">22 Eylül 2026</span></div>
-              <h2><a href="cuphead.html">Cuphead Türkçe Yama</a></h2>
-              <p>Cuphead için hazırlanmış tam Türkçe yama. Kurucusuz paket ve kolay kurulum bilgileri.</p>
-              <div class="patch-tags"><span>Windows</span><span>Tam Türkçe</span><span>Yama</span></div>
-              <a class="patch-readmore" href="cuphead.html">Yamayı görüntüle →</a>
-            </div>
-          </article>
-        </div>
-
-        <div id="noPatchResult" class="no-patch-result" hidden>Aramana uygun yama bulunamadı.</div>
-        <nav class="pagination-modern" aria-label="Sayfalama"><span class="current">1</span><span class="disabled">Sonraki ›</span></nav>
-      </div>
-
-      <aside class="archive-sidebar">
-        <section class="v45-stats-card js-site-stats" aria-label="Site istatistikleri">
-          <h3><span>▥</span> İstatistik</h3>
-          <div class="v45-stat-row"><span>Toplam Yama:</span><b data-stat="total_patches">15</b><i>›</i></div>
-          <div class="v45-stat-row"><span>Toplam İndirme:</span><b data-stat="total_downloads">40</b><i>›</i></div>
-          <div class="v45-stat-row"><span>Bugünkü İndirme:</span><b data-stat="today_downloads">—</b><i>›</i></div>
-          <div class="v45-stat-row"><span>Dünkü İndirme:</span><b data-stat="yesterday_downloads">—</b><i>›</i></div>
-        </section>
-        <section class="sidebar-card">
-          <h3>Hızlı Erişim</h3>
-<a class="sidebar-link" href="resident-evil-4-remake.html"><img src="assets/resident-evil-4-cover.jpg" alt=""><span><b>Resident Evil 4 Remake</b><small>Türkçe Yama • Yeni</small></span></a>
-<a class="sidebar-link" href="resident-evil-2-remake.html"><img src="assets/resident-evil-2-cover.jpg" alt=""><span><b>Resident Evil 2 Remake</b><small>Türkçe Yama • Yeni</small></span></a>
-<a class="sidebar-link" href="resident-evil-village.html"><img src="assets/resident-evil-village-cover.jpg" alt=""><span><b>Resident Evil Village</b><small>Türkçe Yama • Yeni</small></span></a>
-          <a class="sidebar-link" href="beast-of-reincarnation.html"><img src="assets/beast-of-reincarnation-cover.jpg" alt=""><span><b>Beast of Reincarnation</b><small>Türkçe Yama • Yeni</small></span></a>
-          <a class="sidebar-link" href="gothic-1-remake.html"><img src="assets/gothic-1-remake-cover.jpg" alt=""><span><b>Gothic 1 Remake</b><small>Türkçe Yama • Yeni</small></span></a>
-          <a class="sidebar-link" href="mortal-shell-2.html"><img src="assets/mortal-shell-2-cover.jpg" alt=""><span><b>Mortal Shell 2</b><small>Türkçe Yama • Yeni</small></span></a>
-          <a class="sidebar-link" href="star-wars-outlaws.html"><img src="assets/star-wars-outlaws-cover.png" alt=""><span><b>Star Wars Outlaws</b><small>Türkçe Yama</small></span></a>
-          <a class="sidebar-link" href="prince-of-persia-the-lost-crown.html"><img src="assets/prince-of-persia-the-lost-crown-cover.png" alt=""><span><b>Prince of Persia: The Lost Crown</b><small>Türkçe Yama</small></span></a>
-          <a class="sidebar-link" href="mindseye.html"><img src="assets/mindseye-hero.jpg" alt=""><span><b>MindsEye</b><small>Türkçe Yama</small></span></a>
-          <a class="sidebar-link" href="silent-hill-townfall.html"><img src="assets/silent-hill-townfall-cover.jpg" alt=""><span><b>Silent Hill Townfall</b><small>Türkçe Yama</small></span></a>
-          <a class="sidebar-link" href="aniimo.html"><img src="assets/aniimo-cover.webp" alt=""><span><b>Aniimo</b><small>Türkçe Yama v4</small></span></a>
-          <a class="sidebar-link" href="cuphead.html"><img src="assets/cuphead-cover-small.jpg" alt=""><span><b>Cuphead</b><small>Tam Türkçe</small></span></a>
-        </section>
-      </aside>
-    </div>
-  </section>
+<section class="archive-hero">
+<div class="container">
+<span class="badge">Türkçe yama arşivi</span>
+<h1>PC Oyun Türkçe Yamaları</h1>
+<p>Aradığın oyunun Türkçe yamasını bul, detaylarını incele ve indirme sayfasına git.</p>
+<div class="archive-searchbar">
+<span class="search-icon">⌕</span>
+<input autocomplete="off" id="patchSearch" placeholder="Oyun veya yama ara..." type="search"/>
+</div>
+</div>
+</section>
+<section class="section archive-section">
+<div class="container archive-layout">
+<div class="archive-main">
+<div class="archive-toolbar">
+<div class="filter-tabs" id="filterTabs">
+<button class="filter-tab active" data-filter="all">Tümü</button>
+<button class="filter-tab" data-filter="published">Yayınlanan</button>
+<button class="filter-tab" data-filter="upcoming">Yakında</button>
+</div>
+<select aria-label="Yamaları sırala" class="archive-sort" id="patchSort">
+<option value="newest">En Yeni</option>
+<option value="name">A-Z</option>
+</select>
+</div>
+<div class="patch-list-modern" id="patchList">
+<article class="patch-row" data-order="15" data-state="published" data-title="Grand Theft Auto V Türkçe Yama"><a class="patch-thumb" href="gta-5.html"><img alt="Grand Theft Auto V Türkçe Yama" loading="lazy" src="assets/gta-5-cover.png"/></a><div class="patch-row-content"><div class="patch-row-top"><span class="status">Yeni</span><span class="patch-date">26 Eylül 2026</span></div><h2><a href="gta-5.html">Grand Theft Auto V Türkçe Yama</a></h2><p>GTA 5 için kurucusuz dosya kopyalama Türkçe yaması.</p><div class="patch-tags"><span>Windows</span><span>Kurucusuz</span><span>GTA V</span></div><p class="patch-download-count" data-patch-downloads="gta-5">↓ İndirilme: yükleniyor…</p><a class="patch-readmore" href="gta-5.html">Yamayı görüntüle →</a></div></article>
+<article class="patch-row" data-order="14" data-state="published" data-title="Shadow of the Tomb Raider Türkçe Yama"><a class="patch-thumb" href="shadow-of-the-tomb-raider.html"><img alt="Shadow of the Tomb Raider Türkçe Yama" loading="lazy" src="assets/shadow-of-the-tomb-raider-cover.png"/></a><div class="patch-row-content"><div class="patch-row-top"><span class="status">Yeni</span><span class="patch-date">26 Eylül 2026</span></div><h2><a href="shadow-of-the-tomb-raider.html">Shadow of the Tomb Raider Türkçe Yama</a></h2><p>Shadow of the Tomb Raider için kurucusuz dosya kopyalama Türkçe yaması.</p><div class="patch-tags"><span>Windows</span><span>Kurucusuz</span><span>Tomb Raider</span></div><p class="patch-download-count" data-patch-downloads="shadow-of-the-tomb-raider">↓ İndirilme: yükleniyor…</p><a class="patch-readmore" href="shadow-of-the-tomb-raider.html">Yamayı görüntüle →</a></div></article>
+<article class="patch-row" data-order="13" data-state="published" data-title="Red Dead Redemption 2 Türkçe Yama"><a class="patch-thumb" href="red-dead-redemption-2.html"><img alt="Red Dead Redemption 2 Türkçe Yama" loading="lazy" src="assets/rdr2-cover.png"/></a><div class="patch-row-content"><div class="patch-row-top"><span class="status">Yeni</span><span class="patch-date">26 Eylül 2026</span></div><h2><a href="red-dead-redemption-2.html">Red Dead Redemption 2 Türkçe Yama</a></h2><p>RDR2 için kurucusuz Türkçe yama dosyaları ve kolay klasöre kopyalama kurulumu.</p><div class="patch-tags"><span>Windows</span><span>Kurucusuz</span><span>RDR2</span></div><p class="patch-download-count" data-patch-downloads="red-dead-redemption-2">↓ İndirilme: yükleniyor…</p><a class="patch-readmore" href="red-dead-redemption-2.html">Yamayı görüntüle →</a></div></article>
+<article class="patch-row" data-order="12" data-state="published" data-title="Resident Evil 4 Remake Türkçe Yama"><a class="patch-thumb" href="resident-evil-4-remake.html"><img alt="Resident Evil 4 Remake Türkçe Yama" loading="lazy" src="assets/resident-evil-4-cover.jpg"/></a><div class="patch-row-content"><div class="patch-row-top"><span class="status">Yeni</span><span class="patch-date">25 Eylül 2026</span></div><h2><a href="resident-evil-4-remake.html">Resident Evil 4 Remake Türkçe Yama</a></h2><p>RE4 Remake Türkçe yama dosyası ve kurulum notları.</p><div class="patch-tags"><span>Windows</span><span>Kurucusuz</span><span>Resident Evil</span></div><p class="patch-download-count" data-patch-downloads="resident-evil-4-remake">↓ İndirilme: yükleniyor…</p><a class="patch-readmore" href="resident-evil-4-remake.html">Yamayı görüntüle →</a></div></article>
+<article class="patch-row" data-order="11" data-state="published" data-title="Resident Evil 2 Remake Türkçe Yama"><a class="patch-thumb" href="resident-evil-2-remake.html"><img alt="Resident Evil 2 Remake Türkçe Yama" loading="lazy" src="assets/resident-evil-2-cover.jpg"/></a><div class="patch-row-content"><div class="patch-row-top"><span class="status">Yeni</span><span class="patch-date">25 Eylül 2026</span></div><h2><a href="resident-evil-2-remake.html">Resident Evil 2 Remake Türkçe Yama</a></h2><p>RE2 Remake için kurucusuz Türkçe yama ve kurulum anlatımı.</p><div class="patch-tags"><span>Windows</span><span>Kurucusuz</span><span>Resident Evil</span></div><p class="patch-download-count" data-patch-downloads="resident-evil-2-remake">↓ İndirilme: yükleniyor…</p><a class="patch-readmore" href="resident-evil-2-remake.html">Yamayı görüntüle →</a></div></article>
+<article class="patch-row" data-order="10" data-state="published" data-title="Resident Evil Village Türkçe Yama"><a class="patch-thumb" href="resident-evil-village.html"><img alt="Resident Evil Village Türkçe Yama" loading="lazy" src="assets/resident-evil-village-cover.jpg"/></a><div class="patch-row-content"><div class="patch-row-top"><span class="status">Yeni</span><span class="patch-date">25 Eylül 2026</span></div><h2><a href="resident-evil-village.html">Resident Evil Village Türkçe Yama</a></h2><p>Resident Evil Village için kurucusuz Türkçe yama.</p><div class="patch-tags"><span>Windows</span><span>Kurucusuz</span><span>Resident Evil</span></div><p class="patch-download-count" data-patch-downloads="resident-evil-village">↓ İndirilme: yükleniyor…</p><a class="patch-readmore" href="resident-evil-village.html">Yamayı görüntüle →</a></div></article>
+<article class="patch-row" data-order="9" data-state="published" data-title="Beast of Reincarnation Türkçe Yama">
+<a class="patch-thumb" href="beast-of-reincarnation.html"><img alt="Beast of Reincarnation Türkçe Yama" loading="lazy" src="assets/beast-of-reincarnation-cover.jpg"/></a>
+<div class="patch-row-content"><div class="patch-row-top"><span class="status">Yeni</span><span class="patch-date">25 Eylül 2026</span></div><h2><a href="beast-of-reincarnation.html">Beast of Reincarnation Türkçe Yama</a></h2><p>Steam, Epic ve Game Pass desteği bulunan kurucusuz Türkçe yama dosyaları.</p><div class="patch-tags"><span>Windows</span><span>Kurucusuz</span><span>Aksiyon RPG</span></div><p class="patch-download-count" data-patch-downloads="beast-of-reincarnation">↓ İndirilme: yükleniyor…</p><a class="patch-readmore" href="beast-of-reincarnation.html">Yamayı görüntüle →</a></div>
+</article>
+<article class="patch-row" data-order="8" data-state="published" data-title="Gothic 1 Remake Türkçe Yama">
+<a class="patch-thumb" href="gothic-1-remake.html"><img alt="Gothic 1 Remake Türkçe Yama" loading="lazy" src="assets/gothic-1-remake-cover.jpg"/></a>
+<div class="patch-row-content"><div class="patch-row-top"><span class="status">Yeni</span><span class="patch-date">25 Eylül 2026</span></div><h2><a href="gothic-1-remake.html">Gothic 1 Remake Türkçe Yama</a></h2><p>Türkçe karakter desteği ve doğrudan klasöre kopyalama yöntemiyle kurucusuz yama.</p><div class="patch-tags"><span>Windows</span><span>Kurucusuz</span><span>RPG</span></div><p class="patch-download-count" data-patch-downloads="gothic-1-remake">↓ İndirilme: yükleniyor…</p><a class="patch-readmore" href="gothic-1-remake.html">Yamayı görüntüle →</a></div>
+</article>
+<article class="patch-row" data-order="7" data-state="published" data-title="Mortal Shell 2 Türkçe Yama">
+<a class="patch-thumb" href="mortal-shell-2.html"><img alt="Mortal Shell 2 Türkçe Yama" loading="lazy" src="assets/mortal-shell-2-cover.jpg"/></a>
+<div class="patch-row-content"><div class="patch-row-top"><span class="status">Yeni</span><span class="patch-date">25 Eylül 2026</span></div><h2><a href="mortal-shell-2.html">Mortal Shell 2 Türkçe Yama</a></h2><p>Steam, Epic ve Game Pass için ayrı klasörleri bulunan küçük boyutlu kurucusuz yama.</p><div class="patch-tags"><span>Windows</span><span>Kurucusuz</span><span>Souls-like</span></div><p class="patch-download-count" data-patch-downloads="mortal-shell-2">↓ İndirilme: yükleniyor…</p><a class="patch-readmore" href="mortal-shell-2.html">Yamayı görüntüle →</a></div>
+</article>
+<article class="patch-row" data-order="6" data-state="published" data-title="Star Wars Outlaws Türkçe Yama">
+<a class="patch-thumb" href="star-wars-outlaws.html"><img alt="Star Wars Outlaws Türkçe Yama" loading="lazy" src="assets/star-wars-outlaws-cover.png"/></a>
+<div class="patch-row-content"><div class="patch-row-top"><span class="status">Yeni</span><span class="patch-date">24 Eylül 2026</span></div><h2><a href="star-wars-outlaws.html">Star Wars Outlaws Türkçe Yama</a></h2><p>Türkçe yama dosyaları, MediaFire indirme bağlantısı ve kurulum notları.</p><div class="patch-tags"><span>Windows</span><span>Türkçe</span><span>Aksiyon</span></div><p class="patch-download-count" data-patch-downloads="star-wars-outlaws">↓ İndirilme: yükleniyor…</p><a class="patch-readmore" href="star-wars-outlaws.html">Yamayı görüntüle →</a></div>
+</article>
+<article class="patch-row" data-order="5" data-state="published" data-title="Prince of Persia The Lost Crown Türkçe Yama">
+<a class="patch-thumb" href="prince-of-persia-the-lost-crown.html"><img alt="Prince of Persia The Lost Crown Türkçe Yama" loading="lazy" src="assets/prince-of-persia-the-lost-crown-cover.png"/></a>
+<div class="patch-row-content"><div class="patch-row-top"><span class="status">Yeni</span><span class="patch-date">23 Eylül 2026</span></div><h2><a href="prince-of-persia-the-lost-crown.html">Prince of Persia: The Lost Crown Türkçe Yama</a></h2><p>MediaFire indirme bağlantısı ve kurulum öncesi bilgiler.</p><div class="patch-tags"><span>Windows</span><span>Türkçe</span><span>Aksiyon</span></div><p class="patch-download-count" data-patch-downloads="prince-of-persia-the-lost-crown">↓ İndirilme: yükleniyor…</p><a class="patch-readmore" href="prince-of-persia-the-lost-crown.html">Yamayı görüntüle →</a></div>
+</article>
+<article class="patch-row mindseye-patch-row" data-order="4" data-state="published" data-title="MindsEye Türkçe Yama">
+<a class="patch-thumb" href="mindseye.html"><img alt="MindsEye Türkçe Yama" loading="lazy" src="assets/mindseye-hero.jpg"/></a>
+<div class="patch-row-content">
+<div class="patch-row-top"><span class="status">Yeni</span><span class="patch-date">23 Eylül 2026</span></div>
+<h2><a href="mindseye.html">MindsEye Türkçe Yama</a></h2>
+<p>MindsEye için Türkçe yama. İndirme bağlantıları, kurulum ve VirusTotal kontrolü.</p>
+<div class="patch-tags"><span>Windows</span><span>Türkçe</span><span>Aksiyon</span></div>
+<p class="patch-download-count" data-patch-downloads="mindseye">↓ İndirilme: yükleniyor…</p><a class="patch-readmore" href="mindseye.html">Yamayı görüntüle →</a>
+</div>
+</article>
+<article class="patch-row" data-order="3" data-state="published" data-title="Silent Hill Townfall Türkçe Yama">
+<a class="patch-thumb" href="silent-hill-townfall.html"><img alt="Silent Hill Townfall Türkçe Yama" loading="lazy" src="assets/silent-hill-townfall-cover.jpg"/></a>
+<div class="patch-row-content">
+<div class="patch-row-top"><span class="status">Yeni</span><span class="patch-date">23 Eylül 2026</span></div>
+<h2><a href="silent-hill-townfall.html">Silent Hill Townfall Türkçe Yama</a></h2>
+<p>Kurucusuz dosya sürümü. Dosya.co ve MediaFire indirme seçenekleri hazır.</p>
+<div class="patch-tags"><span>Windows</span><span>Kurucusuz</span><span>Korku</span></div>
+<p class="patch-download-count" data-patch-downloads="silent-hill-townfall">↓ İndirilme: yükleniyor…</p><a class="patch-readmore" href="silent-hill-townfall.html">Yamayı görüntüle →</a>
+</div>
+</article>
+<article class="patch-row" data-order="2" data-state="published" data-title="Aniimo Türkçe Yama">
+<a class="patch-thumb" href="aniimo.html"><img alt="Aniimo Türkçe Yama" loading="lazy" src="assets/aniimo-cover.webp"/></a>
+<div class="patch-row-content">
+<div class="patch-row-top"><span class="status">Yayınlandı</span><span class="patch-date">23 Eylül 2026</span></div>
+<h2><a href="aniimo.html">Aniimo Türkçe Yama</a></h2>
+<p>Aniimo için hazırlanmış Türkçe topluluk yaması. Kurulum, indirme bağlantıları ve sürüm bilgileri.</p>
+<div class="patch-tags"><span>Windows</span><span>v4</span><span>Türkçe</span></div>
+<p class="patch-download-count" data-patch-downloads="aniimo">↓ 31 indirilme</p><a class="patch-readmore" href="aniimo.html">Yamayı görüntüle →</a>
+</div>
+</article>
+<article class="patch-row" data-order="1" data-state="published" data-title="Cuphead Türkçe Yama">
+<a class="patch-thumb" href="cuphead.html"><img alt="Cuphead Türkçe Yama" loading="lazy" src="assets/cuphead-cover-small.jpg"/></a>
+<div class="patch-row-content">
+<div class="patch-row-top"><span class="status">Yayınlandı</span><span class="patch-date">22 Eylül 2026</span></div>
+<h2><a href="cuphead.html">Cuphead Türkçe Yama</a></h2>
+<p>Cuphead için hazırlanmış tam Türkçe yama. Kurucusuz paket ve kolay kurulum bilgileri.</p>
+<div class="patch-tags"><span>Windows</span><span>Tam Türkçe</span><span>Yama</span></div>
+<p class="patch-download-count" data-patch-downloads="cuphead">↓ İndirilme: yükleniyor…</p><a class="patch-readmore" href="cuphead.html">Yamayı görüntüle →</a>
+</div>
+</article>
+</div>
+<div class="no-patch-result" hidden="" id="noPatchResult">Aramana uygun yama bulunamadı.</div>
+<nav aria-label="Sayfalama" class="pagination-modern"><span class="current">1</span><span class="disabled">Sonraki ›</span></nav>
+</div>
+<aside class="archive-sidebar">
+<section aria-label="Site istatistikleri" class="v45-stats-card js-site-stats">
+<h3><span>▥</span> İstatistik</h3>
+<div class="v45-stat-row"><span>Toplam Yama:</span><b data-stat="total_patches">15</b><i>›</i></div>
+<div class="v45-stat-row"><span>Toplam İndirme:</span><b data-stat="total_downloads">40</b><i>›</i></div>
+<div class="v45-stat-row"><span>Bugünkü İndirme:</span><b data-stat="today_downloads">—</b><i>›</i></div>
+<div class="v45-stat-row"><span>Dünkü İndirme:</span><b data-stat="yesterday_downloads">—</b><i>›</i></div>
+</section>
+<section class="sidebar-card">
+<h3>Hızlı Erişim</h3>
+<a class="sidebar-link" href="resident-evil-4-remake.html"><img alt="" src="assets/resident-evil-4-cover.jpg"/><span><b>Resident Evil 4 Remake</b><small>Türkçe Yama • Yeni</small></span></a>
+<a class="sidebar-link" href="resident-evil-2-remake.html"><img alt="" src="assets/resident-evil-2-cover.jpg"/><span><b>Resident Evil 2 Remake</b><small>Türkçe Yama • Yeni</small></span></a>
+<a class="sidebar-link" href="resident-evil-village.html"><img alt="" src="assets/resident-evil-village-cover.jpg"/><span><b>Resident Evil Village</b><small>Türkçe Yama • Yeni</small></span></a>
+<a class="sidebar-link" href="beast-of-reincarnation.html"><img alt="" src="assets/beast-of-reincarnation-cover.jpg"/><span><b>Beast of Reincarnation</b><small>Türkçe Yama • Yeni</small></span></a>
+<a class="sidebar-link" href="gothic-1-remake.html"><img alt="" src="assets/gothic-1-remake-cover.jpg"/><span><b>Gothic 1 Remake</b><small>Türkçe Yama • Yeni</small></span></a>
+<a class="sidebar-link" href="mortal-shell-2.html"><img alt="" src="assets/mortal-shell-2-cover.jpg"/><span><b>Mortal Shell 2</b><small>Türkçe Yama • Yeni</small></span></a>
+<a class="sidebar-link" href="star-wars-outlaws.html"><img alt="" src="assets/star-wars-outlaws-cover.png"/><span><b>Star Wars Outlaws</b><small>Türkçe Yama</small></span></a>
+<a class="sidebar-link" href="prince-of-persia-the-lost-crown.html"><img alt="" src="assets/prince-of-persia-the-lost-crown-cover.png"/><span><b>Prince of Persia: The Lost Crown</b><small>Türkçe Yama</small></span></a>
+<a class="sidebar-link" href="mindseye.html"><img alt="" src="assets/mindseye-hero.jpg"/><span><b>MindsEye</b><small>Türkçe Yama</small></span></a>
+<a class="sidebar-link" href="silent-hill-townfall.html"><img alt="" src="assets/silent-hill-townfall-cover.jpg"/><span><b>Silent Hill Townfall</b><small>Türkçe Yama</small></span></a>
+<a class="sidebar-link" href="aniimo.html"><img alt="" src="assets/aniimo-cover.webp"/><span><b>Aniimo</b><small>Türkçe Yama v4</small></span></a>
+<a class="sidebar-link" href="cuphead.html"><img alt="" src="assets/cuphead-cover-small.jpg"/><span><b>Cuphead</b><small>Tam Türkçe</small></span></a>
+</section>
+</aside>
+</div>
+</section>
 </main>
-
 <footer><div class="container footer-inner"><span>© 2026 Türkçe Yamalar</span></div></footer>
 <script>
 (function(){

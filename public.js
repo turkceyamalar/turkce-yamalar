@@ -9,57 +9,50 @@
     footer.appendChild(links);
   }
 
-  const statCards = [...document.querySelectorAll('.js-site-stats')];
-  // The owner confirmed 40 earlier downloads before the click recorder existed.
-  // The database stores subsequent clicks, so add that historical baseline once.
-  const historicDownloads = 40;
-  const writeStat = (name, value) => {
-    const formatted = Number(value).toLocaleString('tr-TR');
-    document.querySelectorAll(`[data-stat="${name}"]`).forEach(node => { node.textContent = formatted; });
-  };
-  if (statCards.length) writeStat('total_patches', 15);
-  if (statCards.length) writeStat('total_downloads', historicDownloads);
-  const cfg = window.TY_SUPABASE_CONFIG || {};
-  if (!window.supabase || !cfg.url || !cfg.anonKey) return;
-  const sb = window.supabase.createClient(cfg.url, cfg.anonKey);
-
-  // Open the existing target normally. Every actual download-button activation
-  // registers against the same patch key used by the database dashboard.
-  const patchKey = (document.body.dataset.page || '').replace(/\.html$/, '');
-  if (/^[a-z0-9-]{1,80}$/.test(patchKey)) {
-    document.querySelectorAll('.uniform-grid #indir a[href]').forEach(link => {
-      link.addEventListener('click', () => {
-        sb.rpc('register_download', { p_patch_key: patchKey }).then(({ error }) => {
-          if (error) console.warn('İndirme sayacı kaydedilemedi:', error.message);
-        });
+  // Owner-confirmed downloads before the server-side recorder was installed.
+  // Nine of the 40 historical downloads have no per-game attribution.
+  const baseline = { daily: {'2026-09-25':3, '2026-09-26':37}, patches: {aniimo:31}, total:40 };
+  const dateKey = date => new Intl.DateTimeFormat('sv-SE', {timeZone:'Europe/Istanbul'}).format(date);
+  const today = dateKey(new Date());
+  const yesterday = dateKey(new Date(Date.now()-86400000));
+  const writeStat = (name,value) => document.querySelectorAll(`[data-stat="${name}"]`).forEach(n=>n.textContent=Number(value).toLocaleString('tr-TR'));
+  const paintPatch = (key,count) => document.querySelectorAll('[data-patch-downloads]').forEach(n=>{
+    if(n.dataset.patchDownloads===key) n.textContent='↓ '+Number(count).toLocaleString('tr-TR')+' indirilme';
+  });
+  writeStat('total_patches',15);
+  writeStat('total_downloads',baseline.total);
+  writeStat('today_downloads',baseline.daily[today]||0);
+  writeStat('yesterday_downloads',baseline.daily[yesterday]||0);
+  document.querySelectorAll('[data-patch-downloads]').forEach(n=>{
+    const key=n.dataset.patchDownloads;
+    if(key in baseline.patches) paintPatch(key,baseline.patches[key]);
+    else n.textContent='↓ İndirilme: henüz kayıt yok';
+  });
+  const cfg=window.TY_SUPABASE_CONFIG||{};
+  if(!window.supabase||!cfg.url||!cfg.anonKey)return;
+  const sb=window.supabase.createClient(cfg.url,cfg.anonKey);
+  async function refresh(){
+    const [patches,daily]=await Promise.all([
+      sb.from('download_stats').select('patch_key,download_count'),
+      sb.from('download_daily_stats').select('day,download_count').in('day',[today,yesterday])
+    ]);
+    if(!patches.error){
+      const counts=new Map((patches.data||[]).map(r=>[r.patch_key,Number(r.download_count)||0]));
+      document.querySelectorAll('[data-patch-downloads]').forEach(n=>{
+        const key=n.dataset.patchDownloads;paintPatch(key,(baseline.patches[key]||0)+(counts.get(key)||0));
       });
-    });
+      writeStat('total_downloads',baseline.total+[...counts.values()].reduce((a,b)=>a+b,0));
+    }
+    if(!daily.error){
+      for(const [name,date] of [['today_downloads',today],['yesterday_downloads',yesterday]])
+        writeStat(name,(baseline.daily[date]||0)+Number(daily.data?.find(r=>r.day===date)?.download_count||0));
+    }
   }
-
-  if (!statCards.length) return;
-  (async () => {
-    const { data, error } = await sb.rpc('get_download_dashboard');
-    if (!error && data && data.total_downloads != null) {
-      writeStat('total_downloads', historicDownloads + Number(data.total_downloads));
-      writeStat('today_downloads', data.today_downloads);
-      writeStat('yesterday_downloads', data.yesterday_downloads);
-      return;
-    }
-    const fallback = await sb.from('download_stats').select('download_count');
-    if (!fallback.error) {
-      writeStat('total_downloads', historicDownloads + (fallback.data || []).reduce((sum, row) => sum + Number(row.download_count || 0), 0));
-    }
-    const istanbulDate = date => {
-      const parts = new Intl.DateTimeFormat('en-US', { timeZone: 'Europe/Istanbul', year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(date);
-      const part = type => parts.find(item => item.type === type).value;
-      return `${part('year')}-${part('month')}-${part('day')}`;
-    };
-    const today = istanbulDate(new Date());
-    const daily = await sb.from('download_daily_stats').select('day,download_count').lte('day', today).order('day', { ascending: false }).limit(2);
-    if (!daily.error) {
-      const yesterday = istanbulDate(new Date(Date.now() - 86400000));
-      writeStat('today_downloads', daily.data?.find(row => row.day === today)?.download_count ?? 0);
-      writeStat('yesterday_downloads', daily.data?.find(row => row.day === yesterday)?.download_count ?? 0);
-    }
-  })();
+  const patchKey=(document.body.dataset.page||'').replace(/\.html$/,'');
+  if(/^[a-z0-9-]{1,80}$/.test(patchKey)){
+    document.querySelectorAll('.uniform-grid #indir .download-options a[href]').forEach(link=>link.addEventListener('click',()=>{
+      sb.rpc('register_download',{p_patch_key:patchKey}).then(({error})=>{if(!error)refresh();});
+    }));
+  }
+  refresh().catch(()=>{});
 })();

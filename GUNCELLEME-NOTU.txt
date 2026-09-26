@@ -1,0 +1,7 @@
+Yama sayfaları dengeli iki sütuna dağıtıldı; tüm yamalara oyun görseli eklendi. Aniimo görseli videonun sağındadır. Ejderha SVG animasyonuyla sürekli hareket eder. Haberler menüden kaldırıldı.
+
+26 Eylül 2026: 37 indirme. 25 Eylül: 3 indirme. Toplam: 40. Aniimo: 31. Kalan 9 indirmenin hangi yamalara ait olduğu belirtilmediğinden dağıtılmadı.
+
+Otomatik artan sayaç için Supabase > SQL Editor > New query açıp INDIRME-SAYACI-KUR.sql içeriğini yapıştırın ve Run seçin. Kontrolde download_stats ve download_daily_stats tablolarının henüz kurulmadığı görüldü. Eski 40 kayıt site kodunda bir kez eklenir; SQL dosyasına ayrıca eklemeyin. Yeni tıklamalar veritabanından eklenir. Sayaç tamamlanmış indirme yerine indirme bağlantısına tıklamayı kaydeder.
+
+ZIP içeriğini mevcut site dosyalarının üzerine yükleyin.
