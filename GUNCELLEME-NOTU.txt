@@ -1,7 +1,7 @@
-Yama sayfaları dengeli iki sütuna dağıtıldı; tüm yamalara oyun görseli eklendi. Aniimo görseli videonun sağındadır. Ejderha SVG animasyonuyla sürekli hareket eder. Haberler menüden kaldırıldı.
+V37 — 32 kareli, sürekli dönen GIF ejderha, kaldırılmış Haberler ve sayaç düzeltmesi.
 
-26 Eylül 2026: 37 indirme. 25 Eylül: 3 indirme. Toplam: 40. Aniimo: 31. Kalan 9 indirmenin hangi yamalara ait olduğu belirtilmediğinden dağıtılmadı.
+ZIP dosyasını bilgisayarda çıkarın. İçindeki TÜM dosyaları (index.html ve assets klasörü dahil) GitHub deposunun ana klasörüne yükleyip mevcut dosyaların üzerine yazın. ZIP dosyasının kendisini yüklemeyin. Cloudflare Pages dağıtımı tamamlandıktan sonra siteyi Ctrl+F5 ile yenileyin.
 
-Otomatik artan sayaç için Supabase > SQL Editor > New query açıp INDIRME-SAYACI-KUR.sql içeriğini yapıştırın ve Run seçin. Kontrolde download_stats ve download_daily_stats tablolarının henüz kurulmadığı görüldü. Eski 40 kayıt site kodunda bir kez eklenir; SQL dosyasına ayrıca eklemeyin. Yeni tıklamalar veritabanından eklenir. Sayaç tamamlanmış indirme yerine indirme bağlantısına tıklamayı kaydeder.
+Bugün (26 Eylül 2026): 37. Dün: 3. Toplam: 40. Aniimo: 31. Bunlar sayım başlamadan önce bildirilen indirmelerdir. Diğer 9 indirmenin oyunlara dağılımı bilinmediğinden uydurulmadı. Günlük etiketler İstanbul tarihine göre değişir.
 
-ZIP içeriğini mevcut site dosyalarının üzerine yükleyin.
+Yeni indirme tıklamalarının otomatik kaydı için Supabase > SQL Editor > New query bölümünde INDIRME-SAYACI-KUR.sql dosyasının içeriğini çalıştırın. Tablolar kurulmadan geçmiş sayılar görünür ama yeni tıklamalar sunucuya kaydedilemez. 40 eski indirimi SQL içine ayrıca eklemeyin; sitedeki geçmiş kaydıyla iki kez sayılır.
