@@ -996,7 +996,7 @@ html[data-theme="dark"] .nav-support .support-heart{color:#f58a35}
 .v32-card-grid>.v32-game-card>.v32-card-cover{flex:0 0 205px}
 .v32-card-grid>.v32-game-card>.v32-card-body{display:flex;flex:1;flex-direction:column}
 .v32-card-grid>.v32-game-card .v32-detail{margin-top:auto}
-@media(max-width:1300px){.header-dragon{display:none}}
+@media(max-width:760px){.header-dragon{display:none}}
 
 /* Balanced patch pages, shared art sizing and download labels. */
 .uniform-grid{align-items:start}
@@ -1012,3 +1012,9 @@ html[data-theme="dark"] .nav-support .support-heart{color:#f58a35}
 html[data-theme="dark"] .patch-download-count{color:#ffac6e!important}
 html[data-theme="dark"] .detail-art{border-color:#2e3d50}
 @media(max-width:720px){.uniform-media.media-pair{grid-template-columns:1fr}.detail-art img{height:auto;aspect-ratio:16/9}.media-banner .v38-video-card>img{height:auto;aspect-ratio:720/220}}
+
+
+/* v40 detail-grid fix */
+.uniform-grid{align-items:start!important;}
+.uniform-grid>.detail-column{align-self:start!important;height:max-content!important;}
+.uniform-card{height:auto!important;min-height:0!important;}

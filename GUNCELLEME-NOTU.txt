@@ -1,5 +1,12 @@
-V39
-- Bugünkü indirme: 37
-- Dünkü indirme: 3
-- Toplam indirme: 40
-- Ejderha GIF animasyonu ve haberler menüsü V38 ile korunmuştur.
+V40 - SON DÜZELTMELER
+
+- Üst menüde HABERLER kaldırıldı.
+- Tüm sayfalardaki bozuk v37 ejderha bağlantıları v38 hareketli GIF ile değiştirildi.
+- Ejderha GIF'i gövde ve kuyruğu dalgalanacak şekilde 32 kare animasyon olarak kullanılıyor.
+- Ana sayfa ve Türkçe Yama sayfasındaki sayaçlar: Toplam Yama 15, Toplam İndirme 40, Bugünkü İndirme 37, Dünkü İndirme 3.
+- Sayaç JavaScript'i v40 olarak önbellek kırmalı şekilde güncellendi; HTML içinde de 40 / 37 / 3 yedek değerleri bulunuyor.
+- Aniimo yama sayfasındaki eski/tekrarlanan "Yama Hakkında" bölümü temizlendi.
+- Aniimo yama sayfasındaki iki sütunun gereksiz boşlukla eşitlenmesi düzeltildi.
+
+ÖNEMLİ:
+GitHub'da eski "haberler.html" gibi dosyalar varsa bunları ayrıca sil. GitHub'a yeni dosya yüklemek eski dosyaları kendiliğinden silmez.
