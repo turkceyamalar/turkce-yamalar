@@ -1,1 +1,1 @@
-ZIP dosyasini ac. index.html ve style-v42.css dosyalarini sitenin kokune; berserk-guts-background.jpg dosyasini assets klasorune yukle. Ust menu dosyalari degistirilmedi. Sonra Ctrl+F5 ile yenile.
+ZIP'i ac. HTML dosyalari ve style-v43.css dosyasini site kokune; berserk-guts-background.jpg dosyasini assets klasorune yukle. Ayni adli dosyalari degistir. ZIP'i dogrudan yukleme. Ctrl+F5 ile yenile. V39 JS dosyalari depoda kalmalidir.
