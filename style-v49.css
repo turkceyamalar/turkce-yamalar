@@ -1359,3 +1359,13 @@ body[data-page="aniimo.html"] .detail-gallery img{display:block;width:min(100%,7
 .brand-mark img{display:block;width:46px!important;height:46px!important;max-width:none!important;object-fit:contain;filter:drop-shadow(0 1px 2px #0009)}
 html[data-theme="light"] .brand-mark{background:#f5e3ce!important}
 @media(max-width:760px){.brand-mark img{width:38px!important;height:38px!important}}
+
+/* v54: iki ejderha arasına ortalanmış marka */
+.oi-header .v29-nav-wrap{display:flex!important;align-items:center!important;gap:8px!important}
+.oi-header .header-dragon-left,.oi-header .header-dragon-right{display:flex!important;align-items:center!important;justify-content:center!important;flex:0 1 180px!important;min-width:100px!important;max-width:180px!important;height:70px!important;overflow:hidden!important}
+.oi-header .header-dragon-left img,.oi-header .header-dragon-right img{display:block!important;width:100%!important;height:64px!important;object-fit:fill!important}
+.oi-header .header-dragon-right img{transform:scaleX(-1)!important}
+.oi-header .v45-logo{flex:0 0 auto!important;z-index:2;margin:0 8px!important}
+.oi-header .v29-main-nav{margin-left:auto!important}
+@media(max-width:1550px){.oi-header .header-dragon-left,.oi-header .header-dragon-right{flex-basis:115px!important;min-width:80px!important;max-width:115px!important}}
+@media(max-width:1300px){.oi-header .header-dragon-left,.oi-header .header-dragon-right{display:none!important}.oi-header .v45-logo{margin:0!important}}
