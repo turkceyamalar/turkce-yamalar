@@ -5,3 +5,7 @@ Bu paket mevcut EjderArşiv site dosyaları üzerine eklenir. assets klasöründ
 Eklenen sayfalar: Director's Cut, Brotherhood, III, Unity, Syndicate, Odyssey, Mirage, Shadows.
 Yama arşivleri bu site ZIP dosyasına eklenmedi. Herkese açık indirme bağlantıları henüz verilmediği için sayfalarda indirme düğmesi yoktur.
 İndirme bağlantıları hazır olduğunda her sayfanın Kurulum ve İndirme alanına ilgili URL ve doğrulanmış kurulum bilgisi eklenecek.
+
+Ek vitrin sayfaları: Marvel's Spider-Man Remastered, Miles Morales ve Spider-Man 2.
+Bu üç oyun için yama arşivi veya indirme adresi henüz verilmedi; sitede indirme düğmesi yoktur.
+Kapaklar özgün tematik SVG vitrin çizimleridir, resmi oyun kapağı değildir.
