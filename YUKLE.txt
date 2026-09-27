@@ -1,1 +1,1 @@
-V39 paketini yuklediysen bu ZIP dosyasini ac. HTML dosyalarini ve style-v41.css dosyasini GitHub deposunun kokune yukle; ayni adli HTML dosyalarini degistir. ZIP dosyasini dogrudan yukleme. Sonra Ctrl+F5 ile yenile. V39 JS ve resim dosyalari depoda kalmalidir.
+ZIP dosyasini ac. index.html ve style-v42.css dosyalarini sitenin kokune; berserk-guts-background.jpg dosyasini assets klasorune yukle. Ust menu dosyalari degistirilmedi. Sonra Ctrl+F5 ile yenile.
