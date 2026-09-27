@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'star-wars-outlaws':'cMqqfkLhuZk', 'beast-of-reincarnation':'H0r-Kap8kWI'
   };
   const extraImages = {
-    aniimo:['assets/aniimo-detail.png','assets/aniimo-trailer-poster.jpg'],
+    aniimo:['assets/aniimo-gameplay-tr.webp'],
     cuphead:['assets/cuphead-trailer-poster.jpg'], mindseye:['assets/mindseye-hero.jpg']
   };
   const entries = [
@@ -56,12 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
   gallery.className = 'detail-gallery';
   const gh = document.createElement('h2'); gh.textContent = 'OYUNDAN GÖRSELLER'; gallery.append(gh);
   const galleryItems = [...new Set([coverSrc,...(extraImages[slug] || [])])].filter(Boolean);
-  if (videos[slug]) galleryItems.push('https://i.ytimg.com/vi/'+videos[slug]+'/hqdefault.jpg');
-  galleryItems.slice(0,3).forEach((src,i) => {
+  if (videos[slug] && slug!=='aniimo') galleryItems.push('https://i.ytimg.com/vi/'+videos[slug]+'/hqdefault.jpg');
+  galleryItems.slice(0,slug==='aniimo'?2:3).forEach((src,i) => {
     const img = document.createElement('img'); img.src = src; img.alt = intro.querySelector('h1')?.textContent + ' görsel ' + (i+1);
     img.loading = 'lazy'; if(src.includes('ytimg.com')) img.onerror=()=>img.remove(); gallery.append(img);
   });
-  column.append(gallery);
   const trailer = document.createElement('section'); trailer.className = 'detail-trailers';
   const th = document.createElement('h2'); th.textContent = 'OYUN FRAGMANI / OYNANIŞ'; trailer.append(th);
   if (videos[slug]) {
@@ -74,13 +73,14 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     const link=document.createElement('a');link.href='https://www.youtube.com/results?search_query='+encodeURIComponent(intro.querySelector('h1')?.textContent.replace('TÜRKÇE YAMA','')+' oynanış fragmanı');link.target='_blank';link.rel='noopener noreferrer';link.textContent='Bu oyunun fragmanlarını YouTube’da bul →';trailer.append(link);
   }
-  column.append(trailer);
   const howto=document.createElement('section');howto.className='detail-howto';
   const hh=document.createElement('h2');hh.textContent='YAMA KURULUM VİDEOSU';howto.append(hh);
   if (slug==='aniimo') {
     const frame=document.createElement('iframe');frame.src='https://www.youtube-nocookie.com/embed/ZTV0lfE5z_I?start=12';frame.title='Aniimo Türkçe Yama Kurulumu';frame.loading='lazy';frame.allowFullscreen=true;howto.append(frame);
   } else {const note=document.createElement('p');note.textContent='Yama kurulum videosu yakında gelecek.';howto.append(note)}
   column.append(howto);
+  column.append(gallery);
+  column.append(trailer);
   const aside=document.createElement('aside');aside.className='detail-related';
   const heading=document.createElement('h2');heading.textContent='DİĞER İÇERİKLER';aside.append(heading);
   for (const [url,title,src] of entries) {

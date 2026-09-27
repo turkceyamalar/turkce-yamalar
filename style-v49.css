@@ -1348,3 +1348,14 @@ html[data-theme="light"] .brand-name{color:#28211b!important}
 @media(max-width:760px){.v45-logo{position:relative!important;background:#1a1716!important}.brand-name{font-size:.89rem!important}.brand-mark{width:36px!important;height:36px!important;flex-basis:36px!important}.brand-mark svg{width:29px;height:29px}}
 
 .new-detail .detail-gallery img+img{margin-top:16px}
+
+/* v52: oyun sayfası başlıkları ve Aniimo görselleri */
+body:has(main.uniform-page) .uniform-intro h1,body:has(main.uniform-page) .uniform-grid .uniform-card h2,body:has(main.uniform-page) :is(.detail-gallery,.detail-trailers,.detail-howto) h2,body:has(main.uniform-page) .detail-download h2{color:#eeb56b!important}
+html[data-theme="light"] body:has(main.uniform-page) .uniform-intro h1,html[data-theme="light"] body:has(main.uniform-page) .uniform-grid .uniform-card h2,html[data-theme="light"] body:has(main.uniform-page) :is(.detail-gallery,.detail-trailers,.detail-howto) h2{color:#a65d18!important}
+body[data-page="aniimo.html"] .detail-gallery img{display:block;width:min(100%,740px)!important;height:auto!important;max-height:460px!important;object-fit:contain;margin:0 auto 15px}
+
+/* v53: net ejderha kafa logosu */
+.brand-mark{background:#261a14!important;border:1px solid #dc9959!important;overflow:visible!important;box-shadow:inset 0 0 0 2px #51311f,0 3px 9px #0006!important}
+.brand-mark img{display:block;width:46px!important;height:46px!important;max-width:none!important;object-fit:contain;filter:drop-shadow(0 1px 2px #0009)}
+html[data-theme="light"] .brand-mark{background:#f5e3ce!important}
+@media(max-width:760px){.brand-mark img{width:38px!important;height:38px!important}}
