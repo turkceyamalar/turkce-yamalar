@@ -1,0 +1,16 @@
+DOĞRULAMA VE ADMIN YETKİSİ
+
+1. Supabase > Authentication > URL Configuration:
+   Site URL: https://turkce-yamalar.pages.dev
+   Redirect URLs listesine: https://turkce-yamalar.pages.dev/**
+   Kaydet. localhost adresini Site URL olarak bırakma.
+2. Sitede Giriş Yap ekranına e-postanı yaz. "Doğrulama e-postasını yeniden gönder" düğmesini kullan.
+   Eski e-postadaki bağlantı eski localhost yönlendirmesini içerir; yeni gelen bağlantıyı aç.
+   Hesap zaten doğrulandıysa e-posta gelmeyebilir; o durumda normal giriş yap.
+3. ADMIN-VE-EPOSTA-DUZELTME.sql dosyasında BURAYA_KAYITLI_EPOSTANI_YAZ kısmını
+   sitede kullandığın GERÇEK kayıtlı e-postayla değiştir, Supabase SQL Editor'da RUN de.
+   Sonuçta role=admin ve bir satır görünmeli. Sıfır satır çıkarsa e-posta yanlış veya
+   başka bir Supabase projesindesin.
+4. Siteden çıkış yapıp yeniden giriş yap. Profilde Yönetici, üstte Admin Paneli görünür.
+
+Admin rolü yalnızca veritabanında değişir; site kodundaki görsel değişiklik tek başına rol vermez.

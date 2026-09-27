@@ -1369,3 +1369,13 @@ html[data-theme="light"] .brand-mark{background:#f5e3ce!important}
 .oi-header .v29-main-nav{margin-left:auto!important}
 @media(max-width:1550px){.oi-header .header-dragon-left,.oi-header .header-dragon-right{flex-basis:115px!important;min-width:80px!important;max-width:115px!important}}
 @media(max-width:1300px){.oi-header .header-dragon-left,.oi-header .header-dragon-right{display:none!important}.oi-header .v45-logo{margin:0!important}}
+
+/* v56: örnekteki piksel ejderha hareketli marka simgesi */
+.oi-header .v45-logo{padding:4px 14px 4px 8px!important;gap:7px!important}
+.oi-header .brand-mark,.oi-header html[data-theme="light"] .brand-mark{position:relative;width:68px!important;height:62px!important;flex:0 0 68px!important;background:transparent!important;border:0!important;box-shadow:none!important;overflow:visible!important}
+.oi-header .brand-mark img{position:relative;z-index:2;display:block;width:72px!important;height:66px!important;object-fit:contain;image-rendering:pixelated;filter:drop-shadow(0 4px 4px #0009);transform-origin:55% 78%;animation:ejder-piksel-nefes 1.5s ease-in-out infinite alternate}
+.oi-header .brand-mark:after{content:"";position:absolute;z-index:1;left:-12px;top:24px;width:25px;height:13px;background:linear-gradient(90deg,#ff5b16,#ffc65c 75%,transparent);clip-path:polygon(100% 50%,65% 0,45% 25%,0 4%,27% 50%,0 97%,48% 75%,65% 100%);filter:drop-shadow(0 0 5px #e77b2d);transform-origin:right center;animation:ejder-piksel-ates 1.5s ease-in-out infinite alternate}
+@keyframes ejder-piksel-nefes{from{transform:translateY(2px) rotate(-2deg) scaleY(.96)}to{transform:translateY(-3px) rotate(2deg) scaleY(1.04)}}
+@keyframes ejder-piksel-ates{from{opacity:.25;transform:scaleX(.35) scaleY(.7)}to{opacity:1;transform:scaleX(1.05) scaleY(1.15)}}
+@media(max-width:760px){.oi-header .brand-mark{width:54px!important;height:50px!important;flex-basis:54px!important}.oi-header .brand-mark img{width:56px!important;height:52px!important}.oi-header .brand-mark:after{left:-10px;top:19px;width:20px}}
+@media(prefers-reduced-motion:reduce){.oi-header .brand-mark img,.oi-header .brand-mark:after{animation:none!important}}
