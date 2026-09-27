@@ -1,0 +1,2 @@
+V39 sürümünü yüklediysen bu düzeltme paketini açıp içindeki HTML dosyaları ile style-v40.css dosyasını GitHub deposunun köküne yükle. Aynı adlı HTML dosyalarını değiştir. ZIP'i doğrudan yükleme. Tarayıcıda Ctrl+F5 ile yenile.
+Bu küçük paket V39'daki görsel hatayı düzeltir; V39'un JS, resim ve SQL dosyaları depoda kalmalıdır.
