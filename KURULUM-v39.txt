@@ -1,0 +1,14 @@
+TÜRKÇE YAMALAR v39
+
+1. ZIP'i açın. Site dosyalarını GitHub deponuzun kök dizinine yükleyin. ZIP dosyasının kendisini yüklemeyin.
+2. Supabase > SQL Editor'da önce ONCE-INDIRME-GIZLILIGI.sql, sonra ONCE-GORUNTULENME-SAYACI.sql dosyalarının içeriğini birer kez çalıştırın.
+3. Sitedeki Giriş Yap / Kayıt Ol bağlantılarıyla hesabınızı oluşturup giriş yapın.
+4. Yönetici rolünüz henüz yoksa Supabase SQL Editor'da kendi hesap e-postanızı yazarak şu sorguyu çalıştırın:
+
+update public.profiles set role='admin'
+where id=(select id from auth.users where email='KENDI_EPOSTANIZ@example.com');
+
+Ardından çıkış yapıp tekrar giriş yapın. Yönetici hesabı doğrudan admin.html paneline gider.
+İndirme istatistikleri sadece bu panelde görünür ve indirme kaydı devam eder.
+Görüntülenme sayacı yeni kurulumdan itibaren sayar; geçmiş görüntülenmeler bilinmediği için sıfırdan başlar.
+PC Oyunları ve Emülatör Oyunları bölümleri içerik eklenene kadar boş görünür.
