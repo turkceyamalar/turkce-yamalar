@@ -8,3 +8,5 @@ Yama isteği formunun çalışması için Supabase > SQL Editor içinde ONCE-YAM
 Önceki indirme gizliliği ve görüntülenme sayacı SQL dosyalarını henüz çalıştırmadıysan ZIP içindekileri de uygula.
 Kayıtlı üyeler /istek sayfasından oyun adı, platform ve not gönderebilir. Yönetici admin.html sayfasında gelen istekleri görür.
 PC Oyunları kategorisi tam oyun paylaşımı için boş bırakıldı; mevcut Türkçe yamalar o kategoriye kopyalanmadı.
+
+Yönetici hesabı: Önce siteden Kayıt Ol ile kendi hesabını oluştur ve e-posta onayı gerekiyorsa tamamla. Sonra Supabase SQL Editor içinde README-SUPABASE.txt dosyasındaki admin rolü sorgusunda e-postanı yazıp çalıştır. Şifre sitede oluşturulmaz; unutulursa Giriş Yap > Şifremi unuttum ile sıfırlanır. Supabase Auth URL Configuration bölümünde Site URL olarak https://turkce-yamalar.pages.dev ve Redirect URLs içinde https://turkce-yamalar.pages.dev/** tanımlı olmalıdır.
