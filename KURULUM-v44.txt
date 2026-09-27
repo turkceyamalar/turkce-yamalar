@@ -1,0 +1,10 @@
+TÜRKÇE YAMALAR v44
+
+ZIP'i aç. ZIP'in kendisini GitHub'a yükleme.
+HTML, CSS ve JS dosyalarını deponun ana dizinine; assets/berserk-guts-background.jpg dosyasını assets klasörüne yükle. Aynı adlı dosyaları değiştir. Diğer mevcut assets ve downloads dosyalarını silme.
+Yayınlandıktan sonra Ctrl+F5 ile yenile.
+
+Yama isteği formunun çalışması için Supabase > SQL Editor içinde ONCE-YAMA-ISTEKLERI-KUR.sql dosyasını bir kez çalıştır.
+Önceki indirme gizliliği ve görüntülenme sayacı SQL dosyalarını henüz çalıştırmadıysan ZIP içindekileri de uygula.
+Kayıtlı üyeler /istek sayfasından oyun adı, platform ve not gönderebilir. Yönetici admin.html sayfasında gelen istekleri görür.
+PC Oyunları kategorisi tam oyun paylaşımı için boş bırakıldı; mevcut Türkçe yamalar o kategoriye kopyalanmadı.
