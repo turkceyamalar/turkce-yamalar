@@ -7,6 +7,7 @@
   const sb=configured ? window.supabase.createClient(cfg.url,cfg.anonKey,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}}) : null;
   let currentUser=null, currentProfile=null;
   const page=document.body.dataset.page||location.pathname.split('/').pop()||'index.html';
+  const authReturnUrl='https://turkce-yamalar.pages.dev/index.html';
 
   function ensureFooterLinks(){
     const footer=document.querySelector('footer .footer-inner');
@@ -56,7 +57,7 @@
   const modal=document.createElement('div'); modal.className='auth-modal'; modal.innerHTML=`
     <div class="auth-backdrop" data-close></div><div class="auth-box"><button class="auth-close" data-close aria-label="Kapat">×</button>
       <div class="auth-tabs"><button class="auth-tab active" data-tab="login">Giriş Yap</button><button class="auth-tab" data-tab="register">Kayıt Ol</button></div>
-      <form id="loginForm" class="auth-form active"><label>E-posta<input name="email" type="email" required autocomplete="email"></label><label>Şifre<input name="password" type="password" required minlength="6" autocomplete="current-password"></label><button class="button primary" type="submit">Giriş Yap</button><button class="auth-text-button" type="button" id="forgotPassword">Şifremi unuttum</button><p class="form-msg"></p></form>
+      <form id="loginForm" class="auth-form active"><label>E-posta<input name="email" type="email" required autocomplete="email"></label><label>Şifre<input name="password" type="password" required minlength="6" autocomplete="current-password"></label><button class="button primary" type="submit">Giriş Yap</button><button class="auth-text-button" type="button" id="forgotPassword">Şifremi unuttum</button><button class="auth-text-button" type="button" id="resendConfirmation">Doğrulama e-postasını yeniden gönder</button><p class="form-msg"></p></form>
       <form id="registerForm" class="auth-form"><label>Kullanıcı adı<input name="username" required maxlength="24" autocomplete="nickname"></label><label>E-posta<input name="email" type="email" required autocomplete="email"></label><label>Şifre<input name="password" type="password" required minlength="6" autocomplete="new-password"></label><button class="button primary" type="submit">Kayıt Ol</button><p class="form-msg"></p></form>
       <form id="recoverForm" class="auth-form"><h3>Şifreni sıfırla</h3><label>E-posta<input name="email" type="email" required autocomplete="email"></label><button class="button primary" type="submit">Sıfırlama bağlantısı gönder</button><p class="form-msg"></p></form><form id="newPasswordForm" class="auth-form"><h3>Yeni şifre belirle</h3><label>Yeni şifre<input name="password" type="password" required minlength="6" autocomplete="new-password"></label><button class="button primary" type="submit">Şifreyi kaydet</button><p class="form-msg"></p></form><p class="auth-note">Hesaplar güvenli şekilde Supabase Auth ile tutulur. Şifreler site kodunda saklanmaz.</p>
     </div>`; document.body.appendChild(modal);
@@ -67,8 +68,16 @@
   $('#forgotPassword',modal).addEventListener('click',()=>{const email=$('#loginForm input[name=email]',modal).value;switchTab('recover');$('#recoverForm input[name=email]',modal).value=email});
   $('#recoverForm',modal).addEventListener('submit',async e=>{
     e.preventDefault();const m=$('.form-msg',e.currentTarget),email=new FormData(e.currentTarget).get('email').trim();m.textContent='Bağlantı gönderiliyor...';
-    const {error}=await sb.auth.resetPasswordForEmail(email,{redirectTo:location.origin+'/index.html'});
+    const {error}=await sb.auth.resetPasswordForEmail(email,{redirectTo:authReturnUrl});
     m.textContent=error?'Bağlantı gönderilemedi: '+error.message:'Hesap varsa sıfırlama bağlantısı e-postana gönderildi. Gerekiyorsa gereksiz postayı da kontrol et.';
+  });
+  $('#resendConfirmation',modal).addEventListener('click',async () => {
+    const email=$('#loginForm input[name=email]',modal).value.trim();
+    const m=$('#loginForm .form-msg',modal);
+    if(!email){m.textContent='Önce e-posta adresini yaz.';return}
+    m.textContent='Doğrulama e-postası gönderiliyor...';
+    const {error}=await sb.auth.resend({type:'signup',email,options:{emailRedirectTo:authReturnUrl}});
+    m.textContent=error?'E-posta gönderilemedi: '+error.message:'Hesap doğrulanmamışsa yeni bağlantı gönderildi. Gelen kutunu kontrol et.';
   });
   $('#newPasswordForm',modal).addEventListener('submit',async e=>{
     e.preventDefault();const m=$('.form-msg',e.currentTarget),password=new FormData(e.currentTarget).get('password');
@@ -78,7 +87,7 @@
   document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAuth()});
   $('#registerForm',modal).addEventListener('submit',async e=>{
     e.preventDefault();const f=new FormData(e.currentTarget),username=f.get('username').trim(),email=f.get('email').trim(),password=f.get('password'),m=$('.form-msg',e.currentTarget);m.textContent='Kayıt oluşturuluyor...';
-    const {data,error}=await sb.auth.signUp({email,password,options:{data:{display_name:username}}});
+    const {data,error}=await sb.auth.signUp({email,password,options:{data:{display_name:username},emailRedirectTo:authReturnUrl}});
     if(error){m.textContent=error.message;return} m.textContent=data.session?'Kayıt tamamlandı.':'Kayıt tamamlandı. E-posta doğrulaması açıksa gelen kutunu kontrol et.'; await refreshSession(); setTimeout(closeAuth,900);
   });
   $('#loginForm',modal).addEventListener('submit',async e=>{
