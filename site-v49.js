@@ -154,7 +154,13 @@
 
   // Admin page
   async function initAdminPage(){
-    const app=$('#adminApp');if(!app)return;if(!sb){app.innerHTML='<div class="community-card"><h2>Supabase bağlantısı gerekli</h2></div>';return}
+    const app=$('#adminApp');if(!app)return;
+    const requests=$('#adminRequestsSection'),intro=$('#adminIntro'),heading=$('.patch-list-hero h1');
+    if(requests)requests.hidden=true;
+    delete document.documentElement.dataset.adminAuthorized;
+    if(heading)heading.textContent='Yönetici Girişi';
+    if(intro)intro.textContent='Devam etmek için yönetici hesabınla giriş yap.';
+    if(!sb){app.innerHTML='<div class="community-card"><h2>Bağlantı kurulamadı</h2><p>Yönetici girişi şu anda kullanılamıyor.</p></div>';return}
     if(!currentUser){
       app.innerHTML='<section class="community-card admin-private-login"><h2>Yönetici girişi</h2><form id="privateAdminLogin"><label>E-posta<input name="email" type="email" autocomplete="username" required></label><label>Şifre<input name="password" type="password" autocomplete="current-password" required></label><button class="button primary" type="submit">Giriş yap</button><p class="form-msg" role="status"></p></form></section>';
       $('#privateAdminLogin').addEventListener('submit',async e=>{
@@ -169,12 +175,18 @@
       });
       return;
     }
-    if(currentProfile?.role!=='admin'){app.innerHTML='<section class="community-card"><h2>Erişim reddedildi</h2><p>Bu hesap yönetici değil.</p><button class="button secondary" id="adminSignOut">Çıkış yap</button></section>';$('#adminSignOut').onclick=async()=>{await sb.auth.signOut();currentUser=null;currentProfile=null;initAdminPage()};return}
+    if(currentProfile?.role!=='admin'){app.innerHTML='<section class="community-card admin-private-login"><h2>Yönetici yetkisi gerekli</h2><p>Bu hesapla yönetim paneli açılamaz. Yönetici hesabınla giriş yap.</p><button class="button secondary" id="adminSignOut">Hesap değiştir</button></section>';$('#adminSignOut').onclick=async()=>{await sb.auth.signOut();currentUser=null;currentProfile=null;initAdminPage()};return}
+
+    if(heading)heading.textContent='Admin Paneli';
+    if(intro)intro.textContent='Kullanıcıları, yorumları ve moderasyon işlemlerini buradan yönet.';
+    if(requests)requests.hidden=false;
+    document.documentElement.dataset.adminAuthorized='true';
+    document.dispatchEvent(new Event('ty-admin-authorized'));
 
     app.innerHTML=`<button class="button secondary" id="adminLogout" type="button">Çıkış yap</button><section class="community-card" style="margin-bottom:20px"><span class="mini-label">Yalnızca yönetici</span><h2>İndirme istatistikleri</h2><div class="admin-stats" id="downloadAdminStats"></div><div id="downloadPatchStats"></div></section><div class="admin-stats" id="adminStats"></div><div class="admin-grid"><section class="community-card"><div class="section-row"><div><span class="mini-label">Yönetim</span><h2>Kullanıcılar</h2></div><input id="userSearch" class="admin-search" placeholder="Kullanıcı ara..."></div><div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Kullanıcı</th><th>E-posta</th><th>Durum</th><th>Kayıt</th><th>İşlem</th></tr></thead><tbody id="usersTbody"></tbody></table></div></section><section class="community-card"><span class="mini-label">Moderasyon</span><h2>Son Yorumlar</h2><div id="adminComments" class="admin-comments"></div></section></div>`;
-    $('#adminLogout').onclick=async()=>{await sb.auth.signOut();currentUser=null;currentProfile=null;initAdminPage()};
+    $('#adminLogout').onclick=async()=>{delete document.documentElement.dataset.adminAuthorized;await sb.auth.signOut();currentUser=null;currentProfile=null;initAdminPage()};
     const {data:downloads,error:downloadError}=await sb.rpc('admin_download_stats');
-    if(downloadError){$('#downloadAdminStats').textContent='İstatistikler alınamadı. ÖNCE-INDIRME-GIZLILIGI.sql dosyasını Supabase SQL Editor içinde çalıştır.'}
+    if(downloadError){$('#downloadAdminStats').textContent='İndirme istatistikleri şu anda alınamıyor. Yönetici işlevinin Supabase üzerinde kurulması gerekiyor.'}
     else {
       const cards=[['Toplam Yama',15],['Toplam İndirme',Number(downloads.total_downloads||0)],['Bugünkü İndirme',Number(downloads.today_downloads||0)],['Dünkü İndirme',Number(downloads.yesterday_downloads||0)]];
       $('#downloadAdminStats').innerHTML=cards.map(([label,n])=>`<div class="stat-card"><b>${n.toLocaleString('tr-TR')}</b><span>${label}</span></div>`).join('');

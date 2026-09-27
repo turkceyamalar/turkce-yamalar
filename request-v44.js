@@ -1,22 +1,20 @@
 (() => {
   const form=document.getElementById('patchRequestForm');if(!form)return;
-  const note=document.getElementById('requestLoginNote'),result=document.getElementById('requestResult');
+  const result=document.getElementById('requestResult');
   const cfg=window.TY_SUPABASE_CONFIG||{};
-  if(!window.supabase||!cfg.url||!cfg.anonKey){note.textContent='Bağlantı kurulamadı.';return}
+  if(!window.supabase||!cfg.url||!cfg.anonKey){result.textContent='Bağlantı kurulamadı. Lütfen daha sonra tekrar dene.';return}
   const sb=window.supabase.createClient(cfg.url,cfg.anonKey);
-  async function refresh(){
-    const {data}=await sb.auth.getUser();
-    const user=data.user;
-    form.hidden=!user;
-    note.textContent=user?'Hesabınla isteğini gönderebilirsin.':'Yama isteği göndermek için üst menüden giriş yap veya kayıt ol.';
-  }
-  sb.auth.onAuthStateChange(()=>setTimeout(refresh,0));refresh();
   form.addEventListener('submit',async event=>{
-    event.preventDefault();result.textContent='İstek gönderiliyor...';
-    const {data}=await sb.auth.getUser();if(!data.user){result.textContent='Önce giriş yapmalısın.';refresh();return}
+    event.preventDefault();
     const values=new FormData(form);
-    const {error}=await sb.from('patch_requests').insert({user_id:data.user.id,game_name:String(values.get('game_name')).trim(),platform:String(values.get('platform')),details:String(values.get('details')).trim()});
-    if(error){result.textContent='İstek gönderilemedi. ONCE-YAMA-ISTEKLERI-KUR.sql dosyasının uygulandığını kontrol et.';return}
-    result.textContent='İsteğin kaydedildi, teşekkürler.';form.reset();
+    if(String(values.get('website')||'').trim()){result.textContent='İsteğin alındı, teşekkürler.';form.reset();return}
+    const button=form.querySelector('[type="submit"]');button.disabled=true;result.textContent='İstek gönderiliyor...';
+    try{
+      const {data}=await sb.auth.getUser();
+      const {error}=await sb.from('patch_requests').insert({user_id:data?.user?.id||null,contact_name:String(values.get('contact_name')).trim(),contact_email:String(values.get('contact_email')).trim(),game_name:String(values.get('game_name')).trim(),platform:String(values.get('platform')),details:String(values.get('details')).trim()});
+      if(error){result.textContent='İstek gönderilemedi. Site yöneticisinin veritabanı güncellemesini uygulaması gerekiyor.';return}
+      result.textContent='İsteğin alındı, teşekkürler.';form.reset();
+    }catch(_){result.textContent='Bağlantı hatası. Lütfen tekrar dene.'}
+    finally{button.disabled=false}
   });
 })();
