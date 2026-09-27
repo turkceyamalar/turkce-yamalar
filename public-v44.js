@@ -18,7 +18,7 @@
   });
   const patchKey=(document.body.dataset.page||'').replace(/\.html$/,'');
   // Görüntülenme sayısı, yalnızca oyun sayfası açıldığında oturum başına bir kez artar.
-  const gameKeys=['rpcs3','aniimo-android','naruto-ultimate-ninja-impact','aniimo','gta-5','shadow-of-the-tomb-raider','red-dead-redemption-2','resident-evil-4-remake','resident-evil-2-remake','resident-evil-village','beast-of-reincarnation','gothic-1-remake','mortal-shell-2','star-wars-outlaws','cuphead','mindseye','silent-hill-townfall','prince-of-persia-the-lost-crown'];
+  const gameKeys=['ppsspp','rpcs3','aniimo-android','naruto-ultimate-ninja-impact','aniimo','gta-5','shadow-of-the-tomb-raider','red-dead-redemption-2','resident-evil-4-remake','resident-evil-2-remake','resident-evil-village','beast-of-reincarnation','gothic-1-remake','mortal-shell-2','star-wars-outlaws','cuphead','mindseye','silent-hill-townfall','prince-of-persia-the-lost-crown'];
   if(gameKeys.includes(patchKey)){
     try{
       const seen='ty-view-v39-'+patchKey;

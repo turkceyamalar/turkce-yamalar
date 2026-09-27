@@ -15,7 +15,7 @@ begin
     'aniimo','gta-5','shadow-of-the-tomb-raider','red-dead-redemption-2',
     'resident-evil-4-remake','resident-evil-2-remake','resident-evil-village',
     'beast-of-reincarnation','gothic-1-remake','mortal-shell-2',
-    'star-wars-outlaws','cuphead','rpcs3','aniimo-android','naruto-ultimate-ninja-impact','mindseye','silent-hill-townfall',
+    'star-wars-outlaws','cuphead','ppsspp','rpcs3','aniimo-android','naruto-ultimate-ninja-impact','mindseye','silent-hill-townfall',
     'prince-of-persia-the-lost-crown'
   ]) then
     raise exception 'invalid page key';

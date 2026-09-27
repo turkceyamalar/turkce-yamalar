@@ -1346,3 +1346,5 @@ html[data-theme="light"] .brand-name{color:#28211b!important}
 .detail-back{margin-bottom:18px}.detail-back a{color:#d49a66;font-weight:700}.detail-kicker{color:#c88e5a;font-weight:800;letter-spacing:.14em;font-size:.8rem}
 .new-detail .uniform-intro h1{margin-top:10px!important}.new-detail .detail-gallery img{max-width:100%;height:auto}.rpcs3-logo{display:block;max-width:300px;width:75%;margin:18px auto}.new-detail .download-options a{font-family:Segoe UI,Arial,sans-serif!important}
 @media(max-width:760px){.v45-logo{position:relative!important;background:#1a1716!important}.brand-name{font-size:.89rem!important}.brand-mark{width:36px!important;height:36px!important;flex-basis:36px!important}.brand-mark svg{width:29px;height:29px}}
+
+.new-detail .detail-gallery img+img{margin-top:16px}
