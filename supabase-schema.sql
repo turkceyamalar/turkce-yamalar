@@ -75,10 +75,10 @@ alter table public.download_stats enable row level security;
 alter table public.download_daily_stats enable row level security;
 
 drop policy if exists "download stats public read" on public.download_stats;
-create policy "download stats public read" on public.download_stats for select using (true);
+-- İndirme sayıları yalnızca yöneticiye açıktır; ONCE-INDIRME-GIZLILIGI.sql dosyasını çalıştırın.
 
 drop policy if exists "daily download stats public read" on public.download_daily_stats;
-create policy "daily download stats public read" on public.download_daily_stats for select using (true);
+
 
 create or replace function public.register_download(p_patch_key text)
 returns bigint language plpgsql security definer set search_path=public as $$
@@ -104,7 +104,7 @@ create or replace function public.get_download_count(p_patch_key text)
 returns bigint language sql stable security definer set search_path=public as $$
   select coalesce((select download_count from public.download_stats where patch_key=p_patch_key),0);
 $$;
-grant execute on function public.get_download_count(text) to anon, authenticated;
+
 
 create or replace function public.get_download_dashboard()
 returns jsonb language sql stable security definer set search_path=public as $$
@@ -114,7 +114,7 @@ returns jsonb language sql stable security definer set search_path=public as $$
     'yesterday_downloads', coalesce((select download_count from public.download_daily_stats where day=timezone('Europe/Istanbul',now())::date-1),0)
   );
 $$;
-grant execute on function public.get_download_dashboard() to anon, authenticated;
+
 
 create or replace function public.is_admin(uid uuid default auth.uid())
 returns boolean language sql stable security definer set search_path=public as $$
@@ -200,3 +200,5 @@ grant execute on function public.admin_delete_comment(bigint) to authenticated;
 
 -- ÖNEMLİ: İlk admin hesabını oluşturduktan sonra aşağıdaki satırı kendi e-postanızla çalıştırın:
 -- update public.profiles set role='admin' where id=(select id from auth.users where email='SENIN_EPOSTAN@example.com');
+
+-- Özel istatistik paneli için: ayrıca ONCE-INDIRME-GIZLILIGI.sql dosyasını çalıştırın.

@@ -1,12 +1,7 @@
-V40 - SON DÜZELTMELER
+V37 — 32 kareli, sürekli dönen GIF ejderha, kaldırılmış Haberler ve sayaç düzeltmesi.
 
-- Üst menüde HABERLER kaldırıldı.
-- Tüm sayfalardaki bozuk v37 ejderha bağlantıları v38 hareketli GIF ile değiştirildi.
-- Ejderha GIF'i gövde ve kuyruğu dalgalanacak şekilde 32 kare animasyon olarak kullanılıyor.
-- Ana sayfa ve Türkçe Yama sayfasındaki sayaçlar: Toplam Yama 15, Toplam İndirme 40, Bugünkü İndirme 37, Dünkü İndirme 3.
-- Sayaç JavaScript'i v40 olarak önbellek kırmalı şekilde güncellendi; HTML içinde de 40 / 37 / 3 yedek değerleri bulunuyor.
-- Aniimo yama sayfasındaki eski/tekrarlanan "Yama Hakkında" bölümü temizlendi.
-- Aniimo yama sayfasındaki iki sütunun gereksiz boşlukla eşitlenmesi düzeltildi.
+ZIP dosyasını bilgisayarda çıkarın. İçindeki TÜM dosyaları (index.html ve assets klasörü dahil) GitHub deposunun ana klasörüne yükleyip mevcut dosyaların üzerine yazın. ZIP dosyasının kendisini yüklemeyin. Cloudflare Pages dağıtımı tamamlandıktan sonra siteyi Ctrl+F5 ile yenileyin.
 
-ÖNEMLİ:
-GitHub'da eski "haberler.html" gibi dosyalar varsa bunları ayrıca sil. GitHub'a yeni dosya yüklemek eski dosyaları kendiliğinden silmez.
+Bugün (26 Eylül 2026): 37. Dün: 3. Toplam: 40. Aniimo: 31. Bunlar sayım başlamadan önce bildirilen indirmelerdir. Diğer 9 indirmenin oyunlara dağılımı bilinmediğinden uydurulmadı. Günlük etiketler İstanbul tarihine göre değişir.
+
+Yeni indirme tıklamalarının otomatik kaydı için Supabase > SQL Editor > New query bölümünde INDIRME-SAYACI-KUR.sql dosyasının içeriğini çalıştırın. Tablolar kurulmadan geçmiş sayılar görünür ama yeni tıklamalar sunucuya kaydedilemez. 40 eski indirimi SQL içine ayrıca eklemeyin; sitedeki geçmiş kaydıyla iki kez sayılır.

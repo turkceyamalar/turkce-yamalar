@@ -13,10 +13,10 @@ alter table public.download_stats enable row level security;
 alter table public.download_daily_stats enable row level security;
 
 drop policy if exists "download stats public read" on public.download_stats;
-create policy "download stats public read" on public.download_stats for select using (true);
+-- İndirme sayıları yalnızca yöneticiye açıktır; ONCE-INDIRME-GIZLILIGI.sql dosyasını çalıştırın.
 
 drop policy if exists "daily download stats public read" on public.download_daily_stats;
-create policy "daily download stats public read" on public.download_daily_stats for select using (true);
+
 
 create or replace function public.register_download(p_patch_key text)
 returns bigint language plpgsql security definer set search_path=public as $$
@@ -42,7 +42,7 @@ create or replace function public.get_download_count(p_patch_key text)
 returns bigint language sql stable security definer set search_path=public as $$
   select coalesce((select download_count from public.download_stats where patch_key=p_patch_key),0);
 $$;
-grant execute on function public.get_download_count(text) to anon, authenticated;
+
 
 create or replace function public.get_download_dashboard()
 returns jsonb language sql stable security definer set search_path=public as $$
@@ -52,7 +52,9 @@ returns jsonb language sql stable security definer set search_path=public as $$
     'yesterday_downloads', coalesce((select download_count from public.download_daily_stats where day=timezone('Europe/Istanbul',now())::date-1),0)
   );
 $$;
-grant execute on function public.get_download_dashboard() to anon, authenticated;
 
 
-grant select on public.download_stats, public.download_daily_stats to anon, authenticated;
+
+grant select on public.download_stats, public.download_daily_stats to authenticated;
+
+-- Özel istatistik paneli için: ayrıca ONCE-INDIRME-GIZLILIGI.sql dosyasını çalıştırın.
