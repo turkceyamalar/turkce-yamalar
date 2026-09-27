@@ -1,6 +1,6 @@
 Assassin's Creed vitrin güncellemesi
 
-Bu paket mevcut EjderArşiv site dosyaları üzerine eklenir. assets klasöründeki mevcut görselleri silmeyin; bu pakette yalnızca yeni AC kapakları bulunur.
+Bu paket mevcut EjderOyun site dosyaları üzerine eklenir. assets klasöründeki mevcut görselleri silmeyin; bu pakette yalnızca yeni AC kapakları bulunur.
 
 Eklenen sayfalar: Director's Cut, Brotherhood, III, Unity, Syndicate, Odyssey, Mirage, Shadows.
 Yama arşivleri bu site ZIP dosyasına eklenmedi. Herkese açık indirme bağlantıları henüz verilmediği için sayfalarda indirme düğmesi yoktur.
