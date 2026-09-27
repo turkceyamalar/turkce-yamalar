@@ -30,15 +30,6 @@
       }
     }catch(_){}
   }
-  if(document.querySelector('[data-views]')){
-    sb.from('page_views').select('page_key,view_count').then(({data,error})=>{
-      if(error){document.querySelectorAll('[data-views]').forEach(node=>node.textContent='Görüntülenme bilgisi alınamadı');return;}
-      const counts=new Map((data||[]).map(row=>[row.page_key,Number(row.view_count)||0]));
-      document.querySelectorAll('[data-views]').forEach(node=>{
-        node.textContent='◉ '+(counts.get(node.dataset.views)||0).toLocaleString('tr-TR')+' görüntülenme';
-      });
-    });
-  }
   if(/^[a-z0-9-]{1,80}$/.test(patchKey)){
     document.querySelectorAll('.uniform-grid #indir .download-options a[href]').forEach(link=>link.addEventListener('click',()=>{
       sb.rpc('register_download',{p_patch_key:patchKey});

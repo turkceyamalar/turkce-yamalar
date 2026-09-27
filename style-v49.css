@@ -1379,3 +1379,12 @@ html[data-theme="light"] .brand-mark{background:#f5e3ce!important}
 @keyframes ejder-piksel-ates{from{opacity:.25;transform:scaleX(.35) scaleY(.7)}to{opacity:1;transform:scaleX(1.05) scaleY(1.15)}}
 @media(max-width:760px){.oi-header .brand-mark{width:54px!important;height:50px!important;flex-basis:54px!important}.oi-header .brand-mark img{width:56px!important;height:52px!important}.oi-header .brand-mark:after{left:-10px;top:19px;width:20px}}
 @media(prefers-reduced-motion:reduce){.oi-header .brand-mark img,.oi-header .brand-mark:after{animation:none!important}}
+
+/* v57: herkese açık toplu site istatistikleri */
+.public-stats-section{margin:20px auto 8px;padding:18px 22px;border:1px solid #66513e;background:#171717;color:#fff}
+.public-stats-section h2{margin:0 0 15px;color:#efae70;font:800 1.1rem system-ui,-apple-system,Segoe UI,sans-serif}
+.public-stats-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;color:#bec5cb}
+.public-stat-card{padding:15px;border:1px solid #554435;background:#25201c;border-radius:9px}.public-stat-card strong{display:block;color:#fff;font-size:1.5rem}.public-stat-card span{font-size:.78rem;color:#d0bba8}
+.ty-download-count{white-space:nowrap}
+html[data-theme="light"] .public-stats-section{background:#fff;color:#242424;border-color:#cdbba7}html[data-theme="light"] .public-stat-card{background:#f7f3ee;border-color:#d8c8b7}html[data-theme="light"] .public-stat-card strong{color:#252525}html[data-theme="light"] .public-stat-card span{color:#705a48}
+@media(max-width:720px){.public-stats-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.public-stats-section{padding:14px}}
