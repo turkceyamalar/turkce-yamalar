@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
     download.classList.add('detail-download');
     const links = download.querySelectorAll('.download-options a');
     links.forEach(a => {
-      a.textContent = a.textContent.trim().replace(/’dan İndir|’den İndir| Sürümü \(MediaFire\)/g,'').trim() + ' → İndir';
-      if (a.hostname.includes('mediafire.com')) a.textContent = '⬇ ' + a.textContent.replace('MediaFire →','MediaFire üzerinden');
+      // Tam hedef adres görünür; ziyaretçi indirmeden önce bağlantıyı kontrol edebilir.
+      a.textContent = a.href;
     });
   }
   column.append(grid);

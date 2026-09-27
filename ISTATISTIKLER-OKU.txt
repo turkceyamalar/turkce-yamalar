@@ -1,0 +1,1 @@
+Supabase > SQL Editor > New query ekranında ISTATISTIKLERI-DUZELT-TEK-SEFER.sql dosyasının TAMAMINI yapıştırıp Run düğmesine basın. Ardından sitede Ctrl+F5 yapın. Bu SQL mevcut sayaç kayıtlarını silmez. Site ZIP dosyasını yeniden yüklemeniz gerekmez; arıza veritabanındaki eksik tablo ve işlevlerden kaynaklanıyor.
