@@ -48,9 +48,7 @@
     });
     $$('.js-register').forEach(a=>{a.style.display=currentUser?'none':'';a.onclick=e=>{e.preventDefault();openAuth('register')}});
     $$('.admin-nav-link').forEach(a=>a.remove());
-    if(currentProfile?.role==='admin'){
-      $$('.nav-auth').forEach(w=>{const a=document.createElement('a');a.className='admin-nav-link';a.href='admin.html';a.textContent='Admin Paneli';w.appendChild(a)})
-    }
+
   }
 
   // Auth modal
@@ -157,8 +155,24 @@
   // Admin page
   async function initAdminPage(){
     const app=$('#adminApp');if(!app)return;if(!sb){app.innerHTML='<div class="community-card"><h2>Supabase bağlantısı gerekli</h2></div>';return}
-    if(!currentUser||currentProfile?.role!=='admin'){location.href='index.html';return}
-    app.innerHTML=`<section class="community-card" style="margin-bottom:20px"><span class="mini-label">Yalnızca yönetici</span><h2>İndirme istatistikleri</h2><div class="admin-stats" id="downloadAdminStats"></div><div id="downloadPatchStats"></div></section><div class="admin-stats" id="adminStats"></div><div class="admin-grid"><section class="community-card"><div class="section-row"><div><span class="mini-label">Yönetim</span><h2>Kullanıcılar</h2></div><input id="userSearch" class="admin-search" placeholder="Kullanıcı ara..."></div><div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Kullanıcı</th><th>E-posta</th><th>Durum</th><th>Kayıt</th><th>İşlem</th></tr></thead><tbody id="usersTbody"></tbody></table></div></section><section class="community-card"><span class="mini-label">Moderasyon</span><h2>Son Yorumlar</h2><div id="adminComments" class="admin-comments"></div></section></div>`;
+    if(!currentUser){
+      app.innerHTML='<section class="community-card admin-private-login"><h2>Yönetici girişi</h2><form id="privateAdminLogin"><label>E-posta<input name="email" type="email" autocomplete="username" required></label><label>Şifre<input name="password" type="password" autocomplete="current-password" required></label><button class="button primary" type="submit">Giriş yap</button><p class="form-msg" role="status"></p></form></section>';
+      $('#privateAdminLogin').addEventListener('submit',async e=>{
+        e.preventDefault();const form=e.currentTarget,button=form.querySelector('button'),msg=form.querySelector('.form-msg'),data=new FormData(form);
+        button.disabled=true;msg.textContent='Kontrol ediliyor...';
+        const {error}=await sb.auth.signInWithPassword({email:String(data.get('email')).trim(),password:String(data.get('password'))});
+        button.disabled=false;
+        if(error){msg.textContent='Giriş yapılamadı. E-posta ve şifreni kontrol et.';return}
+        await refreshSession();
+        if(currentProfile?.role!=='admin'){await sb.auth.signOut();currentUser=null;currentProfile=null;msg.textContent='Bu hesabın yönetici yetkisi yok.';return}
+        initAdminPage();
+      });
+      return;
+    }
+    if(currentProfile?.role!=='admin'){app.innerHTML='<section class="community-card"><h2>Erişim reddedildi</h2><p>Bu hesap yönetici değil.</p><button class="button secondary" id="adminSignOut">Çıkış yap</button></section>';$('#adminSignOut').onclick=async()=>{await sb.auth.signOut();currentUser=null;currentProfile=null;initAdminPage()};return}
+
+    app.innerHTML=`<button class="button secondary" id="adminLogout" type="button">Çıkış yap</button><section class="community-card" style="margin-bottom:20px"><span class="mini-label">Yalnızca yönetici</span><h2>İndirme istatistikleri</h2><div class="admin-stats" id="downloadAdminStats"></div><div id="downloadPatchStats"></div></section><div class="admin-stats" id="adminStats"></div><div class="admin-grid"><section class="community-card"><div class="section-row"><div><span class="mini-label">Yönetim</span><h2>Kullanıcılar</h2></div><input id="userSearch" class="admin-search" placeholder="Kullanıcı ara..."></div><div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Kullanıcı</th><th>E-posta</th><th>Durum</th><th>Kayıt</th><th>İşlem</th></tr></thead><tbody id="usersTbody"></tbody></table></div></section><section class="community-card"><span class="mini-label">Moderasyon</span><h2>Son Yorumlar</h2><div id="adminComments" class="admin-comments"></div></section></div>`;
+    $('#adminLogout').onclick=async()=>{await sb.auth.signOut();currentUser=null;currentProfile=null;initAdminPage()};
     const {data:downloads,error:downloadError}=await sb.rpc('admin_download_stats');
     if(downloadError){$('#downloadAdminStats').textContent='İstatistikler alınamadı. ÖNCE-INDIRME-GIZLILIGI.sql dosyasını Supabase SQL Editor içinde çalıştır.'}
     else {
