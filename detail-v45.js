@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const entries = [
     ['resident-evil-4-remake.html','Resident Evil 4 Remake','assets/resident-evil-4-cover.jpg'],
     ['cuphead.html','Cuphead','assets/cuphead-cover-small.jpg'],
-    ['gta-5.html','Grand Theft Auto V','assets/gta-5-cover.png'],
+    ['gta-5.html','Grand Theft Auto V','assets/gta-5-cover.webp'],
     ['aniimo.html','Aniimo','assets/aniimo-detail.png'],
-    ['star-wars-outlaws.html','Star Wars Outlaws','assets/star-wars-outlaws-cover.png']
+    ['star-wars-outlaws.html','Star Wars Outlaws','assets/star-wars-outlaws-cover.webp']
   ].filter(([url]) => url !== location.pathname.split('/').pop());
   const aside = document.createElement('aside');
   aside.className = 'detail-related';

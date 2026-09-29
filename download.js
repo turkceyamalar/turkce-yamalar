@@ -21,10 +21,10 @@
         ['PC Client Sürümü (Dosya.co)', 'https://dosya.co/x71udugwl2f9/Aniimo_Turkce_ASCII_Yama_v4_English_Slot(1).zip.html']
       ]
     },
-    'gta-5': { title: 'Grand Theft Auto V Türkçe Yama', file: 'GTA_5_TR_Dosya_Kopyala.zip', size: 'Dosya sunucusunda', type: 'ZIP • EXE içermez', image: 'assets/gta-5-cover.png', detail: 'gta-5.html', links: [['Dosya.co’dan İndir', 'https://dosya.co/6g8qlxymjwbi/GTA_5_TR_Dosya_Kopyala.zip.html']] },
-    'shadow-of-the-tomb-raider': { title: 'Shadow of the Tomb Raider Türkçe Yama', file: 'Shadow_of_the_Tomb_Raider_TR_Dosya_Kopyala.zip', size: 'Dosya sunucusunda', type: 'ZIP • EXE içermez', image: 'assets/shadow-of-the-tomb-raider-cover.png', detail: 'shadow-of-the-tomb-raider.html', links: [['Dosya.co’dan İndir', 'https://dosya.co/m2ijdt9b221h/Shadow_of_the_Tomb_Raider_TR_Dosya_Kopyala.zip.html']] },
+    'gta-5': { title: 'Grand Theft Auto V Türkçe Yama', file: 'GTA_5_TR_Dosya_Kopyala.zip', size: 'Dosya sunucusunda', type: 'ZIP • EXE içermez', image: 'assets/gta-5-cover.webp', detail: 'gta-5.html', links: [['Dosya.co’dan İndir', 'https://dosya.co/6g8qlxymjwbi/GTA_5_TR_Dosya_Kopyala.zip.html']] },
+    'shadow-of-the-tomb-raider': { title: 'Shadow of the Tomb Raider Türkçe Yama', file: 'Shadow_of_the_Tomb_Raider_TR_Dosya_Kopyala.zip', size: 'Dosya sunucusunda', type: 'ZIP • EXE içermez', image: 'assets/shadow-of-the-tomb-raider-cover.webp', detail: 'shadow-of-the-tomb-raider.html', links: [['Dosya.co’dan İndir', 'https://dosya.co/m2ijdt9b221h/Shadow_of_the_Tomb_Raider_TR_Dosya_Kopyala.zip.html']] },
     'red-dead-redemption-2': {
-      title: 'Red Dead Redemption 2 Türkçe Yama', file: 'RDR2_Turkce_Yama_Dosya_Kurulum.zip', size: 'Dosya sunucusunda', type: 'ZIP • EXE içermez', image: 'assets/rdr2-cover.png', detail: 'red-dead-redemption-2.html',
+      title: 'Red Dead Redemption 2 Türkçe Yama', file: 'RDR2_Turkce_Yama_Dosya_Kurulum.zip', size: 'Dosya sunucusunda', type: 'ZIP • EXE içermez', image: 'assets/rdr2-cover.webp', detail: 'red-dead-redemption-2.html',
       links: [['Dosya.co’dan İndir', 'https://dosya.co/jbc08lem0ni1/RDR2_Turkce_Yama_Dosya_Kurulum.zip.html']]
     },
     cuphead: {
@@ -49,7 +49,7 @@
       ]
     },
     'star-wars-outlaws': {
-      title: 'Star Wars Outlaws Türkçe Yama', file: 'Star_Wars_Outlaws_Turkce_Yama_Dosyalari.zip', size: 'Dosya sunucusunda', type: 'ZIP • EXE içermez', image: 'assets/star-wars-outlaws-cover.png', detail: 'star-wars-outlaws.html',
+      title: 'Star Wars Outlaws Türkçe Yama', file: 'Star_Wars_Outlaws_Turkce_Yama_Dosyalari.zip', size: 'Dosya sunucusunda', type: 'ZIP • EXE içermez', image: 'assets/star-wars-outlaws-cover.webp', detail: 'star-wars-outlaws.html',
       links: [['MediaFire’dan İndir', 'https://www.mediafire.com/file/hywywnkn18amoae/Star_Wars_Outlaws_Turkce_Yama_Dosyalari.zip/file']]
     },
     'prince-of-persia': {

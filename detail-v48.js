@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
     ['aniimo.html','Aniimo','assets/aniimo-cover.webp'],
     ['resident-evil-4-remake.html','Resident Evil 4 Remake','assets/resident-evil-4-cover.jpg'],
     ['cuphead.html','Cuphead','assets/cuphead-cover-small.jpg'],
-    ['gta-5.html','Grand Theft Auto V','assets/gta-5-cover.png'],
-    ['star-wars-outlaws.html','Star Wars Outlaws','assets/star-wars-outlaws-cover.png']
+    ['gta-5.html','Grand Theft Auto V','assets/gta-5-cover.webp'],
+    ['star-wars-outlaws.html','Star Wars Outlaws','assets/star-wars-outlaws-cover.webp']
   ].filter(([url]) => url !== slug + '.html');
   const intro = detail.querySelector('.uniform-intro');
   const media = detail.querySelector('.uniform-media');
