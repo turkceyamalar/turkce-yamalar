@@ -26,3 +26,38 @@ Kullanıcı tarafından belirtilen romsgames.net liste kapaklarından alınan k�
 - emulator-game-21.webp — Spider-Man 2 (PS2): https://cache.downloadroms.io/static/6b04ba6a2e243e7f7340c556d2ee65da15634083/image.jpg
 - emulator-game-22.webp — Call of Duty 3 (PS2): https://cache.downloadroms.io/static/79231e39468002c3edcdce6f6745aa2f0453e00c/image.jpg
 - emulator-game-23.webp — God Hand (PS2): https://cache.downloadroms.io/static/5e19379b6ee71f7dfddbf03e5a2b2e8c5f6cb954/image.jpeg
+- emulator-game-24.webp — Gran Turismo (PSP): https://cache.downloadroms.io/static/a1208aa60bc9cd88f4f41864e8d17081075d4c7b/image.jpeg
+- emulator-game-25.webp — Dante's Inferno (PSP): https://cache.downloadroms.io/static/b4afad303b4392f3f77f352c5c7f9a22bc076a19/image.jpeg
+- emulator-game-26.webp — Def Jam: Fight for NY - The Takeover (PSP): https://cache.downloadroms.io/static/47253361ebebec66871872b8d0a86d1bb49bac5c/image.jpeg
+- emulator-game-27.webp — Dragon Ball Z: Tenkaichi Tag Team (PSP): https://cache.downloadroms.io/static/fce7caf35f9ced4c3a6553146070d2024eeaac90/image.jpeg
+- emulator-game-28.webp — Ben 10: Ultimate Alien - Cosmic Destruction (PSP): https://cache.downloadroms.io/static/11570b605a0e83f6ba9c2013b822496ab77389e1/image.jpeg
+- emulator-game-29.webp — Call of Duty: Roads to Victory (PSP): https://cache.downloadroms.io/static/ba4ca4c3028c0676f52420c4066e5adc994815b3/image.jpeg
+- emulator-game-30.webp — LEGO Batman - The Video Game (PSP): https://cache.downloadroms.io/static/2139f1a6d615f0bf8f036ce61d6d47243af651ad/image.jpeg
+- emulator-game-31.webp — Disney-Pixar Toy Story 3 (PSP): https://cache.downloadroms.io/static/7324ced81838cc0429bdb08a512c42d2221a2493/image.jpeg
+- emulator-game-32.webp — Fight Night Round 3 (PSP): https://cache.downloadroms.io/static/118179d11738b20e9db3dfd2922f78e652b1241a/image.jpeg
+- emulator-game-33.webp — Naruto Shippuden: Ultimate Ninja Heroes 3 (PSP): https://cache.downloadroms.io/static/e6bcdf4b97554a7f4f88e3fb7fb0a454fc0a2820/image.jpeg
+- emulator-game-34.webp — Spider-Man - Freund Oder Feind (PSP): https://cache.downloadroms.io/static/3c1e6d163fbb900337546373bc89bc232192948f/image.jpg
+- emulator-game-35.webp — Midnight Club: L.A. Remix (PSP): https://cache.downloadroms.io/static/d94ac2caa4d313f36d88ccb7d2253521f05756ca/image.jpeg
+- emulator-game-36.webp — Medal of Honor: Heroes 2 (PSP): https://cache.downloadroms.io/static/d4dfe4a57a567bcc4ed9fa24a4260e934540ba12/image.jpeg
+- emulator-game-37.webp — FIFA Soccer 12 (PSP): https://cache.downloadroms.io/static/709b9ac64f44b7c9545b2255a93ef226d5041165/image.jpeg
+- emulator-game-38.webp — Dragon Ball Z: Shin Budokai (PSP): https://cache.downloadroms.io/static/025aeefa0e16594ae3b367dc486e63fa09152385/image.jpeg
+- emulator-game-39.webp — Crash: Mind over Mutant (PSP): https://cache.downloadroms.io/static/09e6838db3e2e1db0567d3338084893bffa0fee0/image.jpeg
+- emulator-game-40.webp — Metal Slug XX (PSP): https://cache.downloadroms.io/static/b0b136de6cc2741c3bb73a973894eee480c9b7f1/image.jpeg
+- emulator-game-41.webp — Manhunt 2 (PSP): https://cache.downloadroms.io/static/0265fc76cc983dc3b3c608fe47fe24d859fd071f/image.jpeg
+- emulator-game-42.webp — Dragon Ball Z: Shin Budokai - Another Road (PSP): https://cache.downloadroms.io/static/cdc5d0b2c9dc3ccc1bf978d66bf6d91cad4c6104/image.jpeg
+- emulator-game-43.webp — Crisis Core: Final Fantasy VII (PSP): https://cache.downloadroms.io/static/02d2dd72dc4a3beb4a51aac11074a9c4882f139a/image.jpeg
+- emulator-game-44.webp — Metal Gear Solid: Peace Walker (PSP): https://cache.downloadroms.io/static/2599144f2d5c887c960c9bb4004dda224171bc2c/image.jpeg
+- emulator-game-45.webp — LittleBigPlanet (PSP): https://cache.downloadroms.io/static/5f53dd9224a0a61b2bb2faea8aa97c735863d556/image.jpeg
+- emulator-game-46.webp — NBA 2K13 (PSP): https://cache.downloadroms.io/static/50385ece3adf3f9d611a22c1ebf9afcda34647b2/image.jpeg
+- emulator-game-47.webp — Crash Twinsanity (PS2): https://cache.downloadroms.io/static/0de2ed5dce5153f8cc43fcd98dda8b77bb335fe5/image.jpg
+- emulator-game-48.webp — Shadow of the Colossus (PS2): https://cache.downloadroms.io/static/dabd95ccdf927307f3129ca26ab454efb7f3d489/image.jpeg
+- emulator-game-49.webp — Metal Slug Anthology (PS2): https://cache.downloadroms.io/static/428b9f531bc7fdfaf48839b02811292b7ab9a4a0/image.jpg
+- emulator-game-50.webp — Ultimate Spider-Man - Limited Edition (PS2): https://cache.downloadroms.io/static/15b749c9a4028c5388a65520760ab5a336bfaf78/image.jpeg
+- emulator-game-51.webp — Tekken 4 (PS2): https://cache.downloadroms.io/static/f6567ed75b798c2d53ddbfe72a969e2c2c7e0f41/image.png
+- emulator-game-52.webp — Silent Hill 2 (PS2): https://cache.downloadroms.io/static/f6bb0d2d00b6d29ee6acfec3c27608ed05380f00/image.png
+- emulator-game-53.webp — Batman Begins (PS2): https://cache.downloadroms.io/static/5ba8eb3543eaf7e97d469615b6064e0725f2bab3/image.jpeg
+- emulator-game-54.webp — Red Dead Revolver (PS2): https://cache.downloadroms.io/static/54b72d3f3d1bf7ed2739942d190986386274bc43/image.png
+- emulator-game-55.webp — Spider-Man 3 (PS2): https://cache.downloadroms.io/static/4846c557024d5ff4df707fe43127ead51f4dcd91/image.png
+- emulator-game-56.webp — Tom and Jerry in War of the Whiskers (PS2): https://cache.downloadroms.io/static/ed4491b5ed9efc9969b935d15d4593195ee3d7b9/image.jpeg
+- emulator-game-57.webp — Medal of Honor: Frontline (PS2): https://cache.downloadroms.io/static/3d8abab47d6daced312816c49e2819690ab9b6cf/image.jpeg
+- emulator-game-58.webp — Urban Reign (PS2): https://cache.downloadroms.io/static/3426478f3fcee30a1e798117605b8712cb5876df/image.jpg

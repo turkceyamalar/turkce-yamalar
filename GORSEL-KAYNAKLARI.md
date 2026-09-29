@@ -20,3 +20,17 @@ Bu görseller Steam mağaza kapaklarından alınmıştır. Oyunların görsel ha
 - `star-wars-jedi-survivor-store.webp`: https://store.steampowered.com/app/1774580/
 - `starfield-store.webp`: https://store.steampowered.com/app/1716740/
 - `yakuza-like-a-dragon-store.webp`: https://store.steampowered.com/app/1235140/
+- `control-ultimate-edition-store.webp`: https://store.steampowered.com/app/870780/
+- `code-vein-store.webp`: https://store.steampowered.com/app/678960/
+- `greedfall-store.webp`: https://store.steampowered.com/app/606880/
+- `the-evil-within-2-store.webp`: https://store.steampowered.com/app/601430/
+- `prey-2017-store.webp`: https://store.steampowered.com/app/480490/
+- `dishonored-2-store.webp`: https://store.steampowered.com/app/403640/
+- `mass-effect-legendary-edition-store.webp`: https://store.steampowered.com/app/1328670/
+- `the-surge-2-store.webp`: https://store.steampowered.com/app/644830/
+- `days-gone-store.webp`: https://store.steampowered.com/app/1259420/
+- `darksiders-3-store.webp`: https://store.steampowered.com/app/606280/
+- `kingdom-come-deliverance-store.webp`: https://store.steampowered.com/app/379430/
+- `remnant-from-the-ashes-store.webp`: https://store.steampowered.com/app/617290/
+- `scarlet-nexus-store.webp`: https://store.steampowered.com/app/775500/
+- `the-medium-store.webp`: https://store.steampowered.com/app/1293160/

@@ -29,3 +29,68 @@ Steam mağaza görselleri ve mağazada belirtilen çıkış tarihleri. Oyunları
 - Resident Evil Requiem — 2026, Feb 26, 2026: https://store.steampowered.com/app/3764200/
 - Nioh 3 — 2026, Feb 5, 2026: https://store.steampowered.com/app/3681010/
 - PRAGMATA — 2026, Apr 16, 2026: https://store.steampowered.com/app/3357650/
+- Monster Hunter Wilds — 2025, Feb 27, 2025: https://store.steampowered.com/app/2246340/
+- DOOM: The Dark Ages — 2025, May 14, 2025: https://store.steampowered.com/app/3017860/
+- The Alters — 2025, Jun 13, 2025: https://store.steampowered.com/app/1601570/
+- Split Fiction — 2025, Mar 6, 2025: https://store.steampowered.com/app/2001120/
+- Dune: Awakening — 2025, Jun 10, 2025: https://store.steampowered.com/app/1172710/
+- Mafia: The Old Country — 2025, Aug 7, 2025: https://store.steampowered.com/app/1941540/
+- Borderlands 4 — 2025, Sep 11, 2025: https://store.steampowered.com/app/1285190/
+- Hell is Us — 2025, Sep 4, 2025: https://store.steampowered.com/app/1620730/
+- WUCHANG: Fallen Feathers — 2025, Jul 23, 2025: https://store.steampowered.com/app/2277560/
+- Battlefield™ 6 — 2025, Oct 10, 2025: https://store.steampowered.com/app/2807960/
+- ARC Raiders — 2025, Oct 30, 2025: https://store.steampowered.com/app/1808500/
+- Dispatch — 2025, Oct 22, 2025: https://store.steampowered.com/app/2592160/
+- HELLDIVERS™ 2 — 2024, Feb 8, 2024: https://store.steampowered.com/app/553850/
+- Manor Lords — 2024, Apr 26, 2024: https://store.steampowered.com/app/1363080/
+- Frostpunk 2 — 2024, Sep 20, 2024: https://store.steampowered.com/app/1601580/
+- Like a Dragon: Infinite Wealth — 2024, Jan 25, 2024: https://store.steampowered.com/app/2072450/
+- Persona 3 Reload — 2024, Feb 1, 2024: https://store.steampowered.com/app/2161700/
+- S.T.A.L.K.E.R. 2: Heart of Chornobyl — 2024, Nov 20, 2024: https://store.steampowered.com/app/1643320/
+- Indiana Jones and the Great Circle — 2024, Dec 8, 2024: https://store.steampowered.com/app/2677660/
+- Warhammer 40,000: Space Marine 2 — 2024, Sep 9, 2024: https://store.steampowered.com/app/2183900/
+- Balatro — 2024, Feb 20, 2024: https://store.steampowered.com/app/2379780/
+- Pacific Drive — 2024, Feb 21, 2024: https://store.steampowered.com/app/1458140/
+- ARMORED CORE™ VI FIRES OF RUBICON™ — 2023, Aug 24, 2023: https://store.steampowered.com/app/1888160/
+- Dead Space — 2023, Jan 27, 2023: https://store.steampowered.com/app/1693980/
+- REMNANT II® — 2023, Jul 25, 2023: https://store.steampowered.com/app/1282100/
+- THE FINALS — 2023, Dec 7, 2023: https://store.steampowered.com/app/2073850/
+- Hi-Fi RUSH — 2023, Jan 25, 2023: https://store.steampowered.com/app/1817230/
+- Pizza Tower — 2023, Jan 26, 2023: https://store.steampowered.com/app/2231450/
+- DAVE THE DIVER — 2023, Jun 28, 2023: https://store.steampowered.com/app/1868140/
+- Lethal Company — 2023, Oct 23, 2023: https://store.steampowered.com/app/1966720/
+- Atomic Heart — 2023, Feb 20, 2023: https://store.steampowered.com/app/668580/
+- Cities: Skylines II — 2023, Oct 24, 2023: https://store.steampowered.com/app/949230/
+- Wo Long: Fallen Dynasty — 2023, Mar 3, 2023: https://store.steampowered.com/app/1448440/
+- Cult of the Lamb — 2022, Aug 11, 2022: https://store.steampowered.com/app/1313140/
+- Vampire Survivors — 2022, Oct 20, 2022: https://store.steampowered.com/app/1794680/
+- The Callisto Protocol™ — 2022, Dec 1, 2022: https://store.steampowered.com/app/1544020/
+- High On Life — 2022, Dec 13, 2022: https://store.steampowered.com/app/1583230/
+- Scorn — 2022, Oct 14, 2022: https://store.steampowered.com/app/698670/
+- SIGNALIS — 2022, Oct 27, 2022: https://store.steampowered.com/app/1262350/
+- Total War: WARHAMMER III — 2022, Feb 16, 2022: https://store.steampowered.com/app/1142710/
+- TUNIC — 2022, Mar 16, 2022: https://store.steampowered.com/app/553420/
+- Neon White — 2022, Jun 16, 2022: https://store.steampowered.com/app/1533420/
+- Evil West — 2022, Nov 21, 2022: https://store.steampowered.com/app/1065310/
+- Ghostwire: Tokyo — 2022, Mar 24, 2022: https://store.steampowered.com/app/1475810/
+- Marvel's Guardians of the Galaxy — 2021, Oct 26, 2021: https://store.steampowered.com/app/1088850/
+- Psychonauts 2 — 2021, Aug 24, 2021: https://store.steampowered.com/app/607080/
+- Back 4 Blood — 2021, Oct 12, 2021: https://store.steampowered.com/app/924970/
+- The Ascent — 2021, Jul 29, 2021: https://store.steampowered.com/app/979690/
+- Inscryption — 2021, Oct 19, 2021: https://store.steampowered.com/app/1092790/
+- Loop Hero — 2021, Mar 4, 2021: https://store.steampowered.com/app/1282730/
+- OUTRIDERS — 2021, Apr 1, 2021: https://store.steampowered.com/app/680420/
+- Battlefield™ 2042 — 2021, Nov 19, 2021: https://store.steampowered.com/app/1517290/
+- Little Nightmares II — 2021, Feb 10, 2021: https://store.steampowered.com/app/860510/
+- BIOMUTANT — 2021, May 25, 2021: https://store.steampowered.com/app/597820/
+- Half-Life: Alyx — 2020, Mar 23, 2020: https://store.steampowered.com/app/546560/
+- Ori and the Will of the Wisps — 2020, Mar 10, 2020: https://store.steampowered.com/app/1057090/
+- Phasmophobia — 2020, Sep 18, 2020: https://store.steampowered.com/app/739630/
+- Crusader Kings III — 2020, Sep 1, 2020: https://store.steampowered.com/app/1158310/
+- Mafia: Definitive Edition — 2020, Sep 24, 2020: https://store.steampowered.com/app/1030840/
+- CARRION — 2020, Jul 23, 2020: https://store.steampowered.com/app/953490/
+- Spelunky 2 — 2020, Sep 29, 2020: https://store.steampowered.com/app/418530/
+- Risk of Rain 2 — 2020, Aug 11, 2020: https://store.steampowered.com/app/632360/
+- STAR WARS™: Squadrons — 2020, Oct 1, 2020: https://store.steampowered.com/app/1222730/
+- Serious Sam 4 — 2020, Sep 24, 2020: https://store.steampowered.com/app/257420/
+- Wasteland 3 — 2020, Aug 27, 2020: https://store.steampowered.com/app/719040/
