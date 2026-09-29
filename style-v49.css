@@ -1440,3 +1440,16 @@ body:has(main.uniform-page) .uniform-detail:has(> .uniform-media.media-banner)>.
 body:has(main.uniform-page) .uniform-detail:has(> .uniform-media.media-banner)>.uniform-media.media-banner img{display:block;width:100%;height:auto;aspect-ratio:3/1;object-fit:cover;object-position:center}
 @media(max-width:720px){body:has(main.uniform-page) .uniform-detail:has(> .uniform-media.media-banner)>.uniform-media.media-banner img{aspect-ratio:2/1}}
 .pc-year-controls{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 26px}.pc-year-controls button{background:#2c2928;border:1px solid #8d6849;border-radius:9px;color:#f1d2ab;padding:8px 13px;cursor:pointer;font-weight:700}.pc-year-controls button[aria-pressed="true"]{background:#d88a4a;color:#160d08}.pc-pagination{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:26px 0}.pc-pagination button{background:#282321;color:#fff;border:1px solid #805b3d;border-radius:8px;padding:8px 13px;cursor:pointer}.pc-pagination button[aria-current="page"]{background:#d88a4a;color:#160d08}
+/* Tüm oyun/yama başlıklarında Calling Card oranında sabit vitrin alanı. */
+body:has(main.uniform-page) .uniform-detail:has(> .uniform-media) {display:block}
+body:has(main.uniform-page) .uniform-detail > .uniform-media {width:100%;max-width:none;margin:24px 0 32px;display:block}
+body:has(main.uniform-page) .uniform-detail > .uniform-media .v38-video-card,
+body:has(main.uniform-page) .uniform-detail > .uniform-media .detail-art {width:100%;max-width:none;overflow:hidden;border-radius:10px}
+body:has(main.uniform-page) .uniform-detail > .uniform-media :is(.v38-video-card,.detail-art)>img {display:block;width:100%;height:auto;aspect-ratio:4.3/1;object-fit:cover;object-position:center}
+body:has(main.uniform-page) .uniform-detail > .uniform-media.media-pair {display:block}
+@media(max-width:720px){body:has(main.uniform-page) .uniform-detail > .uniform-media :is(.v38-video-card,.detail-art)>img{aspect-ratio:3/1}}
+.detail-extra-media{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:28px 0}.detail-extra-media img,.detail-extra-media video,.detail-extra-media iframe{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border:0;border-radius:10px;background:#161616}.detail-extra-media h2{color:#eeb56b;font-size:1.1rem}.detail-extra-media p{color:#bbb}.detail-extra-media a{color:#eeb56b}
+@media(max-width:720px){.detail-extra-media{grid-template-columns:1fr}}
+body:has(main.uniform-page) .uniform-detail > .uniform-media.emulator-banner .v38-video-card{position:relative;display:flex;justify-content:center;align-items:center;aspect-ratio:4.3/1;background-image:linear-gradient(#08080866,#08080866),var(--cover);background-position:center;background-size:cover}
+body:has(main.uniform-page) .uniform-detail > .uniform-media.emulator-banner .v38-video-card::before{content:"";position:absolute;inset:0;backdrop-filter:blur(14px)}
+body:has(main.uniform-page) .uniform-detail > .uniform-media.emulator-banner .v38-video-card>img{position:relative;z-index:1;width:auto;max-width:100%;height:100%;max-height:100%;aspect-ratio:auto;object-fit:contain;box-shadow:0 0 28px #0009}
