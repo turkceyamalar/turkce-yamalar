@@ -1432,3 +1432,11 @@ body main.ty-home :is(.ty-feed-heading h1,.ty-feed-title,.ty-feature-shade b,.ty
 html[data-theme="light"] .admin-private-login input{background:#fff;color:#222}
 #adminRequestsSection[hidden]{display:none!important}
 .ty-request-trap{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+
+/* Vitrin sayfalarında görsel, başlığın altında geniş çağrı kartı olarak görünür. */
+body:has(main.uniform-page) .uniform-detail:has(> .uniform-media.media-banner){display:block}
+body:has(main.uniform-page) .uniform-detail:has(> .uniform-media.media-banner)>.uniform-media.media-banner{display:block;width:100%;max-width:none;margin:24px 0 32px}
+body:has(main.uniform-page) .uniform-detail:has(> .uniform-media.media-banner)>.uniform-media.media-banner .v38-video-card{width:100%;overflow:hidden;border-radius:12px;background:#181818}
+body:has(main.uniform-page) .uniform-detail:has(> .uniform-media.media-banner)>.uniform-media.media-banner img{display:block;width:100%;height:auto;aspect-ratio:3/1;object-fit:cover;object-position:center}
+@media(max-width:720px){body:has(main.uniform-page) .uniform-detail:has(> .uniform-media.media-banner)>.uniform-media.media-banner img{aspect-ratio:2/1}}
+.pc-year-controls{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 26px}.pc-year-controls button{background:#2c2928;border:1px solid #8d6849;border-radius:9px;color:#f1d2ab;padding:8px 13px;cursor:pointer;font-weight:700}.pc-year-controls button[aria-pressed="true"]{background:#d88a4a;color:#160d08}.pc-pagination{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:26px 0}.pc-pagination button{background:#282321;color:#fff;border:1px solid #805b3d;border-radius:8px;padding:8px 13px;cursor:pointer}.pc-pagination button[aria-current="page"]{background:#d88a4a;color:#160d08}

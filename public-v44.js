@@ -31,8 +31,18 @@
     }catch(_){}
   }
   if(/^[a-z0-9-]{1,80}$/.test(patchKey)){
-    document.querySelectorAll('.uniform-grid #indir .download-options a[href]').forEach(link=>link.addEventListener('click',()=>{
-      sb.rpc('register_download',{p_patch_key:patchKey});
+    document.querySelectorAll('.uniform-grid #indir .download-options a[href]').forEach(link=>link.addEventListener('click',event=>{
+      // Aynı sekmede yönlendirme, bekleyen RPC isteğini iptal edebilir.
+      // keepalive ile kayıt navigasyondan sonra da tamamlanabilir.
+      const endpoint=cfg.url.replace(/\/$/,'')+'/rest/v1/rpc/register_download';
+      fetch(endpoint,{
+        method:'POST',keepalive:true,
+        headers:{apikey:cfg.anonKey,Authorization:'Bearer '+cfg.anonKey,'Content-Type':'application/json'},
+        body:JSON.stringify({p_patch_key:patchKey})
+      }).then(response=>{
+        if(!response.ok)throw new Error('İndirme sayacı kaydedilemedi: '+response.status);
+        document.dispatchEvent(new Event('ty-download-registered'));
+      }).catch(error=>console.warn(error));
     }));
   }
   }
