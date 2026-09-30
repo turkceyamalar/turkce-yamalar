@@ -1921,3 +1921,108 @@ html[data-theme="dark"] .oi-header .v45-logo .brand-name strong{
     background-size:100% 100%!important;
   }
 }
+
+
+/* === 2026-09-30 REFERANS LOGO SON AYAR === */
+@media(min-width:1181px){
+  .oi-header .v29-nav-wrap{
+    min-height:72px!important;
+    height:72px!important;
+    padding:0 8px!important;
+    gap:10px!important;
+    align-items:center!important;
+  }
+
+  .oi-header .v29-main-nav{
+    flex:0 0 auto!important;
+    margin-left:auto!important;
+    gap:10px!important;
+  }
+
+  .oi-header .header-dragon-left,
+  .oi-header .header-dragon-right{
+    display:none!important;
+  }
+
+  .oi-header .v45-logo{
+    position:relative!important;
+    flex:1 1 auto!important;
+    width:auto!important;
+    min-width:620px!important;
+    max-width:820px!important;
+    height:72px!important;
+    margin:0 10px 0 0!important;
+    padding:0!important;
+    border:0!important;
+    background:transparent!important;
+    box-shadow:none!important;
+    overflow:hidden!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+  }
+
+  .oi-header .v45-logo::before{
+    content:""!important;
+    display:block!important;
+    position:absolute!important;
+    left:0!important;
+    right:0!important;
+    top:3px!important;
+    bottom:3px!important;
+    background-image:url("assets/serpent-header-v1.svg")!important;
+    background-repeat:no-repeat!important;
+    background-position:center center!important;
+    background-size:100% 100%!important;
+    transform:scaleX(-1)!important;
+    transform-origin:center!important;
+    opacity:.98!important;
+    z-index:1!important;
+    pointer-events:none!important;
+  }
+
+  html[data-theme="light"] .oi-header .v45-logo::before{
+    filter:brightness(0)!important;
+  }
+
+  html[data-theme="dark"] .oi-header .v45-logo::before{
+    filter:brightness(0) invert(1)!important;
+  }
+
+  .oi-header .v45-logo .brand-mark{
+    display:none!important;
+  }
+
+  .oi-header .v45-logo .brand-name{
+    position:relative!important;
+    z-index:2!important;
+    display:inline-flex!important;
+    align-items:baseline!important;
+    justify-content:center!important;
+    margin:0!important;
+    padding:0 12px 2px!important;
+    font-family:Georgia,"Times New Roman",serif!important;
+    font-size:1.72rem!important;
+    font-style:italic!important;
+    font-weight:900!important;
+    line-height:1!important;
+    letter-spacing:-.055em!important;
+    white-space:nowrap!important;
+    background:transparent!important;
+    border:0!important;
+    border-radius:0!important;
+    color:#111!important;
+    text-shadow:0 1px 2px #fff,0 0 5px #fff!important;
+  }
+
+  html[data-theme="dark"] .oi-header .v45-logo .brand-name{
+    color:#fff!important;
+    text-shadow:0 1px 2px #000,0 0 5px #000!important;
+  }
+
+  .oi-header .v45-logo .brand-name strong{
+    color:#f36f00!important;
+    font-size:1em!important;
+    text-shadow:inherit!important;
+  }
+}
