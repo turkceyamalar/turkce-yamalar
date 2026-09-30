@@ -1911,3 +1911,13 @@ html[data-theme="dark"] .oi-header .v45-logo .brand-name strong{
     display:none!important;
   }
 }
+
+
+/* === 2026-09-30 EJDER YONU DUZELTME === */
+@media(min-width:1181px){
+  .oi-header .v45-logo::before{
+    transform:none!important;
+    background-position:left center!important;
+    background-size:100% 100%!important;
+  }
+}
