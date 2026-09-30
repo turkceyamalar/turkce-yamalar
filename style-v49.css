@@ -1564,3 +1564,161 @@ html[data-theme="dark"] .oi-header .header-dragon-right{
     font-size:1.38rem!important;
   }
 }
+
+
+/* === 2026-09-30 TEK PARCA EJDEROYUN LOGO === */
+.oi-header .header-dragon-left,
+.oi-header .header-dragon-right{
+  display:none!important;
+}
+
+.oi-header .v45-logo{
+  position:relative!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  flex:0 0 560px!important;
+  width:560px!important;
+  min-width:560px!important;
+  height:92px!important;
+  margin:0 18px 0 0!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  overflow:visible!important;
+  text-decoration:none!important;
+}
+
+.oi-header .v45-logo::before{
+  content:""!important;
+  position:absolute!important;
+  inset:2px 0!important;
+  z-index:1!important;
+  background-image:url("assets/serpent-header-v1.svg")!important;
+  background-repeat:no-repeat!important;
+  background-position:center!important;
+  background-size:100% 100%!important;
+  pointer-events:none!important;
+}
+
+.oi-header .v45-logo .brand-mark{
+  display:none!important;
+}
+
+.oi-header .v45-logo .brand-name{
+  position:relative!important;
+  z-index:3!important;
+  display:inline-flex!important;
+  align-items:baseline!important;
+  justify-content:center!important;
+  margin:0!important;
+  padding:3px 14px 5px!important;
+  font-family:Georgia,"Times New Roman",serif!important;
+  font-size:2.55rem!important;
+  font-style:italic!important;
+  font-weight:900!important;
+  line-height:1!important;
+  letter-spacing:-.065em!important;
+  color:#111!important;
+  text-shadow:
+    0 2px 0 #fff,
+    0 0 4px #fff,
+    0 0 9px #fff!important;
+  background:rgba(255,255,255,.10)!important;
+  border-radius:12px!important;
+}
+
+.oi-header .v45-logo .brand-name strong{
+  color:#f36f00!important;
+  font-size:1em!important;
+  font-weight:900!important;
+  text-shadow:
+    0 2px 0 rgba(255,255,255,.95),
+    0 0 4px rgba(255,255,255,.95),
+    0 0 9px rgba(255,255,255,.9)!important;
+}
+
+html[data-theme="light"] .oi-header .v45-logo::before{
+  filter:brightness(0)!important;
+  opacity:.96!important;
+}
+
+html[data-theme="dark"] .oi-header .v45-logo::before{
+  filter:brightness(0) invert(1)!important;
+  opacity:.96!important;
+}
+
+html[data-theme="dark"] .oi-header .v45-logo .brand-name{
+  color:#fff!important;
+  text-shadow:
+    0 2px 2px #000,
+    0 0 4px #000,
+    0 0 9px #000!important;
+  background:rgba(0,0,0,.08)!important;
+}
+
+html[data-theme="dark"] .oi-header .v45-logo .brand-name strong{
+  color:#ff7600!important;
+  text-shadow:
+    0 2px 2px #000,
+    0 0 4px #000,
+    0 0 9px #000!important;
+}
+
+.oi-header .v29-nav-wrap{
+  min-height:98px!important;
+  align-items:center!important;
+}
+
+.oi-header .v45-logo:hover{
+  transform:none!important;
+  box-shadow:none!important;
+}
+
+@media(max-width:1450px){
+  .oi-header .v45-logo{
+    flex-basis:430px!important;
+    width:430px!important;
+    min-width:430px!important;
+    height:82px!important;
+  }
+  .oi-header .v45-logo .brand-name{
+    font-size:2.05rem!important;
+  }
+}
+
+@media(max-width:1180px){
+  .oi-header .v45-logo{
+    flex-basis:310px!important;
+    width:310px!important;
+    min-width:310px!important;
+    height:72px!important;
+    margin-right:10px!important;
+  }
+  .oi-header .v45-logo .brand-name{
+    font-size:1.62rem!important;
+    padding-inline:8px!important;
+  }
+}
+
+@media(max-width:760px){
+  .oi-header .v45-logo{
+    position:sticky!important;
+    left:0!important;
+    z-index:6!important;
+    flex-basis:220px!important;
+    width:220px!important;
+    min-width:220px!important;
+    height:62px!important;
+    margin-right:8px!important;
+  }
+  .oi-header .v45-logo .brand-name{
+    font-size:1.22rem!important;
+    letter-spacing:-.05em!important;
+  }
+  .oi-header .v45-logo::before{
+    inset:5px 0!important;
+  }
+}
