@@ -1722,3 +1722,53 @@ html[data-theme="dark"] .oi-header .v45-logo .brand-name strong{
     inset:5px 0!important;
   }
 }
+
+
+/* === 2026-09-30 LOGO GENISLIK DUZELTMESI === */
+@media(min-width:1181px){
+  .oi-header .v29-nav-wrap{
+    width:calc(100% - 36px)!important;
+    max-width:none!important;
+    min-height:126px!important;
+    gap:14px!important;
+    padding:0 10px!important;
+  }
+
+  .oi-header .v45-logo{
+    flex:1 1 auto!important;
+    width:auto!important;
+    min-width:680px!important;
+    max-width:1080px!important;
+    height:122px!important;
+    margin:0 10px 0 0!important;
+  }
+
+  .oi-header .v45-logo::before{
+    inset:0!important;
+    background-size:100% 100%!important;
+    background-position:center center!important;
+  }
+
+  .oi-header .v45-logo .brand-name{
+    font-size:1.95rem!important;
+    padding:2px 12px 4px!important;
+    letter-spacing:-.055em!important;
+  }
+
+  .oi-header .v29-main-nav{
+    flex:0 0 auto!important;
+    margin-left:auto!important;
+  }
+}
+
+@media(min-width:1600px){
+  .oi-header .v45-logo{
+    min-width:900px!important;
+    max-width:1120px!important;
+    height:132px!important;
+  }
+
+  .oi-header .v45-logo .brand-name{
+    font-size:2.15rem!important;
+  }
+}
