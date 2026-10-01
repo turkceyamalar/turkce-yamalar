@@ -2613,3 +2613,16 @@ html[data-theme="light"],html[data-theme="dark"]{background:#0b0d0e!important}
   background-color:#0b0d0e!important;
   color:#f2f2f2!important;
 }
+
+
+/* 2026-10-01 remove login/register controls completely */
+.oi-header .nav-auth,
+.oi-header .js-login,
+.oi-header .js-register{
+  display:none!important;
+}
+@media(min-width:761px){
+  .oi-header .v29-nav-wrap{
+    grid-template-columns:250px minmax(0,1fr) auto!important;
+  }
+}
