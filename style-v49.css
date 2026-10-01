@@ -2159,3 +2159,35 @@ html[data-theme="light"] .oi-header .v45-logo .brand-name::after{color:#111!impo
   color:#17191f!important;
   border-color:#d5d8de!important;
 }
+
+
+/* 2026-10-01 broken asset/header repair */
+@media(min-width:761px){
+  .site-header .mobile-serpent-logo{display:none!important}
+}
+.oi-header .v29-nav-wrap{
+  grid-template-columns:220px minmax(0,1fr) auto auto auto!important;
+  overflow:visible!important;
+}
+.oi-header .header-serpent-left,.oi-header .header-serpent-right{
+  display:block!important;
+  position:absolute!important;
+  top:1px!important;
+  width:215px!important;
+  height:60px!important;
+  overflow:hidden!important;
+  z-index:1!important;
+  pointer-events:none!important;
+}
+.oi-header .header-serpent-left{left:8px!important}
+.oi-header .header-serpent-right{right:8px!important;transform:scaleX(-1)!important}
+.oi-header .header-serpent-left img,.oi-header .header-serpent-right img{
+  width:100%!important;height:100%!important;object-fit:contain!important;
+  filter:sepia(1) saturate(4.5) hue-rotate(345deg) brightness(1.18) contrast(1.05)!important;
+}
+.oi-header .v29-main-nav,.oi-header .language-switch,.oi-header .nav-auth,.oi-header .theme-toggle{position:relative!important;z-index:5!important}
+.ty-aside-panel .ty-aside-art{
+  display:block!important;width:100%!important;height:132px!important;object-fit:cover!important;
+  border:1px solid #555!important;border-radius:7px!important;background:#171717!important;
+}
+.ty-feed-image img[src*="where-winds-meet-cover.svg"]{object-fit:cover!important}
