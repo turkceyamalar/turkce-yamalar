@@ -1631,3 +1631,23 @@ html[data-theme="light"] .oi-header .v45-logo .brand-name{
   .oi-header .nav-auth{flex:0 0 auto!important;}
   .oi-header .theme-toggle{flex:0 0 38px!important;width:38px!important;height:38px!important;}
 }
+
+/* === SerpentGame kesin logo düzeltmesi === */
+.oi-header .v45-logo .brand-mark{
+  display:block!important;
+  background:url("favicon.svg?v=20261001-serpent-fixed") center/contain no-repeat!important;
+}
+.oi-header .v45-logo .brand-mark img{display:none!important}
+.oi-header .v45-logo .brand-name{font-size:0!important}
+.oi-header .v45-logo .brand-name::after{
+  content:"SerpentGame"!important;
+  display:inline-block!important;
+  font-family:Georgia,"Times New Roman",serif!important;
+  font-size:1.18rem!important;
+  font-weight:900!important;
+  font-style:italic!important;
+  letter-spacing:-.04em!important;
+  color:#f5f5f5!important;
+  text-shadow:0 2px 3px #000!important;
+}
+html[data-theme="light"] .oi-header .v45-logo .brand-name::after{color:#111!important;text-shadow:0 1px 0 #fff!important}
