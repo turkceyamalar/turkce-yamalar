@@ -50,9 +50,13 @@
       nav.append(a);
     }
 
-    if (page > 1) link('‹', page - 1);
-    for (let n = 1; n <= totalPages; n++) link(String(n), n, n === page);
-    if (page < totalPages) link('›', page + 1);
+    link('⏮', 1);
+    link('◀', Math.max(1, page - 1));
+    const first = Math.max(1, Math.min(page - 1, totalPages - 2));
+    const last = Math.min(totalPages, first + 2);
+    for (let n = first; n <= last; n++) link(String(n), n, n === page);
+    link('▶', Math.min(totalPages, page + 1));
+    link('⏭', totalPages);
   }
 
   addEventListener('popstate', render);
