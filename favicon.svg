@@ -1,22 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="SerpentGame red dragon">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="SerpentGame">
   <defs>
-    <linearGradient id="r" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#ff6030"/><stop offset=".55" stop-color="#d92f20"/><stop offset="1" stop-color="#8e1714"/>
-    </linearGradient>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#ffd27a"/><stop offset=".6" stop-color="#f39a25"/><stop offset="1" stop-color="#b83f12"/>
-    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffbd45"/><stop offset="1" stop-color="#e46f16"/></linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff6237"/><stop offset="1" stop-color="#9e1814"/></linearGradient>
   </defs>
-  <circle cx="90" cy="90" r="86" fill="#0b0c0f" stroke="#5f1a14" stroke-width="4"/>
-  <path d="M44 135C21 116 18 78 39 51 57 28 92 22 119 38c24 14 35 43 25 68-9 23-32 38-57 35-20-2-37-14-43-31 12 10 29 16 46 11 19-5 32-22 31-41-1-22-19-39-42-40-26-1-48 20-49 46-1 17 5 33 14 49z" fill="url(#r)" stroke="#46100e" stroke-width="6" stroke-linejoin="round"/>
-  <path d="M60 39 49 19l18 10 5-20 11 18 15-14-3 21 20-8-12 18 22 1-17 14" fill="url(#g)" stroke="#6b2b0c" stroke-width="5" stroke-linejoin="round"/>
-  <path d="M122 53c14-8 31-3 39 10l13 4-11 9 10 10-15 2c-3 16-16 28-33 30l-22-10 10-14-12-6 10-8-6-14z" fill="url(#r)" stroke="#46100e" stroke-width="6" stroke-linejoin="round"/>
-  <path d="m132 51 8-21 9 18 15-13-6 22 18 3-15 10" fill="url(#g)" stroke="#6b2b0c" stroke-width="5" stroke-linejoin="round"/>
-  <path d="M136 72c6-6 14-6 20-2-3 7-9 11-17 9z" fill="#fff" stroke="#24110e" stroke-width="3"/>
-  <circle cx="147" cy="73" r="3.2" fill="#ffb400"/>
-  <path d="M136 92c9 4 18 2 24-3l-5 12-18 5-13-6z" fill="#5b0b0b" stroke="#2a0808" stroke-width="3"/>
-  <path d="m132 96 7 11 6-11 6 9" fill="#fff1cf" stroke="#3b120d" stroke-width="2.5"/>
-  <path d="M111 44C92 52 77 67 70 86c-8 19-6 40 5 56" fill="none" stroke="#f5a12c" stroke-width="6" stroke-linecap="round"/>
-  <path d="M46 115c-10 10-16 23-17 36l18-10 7 18 9-17" fill="url(#g)" stroke="#6b2b0c" stroke-width="5" stroke-linejoin="round"/>
-  <path d="M36 62c12 2 22 8 30 16M31 79c13 0 23 4 32 10M32 97c12-3 23-1 32 6" fill="none" stroke="#f6a53c" stroke-width="4" stroke-linecap="round"/>
-  </svg>
+  <circle cx="64" cy="64" r="58" fill="#0b0c0f" stroke="#8e2b18" stroke-width="4"/>
+  <path d="M36 87C20 68 27 41 47 29c17-10 40-7 53 7-15-5-31-2-42 8-12 11-16 27-10 41 6 13 18 21 32 23-18 4-34-3-44-21z" fill="none" stroke="url(#gold)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M73 29 82 15l4 13 12-7-4 13 14 1-10 9" fill="url(#gold)" stroke="#6c2811" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M59 42c11-9 29-9 40 0l13 4-9 8 8 9-12 2c-4 15-17 24-32 22L49 76l9-12-10-7 9-7z" fill="url(#red)" stroke="#4a1110" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M69 49c6-5 13-5 19-2-3 6-8 8-15 7z" fill="#fff" stroke="#23110f" stroke-width="2"/>
+  <circle cx="80" cy="49" r="2.5" fill="#ffcc35"/>
+  <path d="M70 67c8 4 15 2 21-2l-4 9-12 4-10-5z" fill="#51100e" stroke="#2b0908" stroke-width="2"/>
+  <path d="m68 69 5 8 4-8 5 7" fill="#fff2d2" stroke="#3d120d" stroke-width="2"/>
+  <path d="M16 64 4 56l13-3 4-13 7 12" fill="url(#gold)" stroke="#6c2811" stroke-width="3" stroke-linejoin="round"/>
+</svg>
