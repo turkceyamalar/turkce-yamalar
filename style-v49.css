@@ -2530,3 +2530,72 @@ html[data-theme="light"] .oi-header .v45-logo .brand-name::after{color:#111!impo
   background:#17191b!important;
   color:#f0eee9!important;
 }
+
+
+/* 2026-10-01 header micro-fix: theme toggle + auth moved left */
+@media(min-width:761px){
+  .oi-header .theme-toggle{
+    width:58px!important;
+    height:38px!important;
+    padding:3px!important;
+    border-radius:999px!important;
+    border:1px solid #d7d5cf!important;
+    background:#ece9e2!important;
+    color:#111!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:flex-start!important;
+    position:relative!important;
+    overflow:hidden!important;
+    transform:translate(-18px,3px)!important;
+  }
+  .oi-header .theme-toggle::before{
+    content:""!important;
+    position:absolute!important;
+    width:28px!important;
+    height:28px!important;
+    border-radius:50%!important;
+    background:#111!important;
+    left:4px!important;
+    top:4px!important;
+    transition:transform .2s ease!important;
+  }
+  [data-theme="light"] .oi-header .theme-toggle::before{
+    transform:translateX(20px)!important;
+  }
+  .oi-header .theme-toggle svg{
+    position:relative!important;
+    z-index:2!important;
+    width:16px!important;
+    height:16px!important;
+    margin-left:6px!important;
+    stroke:#ece9e2!important;
+    color:#ece9e2!important;
+  }
+  [data-theme="light"] .oi-header .theme-toggle svg{
+    margin-left:26px!important;
+    stroke:#ece9e2!important;
+  }
+
+  .oi-header .nav-auth{
+    transform:translate(-34px,3px)!important;
+    gap:7px!important;
+  }
+  .oi-header .nav-auth .js-login,
+  .oi-header .nav-auth .js-register{
+    min-width:74px!important;
+    height:40px!important;
+    padding:0 13px!important;
+  }
+
+  /* keep right dragon visually clear behind the controls */
+  .oi-header .header-serpent-right{
+    right:2px!important;
+    width:255px!important;
+    z-index:1!important;
+  }
+  .oi-header .nav-auth,
+  .oi-header .theme-toggle{
+    z-index:6!important;
+  }
+}
