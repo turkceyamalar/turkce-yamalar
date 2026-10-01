@@ -26,6 +26,15 @@
     header.append(rightDragon);
   }
 
+  if (nav && !nav.querySelector('.nav-apk')) {
+    const apk = document.createElement('a');
+    apk.className = 'oi-nav-item v29-pill nav-apk';
+    apk.href = 'apklar.html';
+    apk.innerHTML = '<span>APK\'lar</span>';
+    const pc = Array.from(nav.querySelectorAll('a')).find(a => /PC OYUNLARI/i.test(a.textContent || ''));
+    if (pc) nav.insertBefore(apk, pc); else nav.appendChild(apk);
+  }
+
   if (nav && !nav.querySelector('.nav-support')) {
     const support = document.createElement('a');
     support.className = 'oi-nav-item v29-pill nav-support';
