@@ -2420,3 +2420,113 @@ html[data-theme="light"] .oi-header .v45-logo .brand-name::after{color:#111!impo
   .oi-header .header-serpent-left img,
   .oi-header .header-serpent-right img{display:none!important}
 }
+
+
+/* 2026-10-01 FINAL HEADER + ASIDE POLISH */
+@media(min-width:761px){
+  /* menu slightly lower */
+  .site-header.oi-header{height:76px!important;min-height:76px!important}
+  .oi-header .v29-nav-wrap{
+    height:76px!important;
+    min-height:76px!important;
+    align-items:center!important;
+    padding-top:6px!important;
+  }
+
+  /* dragon directions: left looks right, right looks left */
+  .oi-header .header-serpent-left{
+    left:8px!important;
+    transform:scaleX(-1)!important;
+  }
+  .oi-header .header-serpent-right{
+    right:8px!important;
+    transform:none!important;
+  }
+
+  /* nav vertical alignment */
+  .oi-header .v29-main-nav,
+  .oi-header .oi-main-nav{
+    transform:translateY(3px)!important;
+  }
+
+  /* login/register area */
+  .oi-header .nav-auth{
+    display:flex!important;
+    align-items:center!important;
+    gap:8px!important;
+    transform:translateY(3px)!important;
+  }
+  .oi-header .nav-auth .js-login,
+  .oi-header .nav-auth .js-register{
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    height:40px!important;
+    min-width:78px!important;
+    padding:0 14px!important;
+    border-radius:8px!important;
+    border:1px solid #d9d7d2!important;
+    background:#ece9e2!important;
+    color:#111!important;
+    font-size:.80rem!important;
+    font-weight:900!important;
+    text-decoration:none!important;
+    box-shadow:none!important;
+  }
+  .oi-header .nav-auth .js-login:hover,
+  .oi-header .nav-auth .js-register:hover{
+    background:#fff!important;
+    color:#111!important;
+  }
+
+  /* theme switch */
+  .oi-header .theme-toggle{
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    width:56px!important;
+    height:36px!important;
+    margin:0!important;
+    transform:translateY(3px)!important;
+    border-radius:999px!important;
+    border:1px solid #d2d0cb!important;
+    background:#ece9e2!important;
+    color:#111!important;
+    box-shadow:none!important;
+  }
+  .oi-header .theme-toggle svg{
+    width:20px!important;
+    height:20px!important;
+    stroke:#111!important;
+    fill:none!important;
+  }
+}
+
+/* aside cards: remove orange/brown accents, use site's off-white tone */
+.ty-aside-panel,
+.public-stats-section{
+  border-color:#d0cec8!important;
+  background:#111315!important;
+}
+.ty-aside-panel .ty-aside-art{
+  border-color:#5a5d60!important;
+}
+.ty-aside-panel h2,
+.ty-aside-panel p,
+.public-stats-section h2{
+  color:#f0eee9!important;
+}
+.ty-aside-cta{
+  background:#ece9e2!important;
+  border-color:#ece9e2!important;
+  color:#111!important;
+}
+.ty-aside-cta:hover{
+  background:#fff!important;
+  color:#111!important;
+}
+.public-stats-grid>*{
+  border-color:#5a5d60!important;
+  background:#17191b!important;
+  color:#f0eee9!important;
+}
