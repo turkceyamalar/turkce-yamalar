@@ -2382,8 +2382,8 @@ html[data-theme="light"] .oi-header .v45-logo .brand-name::after{color:#111!impo
     pointer-events:none!important;
     opacity:1!important;
   }
-  .oi-header .header-serpent-left{left:8px!important}
-  .oi-header .header-serpent-right{right:8px!important;transform:scaleX(-1)!important}
+  .oi-header .header-serpent-left{left:8px!important;transform:scaleX(-1)!important}
+  .oi-header .header-serpent-right{right:8px!important;transform:none!important}
   .oi-header .header-serpent-left img,
   .oi-header .header-serpent-right img{
     display:block!important;
