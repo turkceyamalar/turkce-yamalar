@@ -53,13 +53,7 @@
     header.appendChild(langWrap);
   }
 
-  let auth = header.querySelector('.nav-auth');
-  if (!auth) {
-    auth = document.createElement('div');
-    auth.className = 'nav-auth';
-    auth.innerHTML = '<a class="js-login" href="#">Giriş Yap</a><a class="js-register" href="#">Kayıt Ol</a>';
-    header.appendChild(auth);
-  }
+  header.querySelectorAll('.nav-auth').forEach(el => el.remove());
 
   const existingThemeToggle = header.querySelector('.theme-toggle');
   if (existingThemeToggle) existingThemeToggle.remove();
