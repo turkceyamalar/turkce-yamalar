@@ -1457,21 +1457,23 @@ body:has(main.uniform-page) .uniform-detail > .uniform-media.emulator-banner .v3
 .aniimo-install-video{max-width:760px;margin:28px 0}.aniimo-install-video h2{color:#eeb56b}.aniimo-install-video .youtube-embed{position:relative;aspect-ratio:16/9}.aniimo-install-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:10px}
 
 
-/* === 2026-10-01 EjderOyun logo PAINT FINAL === */
+
+/* === 2026-10-01 Header: eski logo solda, menü ortada, hesap sağda === */
 .oi-header,.v29-header{
-  height:64px!important;
-  min-height:64px!important;
-  max-height:64px!important;
+  height:76px!important;
+  min-height:76px!important;
+  max-height:76px!important;
   overflow:visible!important;
 }
 .oi-header .v29-nav-wrap{
-  width:min(1880px,calc(100% - 20px))!important;
-  height:64px!important;
-  min-height:64px!important;
-  max-height:64px!important;
+  width:min(1760px,calc(100% - 28px))!important;
+  height:76px!important;
+  min-height:76px!important;
+  max-height:76px!important;
   margin:0 auto!important;
   padding:0!important;
-  display:flex!important;
+  display:grid!important;
+  grid-template-columns:220px minmax(0,1fr) auto auto!important;
   align-items:center!important;
   gap:12px!important;
   overflow:visible!important;
@@ -1481,78 +1483,113 @@ body:has(main.uniform-page) .uniform-detail > .uniform-media.emulator-banner .v3
 .oi-header .header-dragon-right{display:none!important;}
 
 .oi-header .v45-logo{
+  grid-column:1!important;
+  justify-self:start!important;
   position:relative!important;
-  flex:1 1 auto!important;
-  min-width:650px!important;
-  width:auto!important;
-  max-width:none!important;
-  height:56px!important;
-  min-height:56px!important;
-  margin:0!important;
-  padding:0!important;
   display:flex!important;
   align-items:center!important;
-  justify-content:center!important;
-  overflow:hidden!important;
+  gap:8px!important;
+  width:auto!important;
+  min-width:0!important;
+  max-width:220px!important;
+  height:62px!important;
+  margin:0!important;
+  padding:4px 8px!important;
   border:0!important;
   border-radius:0!important;
   background:transparent!important;
   box-shadow:none!important;
+  overflow:visible!important;
   text-decoration:none!important;
 }
-.oi-header .v45-logo:hover{transform:none!important;box-shadow:none!important;}
-.oi-header .v45-logo .brand-mark{display:none!important;}
-
-/* Paint'teki gibi uzun, ince, sağda kafalı ejder */
-.oi-header .v45-logo::before{
-  content:""!important;
-  position:absolute!important;
-  inset:0!important;
-  background-image:url("assets/header-dragon-running-v37.gif")!important;
-  background-repeat:no-repeat!important;
-  background-position:center!important;
-  background-size:100% 52px!important;
-  z-index:1!important;
-  opacity:1!important;
-  pointer-events:none!important;
-  image-rendering:auto!important;
+.oi-header .v45-logo::before{display:none!important;content:none!important;}
+.oi-header .v45-logo .brand-mark{
+  display:block!important;
+  position:relative!important;
+  width:68px!important;
+  height:62px!important;
+  flex:0 0 68px!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  overflow:visible!important;
 }
-
-/* Yazı ayrı ve net kalsın, esnemesin */
+.oi-header .v45-logo .brand-mark img{
+  display:block!important;
+  width:72px!important;
+  height:66px!important;
+  max-width:none!important;
+  object-fit:contain!important;
+  filter:drop-shadow(0 3px 4px #0008)!important;
+}
 .oi-header .v45-logo .brand-name{
   position:relative!important;
   z-index:2!important;
   display:inline-flex!important;
   align-items:baseline!important;
-  gap:.12em!important;
+  gap:.08em!important;
   margin:0!important;
   padding:0!important;
   font-family:Georgia,"Times New Roman",serif!important;
-  font-size:clamp(1.15rem,1.45vw,1.7rem)!important;
-  line-height:.9!important;
+  font-size:1.32rem!important;
+  line-height:1!important;
   font-style:italic!important;
   font-weight:900!important;
-  letter-spacing:-.045em!important;
-  color:#f7f7f7!important;
-  text-shadow:0 2px 0 #0a0a0a,0 0 5px #000!important;
+  letter-spacing:-.04em!important;
+  color:#f5f5f5!important;
+  text-shadow:0 2px 3px #000!important;
 }
 .oi-header .v45-logo .brand-name strong{
   color:#ff7900!important;
-  font-size:1em!important;
   font-weight:900!important;
-  text-shadow:0 2px 0 #552000,0 0 5px #000!important;
+}
+html[data-theme="light"] .oi-header .v45-logo .brand-name{
+  color:#111!important;
+  text-shadow:0 1px 0 #fff!important;
 }
 
 .oi-header .v29-main-nav,
 .oi-header .oi-main-nav{
-  flex:0 0 auto!important;
+  grid-column:2!important;
+  justify-self:center!important;
   margin:0!important;
-  align-self:center!important;
+  display:flex!important;
+  align-items:center!important;
+  gap:8px!important;
   position:relative!important;
   z-index:3!important;
 }
+
+.oi-header .nav-auth{
+  grid-column:3!important;
+  display:flex!important;
+  align-items:center!important;
+  gap:8px!important;
+  margin:0!important;
+  white-space:nowrap!important;
+}
+.oi-header .nav-auth a{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  height:42px!important;
+  padding:0 13px!important;
+  border-radius:9px!important;
+  border:1px solid #3a3a3a!important;
+  background:#171717!important;
+  color:#fff!important;
+  text-decoration:none!important;
+  font-weight:800!important;
+  font-size:.78rem!important;
+}
+.oi-header .nav-auth .js-register{
+  background:#8b4b22!important;
+  border-color:#a9622f!important;
+}
+.oi-header .nav-auth a:hover{filter:brightness(1.12)!important;}
+
 .oi-header .theme-toggle{
-  flex:0 0 42px!important;
+  grid-column:4!important;
   width:42px!important;
   height:42px!important;
   margin:0!important;
@@ -1561,43 +1598,38 @@ body:has(main.uniform-page) .uniform-detail > .uniform-media.emulator-banner .v3
   right:auto!important;
   top:auto!important;
   bottom:auto!important;
-  align-self:center!important;
+  justify-self:end!important;
 }
 
-html[data-theme="light"] .oi-header .v45-logo::before{
-  filter:brightness(0)!important;
-  opacity:.90!important;
-}
-html[data-theme="light"] .oi-header .v45-logo .brand-name{
-  color:#111!important;
-  text-shadow:0 1px 0 #fff!important;
-}
-html[data-theme="dark"] .oi-header .v45-logo::before{
-  filter:grayscale(1) brightness(2)!important;
-  opacity:.96!important;
-}
-
-@media(max-width:1450px){
-  .oi-header .v45-logo{min-width:520px!important;}
-  .oi-header .v45-logo::before{background-size:100% 48px!important;}
-  .oi-header .v45-logo .brand-name{font-size:1.2rem!important;}
-}
-@media(max-width:1180px){
-  .oi-header .v29-nav-wrap{overflow-x:auto!important;overflow-y:hidden!important;}
-  .oi-header .v45-logo{flex:0 0 430px!important;min-width:430px!important;}
+@media(max-width:1350px){
+  .oi-header .v29-nav-wrap{
+    grid-template-columns:190px auto auto auto!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+  }
+  .oi-header .v45-logo{max-width:190px!important;}
+  .oi-header .v45-logo .brand-mark{width:56px!important;height:54px!important;flex-basis:56px!important;}
+  .oi-header .v45-logo .brand-mark img{width:60px!important;height:56px!important;}
+  .oi-header .v45-logo .brand-name{font-size:1.1rem!important;}
 }
 @media(max-width:760px){
-  .oi-header,.v29-header{height:60px!important;min-height:60px!important;max-height:60px!important;}
+  .oi-header,.v29-header{height:64px!important;min-height:64px!important;max-height:64px!important;}
   .oi-header .v29-nav-wrap{
+    display:flex!important;
     width:100%!important;
-    height:60px!important;
-    min-height:60px!important;
-    max-height:60px!important;
+    height:64px!important;
+    min-height:64px!important;
+    max-height:64px!important;
     padding:0 6px!important;
     gap:8px!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
   }
-  .oi-header .v45-logo{flex:0 0 320px!important;min-width:320px!important;width:320px!important;height:52px!important;min-height:52px!important;}
-  .oi-header .v45-logo::before{background-size:100% 44px!important;}
-  .oi-header .v45-logo .brand-name{font-size:.95rem!important;}
-  .oi-header .theme-toggle{flex-basis:38px!important;width:38px!important;height:38px!important;}
+  .oi-header .v45-logo{flex:0 0 170px!important;max-width:170px!important;height:56px!important;}
+  .oi-header .v45-logo .brand-mark{width:50px!important;height:48px!important;flex-basis:50px!important;}
+  .oi-header .v45-logo .brand-mark img{width:52px!important;height:50px!important;}
+  .oi-header .v45-logo .brand-name{font-size:1rem!important;}
+  .oi-header .v29-main-nav,.oi-header .oi-main-nav{justify-self:auto!important;flex:0 0 auto!important;}
+  .oi-header .nav-auth{flex:0 0 auto!important;}
+  .oi-header .theme-toggle{flex:0 0 38px!important;width:38px!important;height:38px!important;}
 }
