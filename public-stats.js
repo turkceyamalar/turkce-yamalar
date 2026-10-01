@@ -19,7 +19,7 @@
 
   const render=(data) => {
     box.innerHTML=Object.entries(fields).map(([key,label])=>{
-      const demoValue=key==='total_views'?'1.000 D':'500 D';
+      const demoValue=key==='total_views'?'1.000+':'500+';
       return `<div class="public-stat-card"><strong>${demoValue}</strong><span>${label}</span></div>`;
     }).join('')+
       Object.values(catalog).map(([count,label])=>`<div class="public-stat-card"><strong>${count.toLocaleString('tr-TR')}</strong><span>${label}</span></div>`).join('');
@@ -29,7 +29,7 @@
       const count=Number(data.patches?.[node.dataset.views])||0;
       let extra=node.querySelector('.ty-download-count');
       if(!extra){extra=document.createElement('span');extra.className='ty-download-count';node.append(extra)}
-      extra.textContent=' • ⬇ 500 D indirme';
+      extra.textContent=' • ⬇ 500+ indirme';
     });
   };
 
