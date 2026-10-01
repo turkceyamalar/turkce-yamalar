@@ -1756,3 +1756,40 @@ html[data-theme="light"] .oi-header .v45-logo .brand-name::after{color:#111!impo
   .oi-header .v45-logo .brand-mark{width:48px!important;height:48px!important;flex-basis:48px!important}
   .oi-header .language-switch{flex:0 0 auto!important}
 }
+
+/* === USER FINAL: yatay SerpentGame logo + kart ejderleri === */
+.oi-header .v29-nav-wrap{
+  grid-template-columns:360px minmax(0,1fr) auto auto auto!important;
+}
+.oi-header .v45-logo{
+  grid-column:1!important;
+  width:350px!important;
+  max-width:350px!important;
+  height:68px!important;
+  padding:0!important;
+  background:url("assets/serpentgame-logo.svg?v=20261001-user-final") left center/contain no-repeat!important;
+}
+.oi-header .v45-logo .brand-mark,
+.oi-header .v45-logo .brand-name{display:none!important}
+.oi-header .v29-main-nav,.oi-header .oi-main-nav{grid-column:2!important}
+.oi-header .language-switch{grid-column:3!important}
+.oi-header .nav-auth{grid-column:4!important}
+.oi-header .theme-toggle{grid-column:5!important}
+
+.ty-aside-panel .ty-aside-art{
+  display:block!important;
+  width:100%!important;
+  aspect-ratio:1.45/1!important;
+  object-fit:cover!important;
+  border-radius:8px!important;
+  margin:0 0 16px!important;
+  border:1px solid rgba(216,138,74,.35)!important;
+  background:#111!important;
+}
+@media(max-width:1350px){
+  .oi-header .v29-nav-wrap{grid-template-columns:290px auto auto auto auto!important}
+  .oi-header .v45-logo{width:285px!important;max-width:285px!important;height:62px!important}
+}
+@media(max-width:760px){
+  .oi-header .v45-logo{flex:0 0 250px!important;width:250px!important;max-width:250px!important;height:56px!important}
+}
