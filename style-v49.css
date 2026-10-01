@@ -1651,3 +1651,24 @@ html[data-theme="light"] .oi-header .v45-logo .brand-name{
   text-shadow:0 2px 3px #000!important;
 }
 html[data-theme="light"] .oi-header .v45-logo .brand-name::after{color:#111!important;text-shadow:0 1px 0 #fff!important}
+
+/* === SerpentGame tam logo: referanstaki yatay ejderli görünüm === */
+.oi-header .v29-nav-wrap{
+  grid-template-columns:360px minmax(0,1fr) auto auto!important;
+}
+.oi-header .v45-logo{
+  width:350px!important;
+  max-width:350px!important;
+  height:68px!important;
+  padding:0!important;
+  background:url("assets/serpentgame-logo.svg?v=20261001-full") left center/contain no-repeat!important;
+}
+.oi-header .v45-logo .brand-mark,
+.oi-header .v45-logo .brand-name{display:none!important}
+@media(max-width:1350px){
+  .oi-header .v29-nav-wrap{grid-template-columns:290px auto auto auto!important}
+  .oi-header .v45-logo{width:285px!important;max-width:285px!important;height:62px!important}
+}
+@media(max-width:760px){
+  .oi-header .v45-logo{flex:0 0 250px!important;width:250px!important;max-width:250px!important;height:56px!important}
+}
