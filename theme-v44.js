@@ -6,6 +6,7 @@
 
   const nav = header.querySelector('.v29-main-nav');
   const brand = header.querySelector('.v45-logo');
+  if (brand) { const n=brand.querySelector('.brand-name'); if(n) n.innerHTML='Serpent<strong>Game</strong>'; brand.setAttribute('aria-label','SerpentGame Home'); }
   if (nav && brand && !header.querySelector('.header-dragon')) {
     const dragon = document.createElement('span');
     dragon.className = 'header-dragon';
