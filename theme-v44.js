@@ -15,6 +15,13 @@
   }
 
   header.querySelectorAll('.header-dragon').forEach(el => el.remove());
+  if (brand) {
+    const serpent = document.createElement('span');
+    serpent.className = 'header-dragon header-serpent-gold';
+    serpent.setAttribute('aria-hidden', 'true');
+    serpent.innerHTML = '<img src="assets/serpentgame-gold-logo.jpg?v=20261001-header-gold" alt="">';
+    brand.insertAdjacentElement('afterend', serpent);
+  }
 
   if (nav && !nav.querySelector('.nav-support')) {
     const support = document.createElement('a');
