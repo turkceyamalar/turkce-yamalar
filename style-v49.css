@@ -1793,3 +1793,8 @@ html[data-theme="light"] .oi-header .v45-logo .brand-name::after{color:#111!impo
 @media(max-width:760px){
   .oi-header .v45-logo{flex:0 0 250px!important;width:250px!important;max-width:250px!important;height:56px!important}
 }
+
+/* === Sarı SerpentGame logo cache yenileme === */
+.oi-header .v45-logo{
+  background-image:url("assets/serpentgame-logo.svg?v=20261001-gold-final")!important;
+}
