@@ -1514,13 +1514,11 @@ body:has(main.uniform-page) .uniform-detail > .uniform-media.emulator-banner .v3
   box-shadow:none!important;
   overflow:visible!important;
 }
+.oi-header .v45-logo .brand-mark{
+  background:url("favicon.svg?v=20261001-red-dragon") center/contain no-repeat!important;
+}
 .oi-header .v45-logo .brand-mark img{
-  display:block!important;
-  width:72px!important;
-  height:66px!important;
-  max-width:none!important;
-  object-fit:contain!important;
-  filter:drop-shadow(0 3px 4px #0008)!important;
+  display:none!important;
 }
 .oi-header .v45-logo .brand-name{
   position:relative!important;
@@ -1609,7 +1607,7 @@ html[data-theme="light"] .oi-header .v45-logo .brand-name{
   }
   .oi-header .v45-logo{max-width:190px!important;}
   .oi-header .v45-logo .brand-mark{width:56px!important;height:54px!important;flex-basis:56px!important;}
-  .oi-header .v45-logo .brand-mark img{width:60px!important;height:56px!important;}
+  
   .oi-header .v45-logo .brand-name{font-size:1.1rem!important;}
 }
 @media(max-width:760px){
@@ -1627,7 +1625,7 @@ html[data-theme="light"] .oi-header .v45-logo .brand-name{
   }
   .oi-header .v45-logo{flex:0 0 170px!important;max-width:170px!important;height:56px!important;}
   .oi-header .v45-logo .brand-mark{width:50px!important;height:48px!important;flex-basis:50px!important;}
-  .oi-header .v45-logo .brand-mark img{width:52px!important;height:50px!important;}
+  
   .oi-header .v45-logo .brand-name{font-size:1rem!important;}
   .oi-header .v29-main-nav,.oi-header .oi-main-nav{justify-self:auto!important;flex:0 0 auto!important;}
   .oi-header .nav-auth{flex:0 0 auto!important;}
