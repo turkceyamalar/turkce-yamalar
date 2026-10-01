@@ -2700,3 +2700,43 @@ p,span,b,strong,small,em,
 
 a{color:inherit!important}
 .ty-feed-more{color:#fff!important}
+
+
+/* 2026-10-01 right sidebar cards: white/off-white borders and buttons */
+.ty-home-aside .ty-aside-panel:nth-of-type(1),
+.ty-home-aside .ty-aside-panel:nth-of-type(2){
+  background:#000!important;
+  border:1px solid #f0eee9!important;
+  border-radius:10px!important;
+}
+
+.ty-home-aside .ty-aside-panel:nth-of-type(1) .ty-aside-art,
+.ty-home-aside .ty-aside-panel:nth-of-type(2) .ty-aside-art{
+  background:#0a0a0a!important;
+  border:1px solid #f0eee9!important;
+  border-radius:8px!important;
+}
+
+.ty-home-aside .ty-aside-panel:nth-of-type(1) h2,
+.ty-home-aside .ty-aside-panel:nth-of-type(2) h2,
+.ty-home-aside .ty-aside-panel:nth-of-type(1) p,
+.ty-home-aside .ty-aside-panel:nth-of-type(2) p{
+  color:#fff!important;
+}
+
+.ty-home-aside .ty-aside-panel:nth-of-type(1) .ty-aside-cta,
+.ty-home-aside .ty-aside-panel:nth-of-type(2) .ty-aside-cta{
+  background:#f0eee9!important;
+  color:#111!important;
+  border:1px solid #f0eee9!important;
+  border-radius:8px!important;
+  font-weight:900!important;
+  box-shadow:none!important;
+}
+
+.ty-home-aside .ty-aside-panel:nth-of-type(1) .ty-aside-cta:hover,
+.ty-home-aside .ty-aside-panel:nth-of-type(2) .ty-aside-cta:hover{
+  background:#fff!important;
+  color:#111!important;
+  border-color:#fff!important;
+}
