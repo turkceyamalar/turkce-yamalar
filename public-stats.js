@@ -3,7 +3,7 @@
   if(!box)return;
   const cfg=window.TY_SUPABASE_CONFIG||{};
   const fields={total_views:'Toplam görüntülenme',total_downloads:'Toplam indirme',today_downloads:'Bugünkü indirme',yesterday_downloads:'Dünkü indirme'};
-  const catalog={patch_pages:[58,'Yama sayfası'],available_patches:[23,'İndirilebilir yama'],pc_games:[86,'Toplam PC oyunu'],emulator_games:[58,'Toplam emülatör oyunu']};
+  const catalog={patch_pages:[59,'Yama sayfası'],available_patches:[28,'İndirilebilir yama'],pc_games:[86,'Toplam PC oyunu'],emulator_games:[58,'Toplam emülatör oyunu']};
   const render=(data) => {
     box.innerHTML=Object.entries(fields).map(([key,label])=>`<div class="public-stat-card"><strong>${data[key]==null?'—':(Number(data[key])||0).toLocaleString('tr-TR')}</strong><span>${label}</span></div>`).join('')+Object.values(catalog).map(([count,label])=>`<div class="public-stat-card"><strong>${count.toLocaleString('tr-TR')}</strong><span>${label}</span></div>`).join('');
     if(!data.patches)return;
