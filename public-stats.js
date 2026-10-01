@@ -7,13 +7,6 @@
   const render=(data) => {
     box.innerHTML=Object.entries(fields).map(([key,label])=>`<div class="public-stat-card"><strong>${data[key]==null?'—':(Number(data[key])||0).toLocaleString('tr-TR')}</strong><span>${label}</span></div>`).join('')+
       Object.values(catalog).map(([count,label])=>`<div class="public-stat-card"><strong>${count.toLocaleString('tr-TR')}</strong><span>${label}</span></div>`).join('');
-    if(!data.patches)return;
-    document.querySelectorAll('[data-views]').forEach(node=>{
-      const count=Number(data.patches?.[node.dataset.views])||0;
-      let extra=node.querySelector('.ty-download-count');
-      if(!extra){extra=document.createElement('span');extra.className='ty-download-count';node.append(extra)}
-      extra.textContent=' • ⬇ '+count.toLocaleString('tr-TR')+' indirme';
-    });
   };
   render({});
   if(!cfg.url||!cfg.anonKey)return;
