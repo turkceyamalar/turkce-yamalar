@@ -183,12 +183,26 @@
     document.documentElement.dataset.adminAuthorized='true';
     document.dispatchEvent(new Event('ty-admin-authorized'));
 
-    app.innerHTML=`<button class="button secondary" id="adminLogout" type="button">Çıkış yap</button><section class="community-card" style="margin-bottom:20px"><span class="mini-label">Yalnızca yönetici</span><h2>İndirme istatistikleri</h2><div class="admin-stats" id="downloadAdminStats"></div><div id="downloadPatchStats"></div></section><div class="admin-stats" id="adminStats"></div><div class="admin-grid"><section class="community-card"><div class="section-row"><div><span class="mini-label">Yönetim</span><h2>Kullanıcılar</h2></div><input id="userSearch" class="admin-search" placeholder="Kullanıcı ara..."></div><div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Kullanıcı</th><th>E-posta</th><th>Durum</th><th>Kayıt</th><th>İşlem</th></tr></thead><tbody id="usersTbody"></tbody></table></div></section><section class="community-card"><span class="mini-label">Moderasyon</span><h2>Son Yorumlar</h2><div id="adminComments" class="admin-comments"></div></section></div>`;
+    app.innerHTML=`<button class="button secondary" id="adminLogout" type="button">Çıkış yap</button><section class="community-card" style="margin-bottom:20px"><span class="mini-label">Yalnızca yönetici</span><h2>Gerçek site istatistikleri</h2><div class="admin-stats" id="siteAdminStats"></div></section><section class="community-card" style="margin-bottom:20px"><span class="mini-label">Yalnızca yönetici</span><h2>İndirme istatistikleri</h2><div class="admin-stats" id="downloadAdminStats"></div><div id="downloadPatchStats"></div></section><div class="admin-stats" id="adminStats"></div><div class="admin-grid"><section class="community-card"><div class="section-row"><div><span class="mini-label">Yönetim</span><h2>Kullanıcılar</h2></div><input id="userSearch" class="admin-search" placeholder="Kullanıcı ara..."></div><div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Kullanıcı</th><th>E-posta</th><th>Durum</th><th>Kayıt</th><th>İşlem</th></tr></thead><tbody id="usersTbody"></tbody></table></div></section><section class="community-card"><span class="mini-label">Moderasyon</span><h2>Son Yorumlar</h2><div id="adminComments" class="admin-comments"></div></section></div>`;
     $('#adminLogout').onclick=async()=>{delete document.documentElement.dataset.adminAuthorized;await sb.auth.signOut();currentUser=null;currentProfile=null;initAdminPage()};
+    try{
+      const {data:siteStats,error:siteStatsError}=await sb.rpc('public_site_stats');
+      if(siteStatsError)throw siteStatsError;
+      const exactCards=[
+        ['Toplam görüntülenme',Number(siteStats?.total_views||0)],
+        ['Toplam indirme',Number(siteStats?.total_downloads||0)],
+        ['Bugünkü indirme',Number(siteStats?.today_downloads||0)],
+        ['Dünkü indirme',Number(siteStats?.yesterday_downloads||0)]
+      ];
+      $('#siteAdminStats').innerHTML=exactCards.map(([label,n])=>`<div class="stat-card"><b>${n.toLocaleString('tr-TR')}</b><span>${label}</span></div>`).join('');
+    }catch(err){
+      console.error(err);
+      $('#siteAdminStats').textContent='Gerçek site istatistikleri şu anda alınamıyor.';
+    }
     const {data:downloads,error:downloadError}=await sb.rpc('admin_download_stats');
     if(downloadError){$('#downloadAdminStats').textContent='İndirme istatistikleri şu anda alınamıyor. Yönetici işlevinin Supabase üzerinde kurulması gerekiyor.'}
     else {
-      const cards=[['Toplam Yama',15],['Toplam İndirme',Number(downloads.total_downloads||0)],['Bugünkü İndirme',Number(downloads.today_downloads||0)],['Dünkü İndirme',Number(downloads.yesterday_downloads||0)]];
+      const cards=[['İndirilebilir Yama',28],['Toplam İndirme',Number(downloads.total_downloads||0)],['Bugünkü İndirme',Number(downloads.today_downloads||0)],['Dünkü İndirme',Number(downloads.yesterday_downloads||0)]];
       $('#downloadAdminStats').innerHTML=cards.map(([label,n])=>`<div class="stat-card"><b>${n.toLocaleString('tr-TR')}</b><span>${label}</span></div>`).join('');
       const counts=new Map((downloads.patches||[]).map(x=>[x.patch_key,Number(x.download_count)||0]));
       $('#downloadPatchStats').innerHTML='<h3>Yama bazında</h3><div class="admin-stats">'+[...counts].sort((a,b)=>b[1]-a[1]).map(([name,n])=>`<div class="stat-card"><b>${n.toLocaleString('tr-TR')}</b><span>${esc(name)}</span></div>`).join('')+'</div>';
