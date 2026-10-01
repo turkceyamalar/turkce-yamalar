@@ -16,11 +16,14 @@
 
   header.querySelectorAll('.header-dragon').forEach(el => el.remove());
   if (brand) {
-    const serpent = document.createElement('span');
-    serpent.className = 'header-dragon header-serpent-gold';
-    serpent.setAttribute('aria-hidden', 'true');
-    serpent.innerHTML = '<img src="assets/serpentgame-gold-logo.jpg?v=20261001-header-gold" alt="">';
-    brand.insertAdjacentElement('afterend', serpent);
+    const leftDragon = document.createElement('span');
+    leftDragon.className = 'header-dragon header-serpent-left';
+    leftDragon.setAttribute('aria-hidden','true');
+    leftDragon.innerHTML = '<img src="assets/serpentgame-gold-logo.jpg?v=20261001-header-left" alt="">';
+    header.prepend(leftDragon);
+    const rightDragon = leftDragon.cloneNode(true);
+    rightDragon.className = 'header-dragon header-serpent-right';
+    header.append(rightDragon);
   }
 
   if (nav && !nav.querySelector('.nav-support')) {
