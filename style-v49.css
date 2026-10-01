@@ -1798,3 +1798,98 @@ html[data-theme="light"] .oi-header .v45-logo .brand-name::after{color:#111!impo
 .oi-header .v45-logo{
   background-image:url("assets/serpentgame-logo.svg?v=20261001-gold-final")!important;
 }
+
+/* === MOBILE LOGO FIX: logo telefonda her zaman görünür === */
+@media(max-width:760px){
+  .oi-header,.v29-header{
+    height:118px!important;
+    min-height:118px!important;
+    max-height:none!important;
+  }
+  .oi-header .v29-nav-wrap{
+    display:grid!important;
+    grid-template-columns:1fr auto auto!important;
+    grid-template-rows:58px 52px!important;
+    width:100%!important;
+    height:118px!important;
+    min-height:118px!important;
+    max-height:none!important;
+    padding:4px 8px!important;
+    gap:4px 8px!important;
+    overflow:visible!important;
+  }
+
+  .oi-header .v45-logo{
+    grid-column:1!important;
+    grid-row:1!important;
+    justify-self:start!important;
+    align-self:center!important;
+    width:250px!important;
+    max-width:250px!important;
+    min-width:250px!important;
+    height:54px!important;
+    margin:0!important;
+    padding:0!important;
+    display:block!important;
+    background:url("assets/serpentgame-logo.svg?v=20261001-gold-mobile") left center/contain no-repeat!important;
+  }
+  .oi-header .v45-logo .brand-mark,
+  .oi-header .v45-logo .brand-name{display:none!important}
+
+  .oi-header .language-switch{
+    grid-column:2!important;
+    grid-row:1!important;
+    align-self:center!important;
+    justify-self:end!important;
+  }
+  .oi-header .theme-toggle{
+    grid-column:3!important;
+    grid-row:1!important;
+    align-self:center!important;
+    justify-self:end!important;
+  }
+
+  .oi-header .v29-main-nav,
+  .oi-header .oi-main-nav{
+    grid-column:1 / -1!important;
+    grid-row:2!important;
+    justify-self:stretch!important;
+    width:100%!important;
+    max-width:100%!important;
+    display:flex!important;
+    align-items:center!important;
+    gap:7px!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    scrollbar-width:none!important;
+    -webkit-overflow-scrolling:touch!important;
+    padding:0 0 2px!important;
+  }
+  .oi-header .v29-main-nav::-webkit-scrollbar,
+  .oi-header .oi-main-nav::-webkit-scrollbar{display:none!important}
+  .oi-header .v29-main-nav .v29-pill{
+    flex:0 0 auto!important;
+    height:44px!important;
+    min-height:44px!important;
+    padding:0 12px!important;
+    font-size:.75rem!important;
+  }
+
+  .oi-header .nav-auth{
+    grid-column:1 / -1!important;
+    grid-row:2!important;
+    justify-self:end!important;
+    align-self:center!important;
+    position:absolute!important;
+    right:8px!important;
+    top:8px!important;
+    display:none!important;
+  }
+}
+@media(max-width:430px){
+  .oi-header .v45-logo{
+    width:220px!important;
+    max-width:220px!important;
+    min-width:220px!important;
+  }
+}
