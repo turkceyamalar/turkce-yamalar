@@ -1,0 +1,25 @@
+/* SerpentGame header dragons — exact crop from reference screenshot */
+.header-serpent-left,
+.header-serpent-right{
+  position:absolute;
+  top:0;
+  width:235px;
+  height:70px;
+  pointer-events:none;
+  z-index:2;
+}
+.header-serpent-left{left:8px;}
+.header-serpent-right{right:8px;}
+
+.header-serpent-left img,
+.header-serpent-right img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+}
+
+@media(max-width:760px){
+  .header-serpent-left,
+  .header-serpent-right{display:none;}
+}

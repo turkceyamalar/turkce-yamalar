@@ -1,0 +1,8 @@
+<!-- Header içine, menünün bulunduğu kapsayıcının içine ekle -->
+<span class="header-serpent-left" aria-hidden="true">
+  <img src="assets/header-gold-dragon.png" alt="">
+</span>
+
+<span class="header-serpent-right" aria-hidden="true">
+  <img src="assets/header-gold-dragon-right.png" alt="">
+</span>
