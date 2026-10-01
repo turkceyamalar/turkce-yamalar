@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 150" role="img" aria-label="SerpentGame">
 <defs>
   <linearGradient id="red" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#ff6a31"/><stop offset=".45" stop-color="#d82d20"/><stop offset="1" stop-color="#7f1514"/>
+    <stop offset="0" stop-color="#fff07a"/><stop offset=".42" stop-color="#ffc400"/><stop offset="1" stop-color="#d97800"/>
   </linearGradient>
   <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#ffd67b"/><stop offset=".5" stop-color="#f39b25"/><stop offset="1" stop-color="#b84210"/>
+    <stop offset="0" stop-color="#fff6b2"/><stop offset=".5" stop-color="#ffd11a"/><stop offset="1" stop-color="#ef8a00"/>
   </linearGradient>
   <filter id="shadow" x="-20%" y="-40%" width="140%" height="180%">
     <feGaussianBlur in="SourceAlpha" stdDeviation="3"/><feOffset dy="3"/><feComponentTransfer><feFuncA type="linear" slope=".75"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
@@ -12,23 +12,23 @@
 </defs>
 
 <!-- long eastern dragon body -->
-<path d="M28 92C75 26 159 31 211 70c29 22 55 28 85 16 25-10 43-30 69-43 33-16 72-17 104-1 20 10 35 27 44 47-19-11-38-14-55-9-20 6-34 22-51 34-25 18-57 25-88 20-33-5-60-23-90-36-38-17-83-21-122-4-24 10-44 25-61 45 4-18 12-34 22-47z" fill="url(#red)" stroke="#46100e" stroke-width="7" stroke-linejoin="round"/>
+<path d="M28 92C75 26 159 31 211 70c29 22 55 28 85 16 25-10 43-30 69-43 33-16 72-17 104-1 20 10 35 27 44 47-19-11-38-14-55-9-20 6-34 22-51 34-25 18-57 25-88 20-33-5-60-23-90-36-38-17-83-21-122-4-24 10-44 25-61 45 4-18 12-34 22-47z" fill="url(#red)" stroke="#5e3600" stroke-width="7" stroke-linejoin="round"/>
 <!-- body scales -->
 <path d="M58 91c37-40 91-47 137-26m-119 39c35-29 78-33 116-19m75 15c31 10 60 10 88-2m40-20c25-23 55-30 83-19" fill="none" stroke="#f7a137" stroke-width="5" stroke-linecap="round" opacity=".95"/>
-<path d="M48 74 35 49l25 9 7-27 14 23 22-18-6 29 29-11-17 25 31 2-23 17" fill="url(#gold)" stroke="#6b2b0c" stroke-width="5" stroke-linejoin="round"/>
+<path d="M48 74 35 49l25 9 7-27 14 23 22-18-6 29 29-11-17 25 31 2-23 17" fill="url(#gold)" stroke="#7b4b00" stroke-width="5" stroke-linejoin="round"/>
 
 <!-- dragon head -->
-<path d="M520 40c28-18 69-10 88 15l30 9-22 17 24 17-34 5c-7 26-31 43-58 41l-38-18 18-22-22-12 20-14-13-22z" fill="url(#red)" stroke="#46100e" stroke-width="7" stroke-linejoin="round"/>
-<path d="m540 41 13-34 14 27 25-20-10 34 32 4-28 16" fill="url(#gold)" stroke="#6b2b0c" stroke-width="5" stroke-linejoin="round"/>
+<path d="M520 40c28-18 69-10 88 15l30 9-22 17 24 17-34 5c-7 26-31 43-58 41l-38-18 18-22-22-12 20-14-13-22z" fill="url(#red)" stroke="#5e3600" stroke-width="7" stroke-linejoin="round"/>
+<path d="m540 41 13-34 14 27 25-20-10 34 32 4-28 16" fill="url(#gold)" stroke="#7b4b00" stroke-width="5" stroke-linejoin="round"/>
 <path d="M554 66c11-10 26-10 36-4-5 11-15 16-29 14z" fill="#fff" stroke="#24110e" stroke-width="4"/>
 <circle cx="575" cy="67" r="4" fill="#ffb400"/>
-<path d="M550 95c15 8 31 5 44-3l-8 20-28 7-21-11z" fill="#5b0b0b" stroke="#2a0808" stroke-width="4"/>
+<path d="M550 95c15 8 31 5 44-3l-8 20-28 7-21-11z" fill="#8a4a00" stroke="#4a2700" stroke-width="4"/>
 <path d="m546 100 11 16 9-16 9 14 9-17" fill="#fff1cf" stroke="#3b120d" stroke-width="3"/>
 <path d="M609 80c24-6 45-2 64 12" fill="none" stroke="#eac06d" stroke-width="4" stroke-linecap="round"/>
 <path d="M614 91c27-2 47 5 62 18" fill="none" stroke="#eac06d" stroke-width="4" stroke-linecap="round"/>
 
 <!-- tail flames -->
-<path d="M45 100c-19 8-31 21-37 39l22-11 7 18 14-20" fill="url(#gold)" stroke="#6b2b0c" stroke-width="5" stroke-linejoin="round"/>
+<path d="M45 100c-19 8-31 21-37 39l22-11 7 18 14-20" fill="url(#gold)" stroke="#7b4b00" stroke-width="5" stroke-linejoin="round"/>
 
 <!-- logo text -->
 <g filter="url(#shadow)">
