@@ -23,6 +23,14 @@
     nav.appendChild(support);
   }
 
+  let auth = header.querySelector('.nav-auth');
+  if (!auth) {
+    auth = document.createElement('div');
+    auth.className = 'nav-auth';
+    auth.innerHTML = '<a class="js-login" href="#">Giriş Yap</a><a class="js-register" href="#">Kayıt Ol</a>';
+    header.appendChild(auth);
+  }
+
   const button = document.createElement('button');
   button.type = 'button';
   button.className = 'theme-toggle';
