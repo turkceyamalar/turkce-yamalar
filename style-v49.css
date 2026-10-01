@@ -2599,3 +2599,17 @@ html[data-theme="light"] .oi-header .v45-logo .brand-name::after{color:#111!impo
     z-index:6!important;
   }
 }
+
+
+/* 2026-10-01 DARK-ONLY SITE */
+html,body{color-scheme:dark!important}
+html[data-theme="light"],html[data-theme="dark"]{background:#0b0d0e!important}
+.oi-header .theme-toggle{display:none!important}
+[data-theme="light"] body,
+[data-theme="light"] .ty-home,
+[data-theme="light"] .site-header,
+[data-theme="light"] .ty-aside-panel,
+[data-theme="light"] .public-stats-section{
+  background-color:#0b0d0e!important;
+  color:#f2f2f2!important;
+}
