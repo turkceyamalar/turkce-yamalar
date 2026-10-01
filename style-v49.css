@@ -2037,3 +2037,22 @@ html[data-theme="light"] .oi-header .v45-logo .brand-name::after{color:#111!impo
   color:#273143;
   border-color:rgba(23,34,53,.12);
 }
+
+
+/* 2026-10-01 approved white/off-white UI */
+:root{--serpent-ivory:#ece9e2;--serpent-ivory-hover:#fff;--serpent-line:#4a4d52}
+.oi-nav-item.v29-pill.active,.oi-nav-item.v29-pill:hover,.nav-auth a:last-child,.ty-aside-cta,.ty-page-button.is-active{
+  background:var(--serpent-ivory)!important;border-color:var(--serpent-ivory)!important;color:#111!important;
+}
+.nav-auth a:last-child{font-weight:800!important}
+.ty-feed-more,.text-link{color:#e6e2da!important}
+.ty-views{background:#20262b!important;border:1px solid #343b40!important;color:#f2f2f2!important}
+.ty-pagination{border-top:0!important}
+.ty-pagination-summary{color:#d6d3cc!important}
+.ty-page-button{border:1px solid var(--serpent-line)!important;border-radius:8px!important;background:#151719!important;color:#f0f0f0!important}
+.ty-page-button:hover{background:#292c2f!important;border-color:#777!important;color:#fff!important}
+.ty-page-button.is-active{box-shadow:none!important}
+.ty-feed-all{border:0!important;background:var(--serpent-ivory)!important;color:#111!important;border-radius:7px!important;font-weight:900!important}
+.ty-feed-all:hover{background:var(--serpent-ivory-hover)!important;color:#111!important}
+.ty-aside-panel{border-color:#555!important}
+.ty-aside-cta:hover{background:#fff!important;color:#111!important}
