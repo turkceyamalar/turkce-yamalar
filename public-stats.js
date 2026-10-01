@@ -2,8 +2,8 @@
   const box=document.querySelector('[data-public-stats]');
   if(!box)return;
   const cfg=window.TY_SUPABASE_CONFIG||{};
-  const fields={total_views:'Toplam görüntülenme',total_downloads:'Yama indirme',today_downloads:'Bugün indirilen',yesterday_downloads:'Dün indirilen'};
-  const catalog={patch_pages:[59,'Toplam yama sayfası'],available_patches:[28,'İndirilebilir yama'],pc_games:[86,'PC oyunu'],emulator_games:[58,'Emülatör oyunu']};
+  const fields={};
+  const catalog={available_patches:[28,'İndirilebilir yama'],patch_pages:[59,'Toplam yama sayfası'],pc_games:[86,'PC oyunu'],emulator_games:[58,'Emülatör oyunu']};
 
   const approx=(value)=>{
     const n=Math.max(0,Number(value)||0);
@@ -18,11 +18,7 @@
   };
 
   const render=(data) => {
-    box.innerHTML=Object.entries(fields).map(([key,label])=>{
-      const demoValue=key==='total_views'?'1.000+':'500+';
-      return `<div class="public-stat-card"><strong>${demoValue}</strong><span>${label}</span></div>`;
-    }).join('')+
-      Object.values(catalog).map(([count,label])=>`<div class="public-stat-card"><strong>${count.toLocaleString('tr-TR')}</strong><span>${label}</span></div>`).join('');
+    box.innerHTML=Object.values(catalog).map(([count,label])=>`<div class="public-stat-card"><strong>${count.toLocaleString('tr-TR')}</strong><span>${label}</span></div>`).join('');
 
     if(!data.patches)return;
     document.querySelectorAll('[data-views]').forEach(node=>{
