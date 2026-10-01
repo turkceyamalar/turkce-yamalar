@@ -2626,3 +2626,10 @@ html[data-theme="light"],html[data-theme="dark"]{background:#0b0d0e!important}
     grid-template-columns:250px minmax(0,1fr) auto!important;
   }
 }
+
+
+/* 2026-10-01 remove APK nav item */
+.oi-header .nav-apk,
+.oi-header a[href="apklar.html"]{
+  display:none!important;
+}
