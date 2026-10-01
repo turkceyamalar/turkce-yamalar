@@ -1515,7 +1515,7 @@ body:has(main.uniform-page) .uniform-detail > .uniform-media.emulator-banner .v3
   overflow:visible!important;
 }
 .oi-header .v45-logo .brand-mark{
-  background:url("favicon.svg?v=20261001-red-dragon") center/contain no-repeat!important;
+  background:url("favicon.svg?v=20261001-exact") center/contain no-repeat!important;
 }
 .oi-header .v45-logo .brand-mark img{
   display:none!important;
@@ -1529,7 +1529,7 @@ body:has(main.uniform-page) .uniform-detail > .uniform-media.emulator-banner .v3
   margin:0!important;
   padding:0!important;
   font-family:Georgia,"Times New Roman",serif!important;
-  font-size:1.32rem!important;
+  font-size:1.18rem!important;
   line-height:1!important;
   font-style:italic!important;
   font-weight:900!important;
