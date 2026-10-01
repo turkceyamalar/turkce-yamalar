@@ -1457,10 +1457,10 @@ body:has(main.uniform-page) .uniform-detail > .uniform-media.emulator-banner .v3
 .aniimo-install-video{max-width:760px;margin:28px 0}.aniimo-install-video h2{color:#eeb56b}.aniimo-install-video .youtube-embed{position:relative;aspect-ratio:16/9}.aniimo-install-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:10px}
 
 
-/* === 2026-10-01 EjderOyun logo FINAL === */
+/* === 2026-10-01 EjderOyun logo FINAL v2 === */
 .oi-header .v29-nav-wrap{
   display:grid!important;
-  grid-template-columns:minmax(480px,1fr) auto!important;
+  grid-template-columns:minmax(560px,1fr) auto!important;
   align-items:center!important;
   column-gap:18px!important;
   min-height:84px!important;
@@ -1485,19 +1485,25 @@ body:has(main.uniform-page) .uniform-detail > .uniform-media.emulator-banner .v3
   background:transparent!important;
   border:0!important;
   box-shadow:none!important;
-  overflow:visible!important;
+  overflow:hidden!important;
   text-decoration:none!important;
 }
 .oi-header .v45-logo .brand-mark{display:none!important;}
 .oi-header .v45-logo::before{
   content:""!important;
   position:absolute!important;
-  inset:7px 0!important;
-  background:url("assets/header-dragon-running-v37.gif") center right / 100% 100% no-repeat!important;
+  left:0!important;
+  right:0!important;
+  top:50%!important;
+  height:64px!important;
+  transform:translateY(-50%)!important;
+  background-image:url("assets/serpent-header-v1.svg")!important;
+  background-repeat:no-repeat!important;
+  background-position:center center!important;
+  background-size:100% 64px!important;
   z-index:1!important;
   pointer-events:none!important;
-  transform:none!important;
-  opacity:.96!important;
+  opacity:.98!important;
 }
 .oi-header .v45-logo .brand-name{
   position:relative!important;
@@ -1528,24 +1534,24 @@ body:has(main.uniform-page) .uniform-detail > .uniform-media.emulator-banner .v3
 }
 html[data-theme="light"] .oi-header .v45-logo::before{
   filter:brightness(0)!important;
-  opacity:.90!important;
+  opacity:.92!important;
 }
 html[data-theme="light"] .oi-header .v45-logo .brand-name{
   color:#111!important;
   text-shadow:0 1px 0 #fff9!important;
 }
 html[data-theme="dark"] .oi-header .v45-logo::before{
-  filter:grayscale(1) brightness(2.15)!important;
-  opacity:.95!important;
+  filter:invert(1) grayscale(1) brightness(1.2)!important;
+  opacity:.98!important;
 }
 
 @media(max-width:1250px){
   .oi-header .v29-nav-wrap{
-    grid-template-columns:360px auto!important;
+    grid-template-columns:420px auto!important;
     overflow-x:auto!important;
   }
   .oi-header .v45-logo{height:68px!important;}
-  .oi-header .v45-logo::before{inset:9px 0!important;}
+  .oi-header .v45-logo::before{height:56px!important;background-size:100% 56px!important;}
   .oi-header .v45-logo .brand-name{font-size:1.25rem!important;}
 }
 @media(max-width:760px){
@@ -1557,10 +1563,10 @@ html[data-theme="dark"] .oi-header .v45-logo::before{
     overflow-x:auto!important;
   }
   .oi-header .v45-logo{
-    flex:0 0 300px!important;
-    width:300px!important;
+    flex:0 0 320px!important;
+    width:320px!important;
     height:58px!important;
   }
-  .oi-header .v45-logo::before{inset:8px 0!important;}
+  .oi-header .v45-logo::before{height:48px!important;background-size:100% 48px!important;}
   .oi-header .v45-logo .brand-name{font-size:1rem!important;}
 }
