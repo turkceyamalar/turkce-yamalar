@@ -2740,3 +2740,37 @@ a{color:inherit!important}
   color:#111!important;
   border-color:#fff!important;
 }
+
+
+/* 2026-10-01 site statistics readability fix */
+.public-stats-section{
+  background:#000!important;
+  border:1px solid #f0eee9!important;
+  color:#fff!important;
+}
+
+.public-stats-section h2,
+.public-stats-section .stats-title{
+  color:#fff!important;
+}
+
+.public-stats-grid>*{
+  background:#111!important;
+  border:1px solid #f0eee9!important;
+  color:#fff!important;
+}
+
+.public-stats-grid>* *,
+.public-stats-grid strong,
+.public-stats-grid span,
+.public-stats-grid small,
+.public-stats-grid p{
+  color:#fff!important;
+}
+
+.public-stats-grid svg,
+.public-stats-grid i{
+  color:#fff!important;
+  fill:currentColor!important;
+  stroke:currentColor!important;
+}
