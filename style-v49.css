@@ -1457,121 +1457,80 @@ body:has(main.uniform-page) .uniform-detail > .uniform-media.emulator-banner .v3
 .aniimo-install-video{max-width:760px;margin:28px 0}.aniimo-install-video h2{color:#eeb56b}.aniimo-install-video .youtube-embed{position:relative;aspect-ratio:16/9}.aniimo-install-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:10px}
 
 
-/* === 2026-10-01 EjderOyun uzun yatay ejder logo === */
+/* === 2026-10-01 EjderOyun tam geniş yatay ejder logo === */
 .oi-header .v29-nav-wrap{
-  min-height:88px!important;
+  display:flex!important;
   align-items:center!important;
+  gap:18px!important;
+  min-height:84px!important;
+  position:relative!important;
 }
-
 .oi-header .header-dragon-left,
-.oi-header .header-dragon-right{
-  display:none!important;
-}
-
+.oi-header .header-dragon-right{display:none!important;}
 .oi-header .v45-logo{
   position:relative!important;
+  flex:1 1 auto!important;
+  min-width:0!important;
+  max-width:none!important;
+  height:72px!important;
+  margin:0!important;
+  padding:0 18px!important;
   display:flex!important;
   align-items:center!important;
   justify-content:center!important;
-  width:clamp(560px,48vw,950px)!important;
-  min-width:560px!important;
-  max-width:950px!important;
-  height:70px!important;
-  margin:0 18px!important;
-  padding:0!important;
+  background:transparent!important;
   border:0!important;
   border-radius:0!important;
-  background:transparent!important;
   box-shadow:none!important;
   overflow:visible!important;
-  flex:0 0 auto!important;
 }
-
-.oi-header .v45-logo:hover{
-  transform:none!important;
-  box-shadow:none!important;
-}
-
-.oi-header .v45-logo .brand-mark{
-  display:none!important;
-}
-
+.oi-header .v45-logo:hover{transform:none!important;box-shadow:none!important;}
+.oi-header .v45-logo .brand-mark{display:none!important;}
 .oi-header .v45-logo::before{
   content:""!important;
   position:absolute!important;
-  inset:0!important;
-  width:100%!important;
-  height:100%!important;
+  left:0!important;
+  right:0!important;
+  top:50%!important;
+  transform:translateY(-50%)!important;
+  height:58px!important;
   background-image:url("assets/serpent-header-v1.svg")!important;
   background-repeat:no-repeat!important;
-  background-position:center right!important;
+  background-position:center center!important;
   background-size:100% 100%!important;
-  z-index:1!important;
   pointer-events:none!important;
+  z-index:1!important;
+  opacity:.95!important;
 }
-
 .oi-header .v45-logo .brand-name{
+  position:relative!important;
+  z-index:2!important;
   display:inline-flex!important;
   align-items:baseline!important;
   justify-content:center!important;
-  position:relative!important;
-  z-index:2!important;
   font-family:Georgia,"Times New Roman",serif!important;
-  font-size:clamp(1.15rem,1.45vw,1.7rem)!important;
+  font-size:clamp(1.2rem,1.6vw,1.9rem)!important;
   font-style:italic!important;
   font-weight:900!important;
   line-height:1!important;
-  letter-spacing:-.045em!important;
-  color:#111!important;
-  text-shadow:0 1px 0 #fff8!important;
-  transform:translateY(-1px)!important;
-}
-
-.oi-header .v45-logo .brand-name strong{
-  color:#ef6c00!important;
-  font-size:1em!important;
-  font-weight:900!important;
-}
-
-html[data-theme="light"] .oi-header .v45-logo::before{
-  filter:brightness(0)!important;
-  opacity:.92!important;
-}
-
-html[data-theme="dark"] .oi-header .v45-logo::before{
-  filter:invert(1) grayscale(1) brightness(1.35)!important;
-  opacity:.96!important;
-}
-
-html[data-theme="dark"] .oi-header .v45-logo .brand-name{
+  letter-spacing:-.04em!important;
   color:#fff!important;
-  text-shadow:0 2px 3px #000!important;
+  text-shadow:0 2px 4px rgba(0,0,0,.9)!important;
 }
-
-html[data-theme="dark"] .oi-header .v45-logo .brand-name strong{
-  color:#ff7900!important;
-}
-
+.oi-header .v45-logo .brand-name strong{color:#ff7a00!important;font-weight:900!important;}
+html[data-theme="light"] .oi-header .v45-logo::before{filter:brightness(0)!important;opacity:.92!important;}
+html[data-theme="light"] .oi-header .v45-logo .brand-name{color:#111!important;text-shadow:0 1px 0 rgba(255,255,255,.55)!important;}
+html[data-theme="dark"] .oi-header .v45-logo::before{filter:invert(1) grayscale(1) brightness(1.2)!important;opacity:.96!important;}
+.oi-header .oi-main-nav{flex:0 0 auto!important;position:relative!important;z-index:3!important;}
 @media(max-width:1100px){
-  .oi-header .v45-logo{
-    width:clamp(420px,46vw,650px)!important;
-    min-width:420px!important;
-    height:64px!important;
-  }
-  .oi-header .v45-logo .brand-name{
-    font-size:clamp(1.2rem,1.8vw,1.7rem)!important;
-  }
+  .oi-header .v45-logo{height:64px!important;padding:0 10px!important;}
+  .oi-header .v45-logo::before{height:50px!important;}
+  .oi-header .v45-logo .brand-name{font-size:clamp(1rem,1.8vw,1.55rem)!important;}
 }
-
 @media(max-width:720px){
-  .oi-header .v45-logo{
-    width:clamp(290px,86vw,520px)!important;
-    min-width:290px!important;
-    height:56px!important;
-    margin:0 6px!important;
-  }
-  .oi-header .v45-logo .brand-name{
-    font-size:clamp(1.05rem,4vw,1.45rem)!important;
-  }
+  .oi-header .v29-nav-wrap{gap:10px!important;}
+  .oi-header .v45-logo{height:56px!important;padding:0 6px!important;}
+  .oi-header .v45-logo::before{height:42px!important;}
+  .oi-header .v45-logo .brand-name{font-size:1rem!important;}
 }
 
