@@ -2,8 +2,8 @@
   const box=document.querySelector('[data-public-stats]');
   if(!box)return;
   const cfg=window.TY_SUPABASE_CONFIG||{};
-  const fields={total_views:'Toplam görüntülenme',total_downloads:'Toplam indirme',today_downloads:'Bugünkü indirme',yesterday_downloads:'Dünkü indirme'};
-  const catalog={patch_pages:[59,'Yama sayfası'],available_patches:[28,'İndirilebilir yama'],pc_games:[86,'Toplam PC oyunu'],emulator_games:[58,'Toplam emülatör oyunu']};
+  const fields={total_views:'Toplam görüntülenme',total_downloads:'Yama indirme',today_downloads:'Bugün indirilen',yesterday_downloads:'Dün indirilen'};
+  const catalog={patch_pages:[59,'Toplam yama sayfası'],available_patches:[28,'İndirilebilir yama'],pc_games:[86,'PC oyunu'],emulator_games:[58,'Emülatör oyunu']};
 
   const approx=(value)=>{
     const n=Math.max(0,Number(value)||0);
