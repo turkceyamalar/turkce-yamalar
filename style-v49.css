@@ -2237,3 +2237,132 @@ html[data-theme="light"] .oi-header .v45-logo .brand-name::after{color:#111!impo
   }
   .oi-header .v45-logo,.site-header .mobile-serpent-logo{display:none!important}
 }
+
+
+/* 2026-10-01 header matched to user reference */
+@media(min-width:761px){
+  .site-header.oi-header{
+    height:70px!important;
+    min-height:70px!important;
+    background:#090909!important;
+    border-bottom:1px solid #242424!important;
+    box-shadow:0 2px 0 rgba(255,255,255,.02)!important;
+  }
+  .oi-header .v29-nav-wrap{
+    position:relative!important;
+    display:grid!important;
+    grid-template-columns:250px minmax(0,1fr) auto auto!important;
+    align-items:center!important;
+    width:100%!important;
+    max-width:none!important;
+    height:70px!important;
+    min-height:70px!important;
+    padding:0 24px!important;
+    gap:14px!important;
+    overflow:hidden!important;
+  }
+  .oi-header .v45-logo,
+  .site-header .mobile-serpent-logo,
+  .oi-header .language-switch,
+  .oi-header .nav-auth .js-login{display:none!important}
+
+  .oi-header .header-serpent-left,
+  .oi-header .header-serpent-right{
+    display:block!important;
+    position:absolute!important;
+    top:3px!important;
+    width:235px!important;
+    height:64px!important;
+    z-index:1!important;
+    pointer-events:none!important;
+    overflow:hidden!important;
+    opacity:1!important;
+  }
+  .oi-header .header-serpent-left{left:10px!important}
+  .oi-header .header-serpent-right{right:10px!important;transform:scaleX(-1)!important}
+  .oi-header .header-serpent-left img,
+  .oi-header .header-serpent-right img{
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    filter:none!important;
+  }
+
+  .oi-header .v29-main-nav,
+  .oi-header .oi-main-nav{
+    grid-column:2!important;
+    justify-self:center!important;
+    display:flex!important;
+    align-items:center!important;
+    gap:8px!important;
+    margin:0!important;
+    position:relative!important;
+    z-index:5!important;
+  }
+  .oi-header .v29-main-nav .v29-pill{
+    height:42px!important;
+    min-height:42px!important;
+    padding:0 16px!important;
+    border:0!important;
+    border-radius:7px!important;
+    background:transparent!important;
+    color:#f2f2f2!important;
+    font-size:.83rem!important;
+    font-weight:800!important;
+    box-shadow:none!important;
+  }
+  .oi-header .v29-main-nav .v29-pill:hover{
+    background:#171717!important;
+    color:#fff!important;
+  }
+  .oi-header .v29-main-nav .v29-pill.active{
+    background:#ece9e2!important;
+    color:#111!important;
+  }
+  .oi-header .v29-main-nav .oi-menu-icon{display:none!important}
+
+  .oi-header .theme-toggle{
+    grid-column:3!important;
+    justify-self:end!important;
+    width:56px!important;
+    height:36px!important;
+    border-radius:999px!important;
+    border:1px solid #2d2d2d!important;
+    background:#141414!important;
+    position:relative!important;
+    z-index:5!important;
+  }
+
+  .oi-header .nav-auth{
+    grid-column:4!important;
+    justify-self:end!important;
+    display:flex!important;
+    align-items:center!important;
+    margin:0!important;
+    position:relative!important;
+    z-index:5!important;
+  }
+  .oi-header .nav-auth .js-register{
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    height:42px!important;
+    padding:0 20px!important;
+    border-radius:8px!important;
+    border:1px solid #d7d4ce!important;
+    background:#ece9e2!important;
+    color:#111!important;
+    font-size:.84rem!important;
+    font-weight:900!important;
+  }
+}
+
+@media(max-width:1150px) and (min-width:761px){
+  .oi-header .header-serpent-left,
+  .oi-header .header-serpent-right{width:175px!important;opacity:.9!important}
+  .oi-header .v29-nav-wrap{grid-template-columns:185px minmax(0,1fr) auto auto!important;padding:0 14px!important}
+  .oi-header .v29-main-nav{gap:4px!important}
+  .oi-header .v29-main-nav .v29-pill{padding:0 10px!important;font-size:.74rem!important}
+}
