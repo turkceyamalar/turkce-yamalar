@@ -19,7 +19,7 @@
     const leftDragon = document.createElement('span');
     leftDragon.className = 'header-dragon header-serpent-left';
     leftDragon.setAttribute('aria-hidden','true');
-    leftDragon.innerHTML = '<img src="assets/serpentgame-gold-logo.jpg?v=20261001-real-gold-dragon" alt="">';
+    leftDragon.innerHTML = '<img src="assets/header-gold-dragon.svg?v=20261001-fixed" alt="">';
     header.prepend(leftDragon);
     const rightDragon = leftDragon.cloneNode(true);
     rightDragon.className = 'header-dragon header-serpent-right';
