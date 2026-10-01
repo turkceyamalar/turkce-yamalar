@@ -1672,3 +1672,87 @@ html[data-theme="light"] .oi-header .v45-logo .brand-name::after{color:#111!impo
 @media(max-width:760px){
   .oi-header .v45-logo{flex:0 0 250px!important;width:250px!important;max-width:250px!important;height:56px!important}
 }
+
+/* === FINAL: kompakt SerpentGame logo + TR/EN === */
+.oi-header .v29-nav-wrap{
+  grid-template-columns:220px minmax(0,1fr) auto auto auto!important;
+  gap:10px!important;
+}
+.oi-header .v45-logo{
+  grid-column:1!important;
+  width:210px!important;
+  max-width:210px!important;
+  height:64px!important;
+  padding:4px 6px!important;
+  display:flex!important;
+  align-items:center!important;
+  gap:9px!important;
+  background:none!important;
+}
+.oi-header .v45-logo .brand-mark{
+  display:block!important;
+  width:64px!important;
+  height:64px!important;
+  flex:0 0 64px!important;
+  background:url("favicon.svg?v=20261001-compact") center/contain no-repeat!important;
+  border-radius:50%!important;
+}
+.oi-header .v45-logo .brand-name{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  justify-content:center!important;
+  gap:0!important;
+  font-size:1.14rem!important;
+  line-height:.92!important;
+  color:#f5f5f5!important;
+  text-shadow:0 2px 3px #000!important;
+}
+.oi-header .v45-logo .brand-name::after{content:none!important;display:none!important}
+.oi-header .v45-logo .brand-name strong{
+  display:block!important;
+  color:#ff7900!important;
+  font-size:1.04em!important;
+  line-height:1!important;
+}
+.oi-header .v29-main-nav,.oi-header .oi-main-nav{
+  grid-column:2!important;
+  justify-self:center!important;
+}
+.oi-header .language-switch{
+  grid-column:3!important;
+  display:flex!important;
+  align-items:center!important;
+  gap:3px!important;
+  padding:3px!important;
+  border:1px solid #343434!important;
+  border-radius:9px!important;
+  background:#151515!important;
+}
+.oi-header .language-switch button{
+  height:34px!important;
+  min-width:36px!important;
+  border:0!important;
+  border-radius:6px!important;
+  background:transparent!important;
+  color:#bbb!important;
+  font-weight:900!important;
+  cursor:pointer!important;
+}
+.oi-header .language-switch button.active{
+  background:#8b4b22!important;
+  color:#fff!important;
+}
+.oi-header .nav-auth{grid-column:4!important}
+.oi-header .theme-toggle{grid-column:5!important}
+@media(max-width:1350px){
+  .oi-header .v29-nav-wrap{grid-template-columns:190px auto auto auto auto!important}
+  .oi-header .v45-logo{width:180px!important;max-width:180px!important}
+  .oi-header .v45-logo .brand-mark{width:54px!important;height:54px!important;flex-basis:54px!important}
+  .oi-header .v45-logo .brand-name{font-size:1rem!important}
+}
+@media(max-width:760px){
+  .oi-header .v45-logo{flex:0 0 170px!important;width:170px!important;max-width:170px!important;height:56px!important}
+  .oi-header .v45-logo .brand-mark{width:48px!important;height:48px!important;flex-basis:48px!important}
+  .oi-header .language-switch{flex:0 0 auto!important}
+}
