@@ -11,7 +11,7 @@
 
   document.querySelectorAll('link[rel*="icon"]').forEach(link => {
     link.type = 'image/svg+xml';
-    link.href = 'favicon.svg?v=71';
+    link.href = 'favicon.svg?v=72';
   });
 
   const cfg = window.TY_SUPABASE_CONFIG || {};
@@ -27,7 +27,7 @@
   };
   const tr = document.documentElement.lang !== 'en';
   const fmt = n => (Number(n) || 0).toLocaleString(tr ? 'tr-TR' : 'en-US');
-  const viewText = n => '◉ ' + fmt(n) + (tr ? ' görüntülenme' : ' views');
+  const viewText = n => '◉ ' + fmt(n) + (tr ? ' görüntüleme' : ' views');
   const downloadText = n => '⬇ ' + fmt(n) + (tr ? ' indirme' : ' downloads');
 
   function ensureStatsSlots() {
@@ -39,41 +39,29 @@
       const key = keyFromHref(link.getAttribute('href'));
       if (!validKey(key) || ['index','yamalar','pc-oyunlari','emulator-oyunlari'].includes(key)) return;
 
-      let stats = copy.querySelector('.ty-card-stats');
-      if (!stats) {
-        stats = document.createElement('div');
-        stats.className = 'ty-card-stats';
-        copy.appendChild(stats);
-      }
+      // Eski birleşik/mavi sayacı kaldır; yalnızca iki ayrı koyu rozet bırak.
+      copy.querySelectorAll('.ty-views, .ty-download-count, .ty-card-stats').forEach(el => el.remove());
 
-      let view = copy.querySelector('[data-stat-view-key]');
-      const legacyView = copy.querySelector('.ty-views[data-views]');
-      if (!view && legacyView) {
-        view = legacyView;
-        view.dataset.statViewKey = key;
-        view.classList.add('ty-card-stat');
-        stats.appendChild(view);
-      }
-      if (!view) {
-        view = document.createElement('span');
-        view.className = 'ty-card-stat';
-        view.dataset.statViewKey = key;
-        view.textContent = viewText(0);
-        stats.appendChild(view);
-      }
+      const stats = document.createElement('div');
+      stats.className = 'ty-card-stats';
 
-      let down = copy.querySelector('[data-stat-download-key]');
-      if (!down) {
-        down = document.createElement('span');
-        down.className = 'ty-card-stat';
-        down.dataset.statDownloadKey = key;
-        down.textContent = downloadText(0);
-        stats.appendChild(down);
-      }
+      const view = document.createElement('span');
+      view.className = 'ty-card-stat';
+      view.dataset.statViewKey = key;
+      view.textContent = viewText(0);
+
+      const down = document.createElement('span');
+      down.className = 'ty-card-stat';
+      down.dataset.statDownloadKey = key;
+      down.textContent = downloadText(0);
+
+      stats.append(view, down);
+      copy.appendChild(stats);
     });
 
     const intro = document.querySelector('.uniform-detail .uniform-intro');
-    if (intro && validKey(pageKey) && !intro.querySelector('.ty-detail-stats')) {
+    if (intro && validKey(pageKey)) {
+      intro.querySelectorAll('.ty-detail-stats').forEach(el => el.remove());
       const stats = document.createElement('div');
       stats.className = 'ty-detail-stats';
       stats.innerHTML =
