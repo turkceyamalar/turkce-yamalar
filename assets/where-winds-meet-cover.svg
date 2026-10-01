@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#22313b"/><stop offset=".52" stop-color="#101820"/><stop offset="1" stop-color="#6d4c2f"/>
+  </linearGradient>
+  <radialGradient id="sun" cx=".18" cy=".28" r=".55">
+    <stop offset="0" stop-color="#e3b46a" stop-opacity=".78"/><stop offset="1" stop-color="#e3b46a" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<rect width="920" height="520" fill="url(#bg)"/>
+<rect width="920" height="520" fill="url(#sun)"/>
+<path d="M0 390 115 320 190 352 272 286 352 334 458 242 572 309 670 236 920 350V520H0Z" fill="#0b1115" opacity=".82"/>
+<path d="M0 424 170 349 315 402 452 332 608 405 735 348 920 420V520H0Z" fill="#111a1e"/>
+<g transform="translate(535 84)" fill="#080d10">
+  <circle cx="80" cy="68" r="33"/>
+  <path d="M45 104c20-39 76-50 112-18 25 23 28 61 10 92l-26 46 24 155h-44l-17-121-15 121H44l24-153-35-77c-10-20-4-34 12-45Z"/>
+  <path d="M48 113 0 174l18 15 57-45M153 109l76 55-12 20-89-43"/>
+  <path d="M88 43 103 3l14 44z"/>
+</g>
+<text x="58" y="78" fill="#e6c37d" font-family="Georgia,serif" font-size="34" letter-spacing="3">WHERE WINDS MEET</text>
+<text x="60" y="118" fill="#f1eee8" font-family="Arial,sans-serif" font-size="22">Türkçe Yama</text>
+</svg>
