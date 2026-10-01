@@ -2191,3 +2191,49 @@ html[data-theme="light"] .oi-header .v45-logo .brand-name::after{color:#111!impo
   border:1px solid #555!important;border-radius:7px!important;background:#171717!important;
 }
 .ty-feed-image img[src*="where-winds-meet-cover.svg"]{object-fit:cover!important}
+
+
+/* FINAL HEADER DRAGON FIX — use approved gold Serpent artwork */
+@media(min-width:761px){
+  .site-header.oi-header{height:64px!important;min-height:64px!important}
+  .oi-header .v29-nav-wrap{
+    height:64px!important;min-height:64px!important;
+    grid-template-columns:235px minmax(0,1fr) auto auto auto!important;
+    padding:0 18px!important;
+    overflow:hidden!important;
+  }
+  .oi-header .header-serpent-left,
+  .oi-header .header-serpent-right{
+    display:block!important;
+    position:absolute!important;
+    top:2px!important;
+    width:230px!important;
+    height:60px!important;
+    z-index:2!important;
+    overflow:hidden!important;
+    pointer-events:none!important;
+    opacity:1!important;
+  }
+  .oi-header .header-serpent-left{left:6px!important}
+  .oi-header .header-serpent-right{right:6px!important;transform:scaleX(-1)!important}
+  .oi-header .header-serpent-left img,
+  .oi-header .header-serpent-right img{
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    filter:none!important;
+  }
+  .oi-header .v29-main-nav,.oi-header .oi-main-nav{
+    grid-column:2!important;
+    justify-self:center!important;
+    position:relative!important;
+    z-index:5!important;
+  }
+  .oi-header .language-switch,.oi-header .nav-auth,.oi-header .theme-toggle{
+    position:relative!important;
+    z-index:5!important;
+  }
+  .oi-header .v45-logo,.site-header .mobile-serpent-logo{display:none!important}
+}
