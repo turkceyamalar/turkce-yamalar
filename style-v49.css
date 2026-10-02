@@ -2774,3 +2774,40 @@ a{color:inherit!important}
   fill:currentColor!important;
   stroke:currentColor!important;
 }
+
+
+/* 2026-10-02 header nav centering + Turkish flag */
+@media(min-width:761px){
+  .oi-header .v29-main-nav,
+  .oi-header .oi-main-nav{
+    transform:translate(-28px,3px)!important;
+  }
+}
+.oi-header a[href="yamalar.html"]{
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:7px!important;
+}
+.oi-header a[href="yamalar.html"] .oi-menu-icon{
+  display:none!important;
+}
+.oi-header a[href="yamalar.html"]::before{
+  content:""!important;
+  width:20px!important;
+  height:14px!important;
+  flex:0 0 20px!important;
+  display:inline-block!important;
+  background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMCAyMCI+PHJlY3Qgd2lkdGg9IjMwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjZTMwYTE3Ii8+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMCIgcj0iNiIgZmlsbD0iI2ZmZiIvPjxjaXJjbGUgY3g9IjE0IiBjeT0iMTAiIHI9IjQuOCIgZmlsbD0iI2UzMGExNyIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Im0xOC4yIDEwIDQuMi0xLjM1LTIuNiAzLjU1VjcuOGwyLjYgMy41NXoiLz48L3N2Zz4=")!important;
+  background-position:center!important;
+  background-size:cover!important;
+  background-repeat:no-repeat!important;
+  border-radius:2px!important;
+  box-shadow:0 0 0 1px rgba(255,255,255,.18)!important;
+}
+@media(max-width:760px){
+  .oi-header a[href="yamalar.html"]::before{
+    width:18px!important;
+    height:12px!important;
+    flex-basis:18px!important;
+  }
+}
